@@ -43,12 +43,8 @@ Platí: ![1 \leq NSD(a, b) \leq min(a, b)](https://latex.codecogs.com/svg.latex?
 #### Jak nalézt NSD?
 
 1. metoda hrubé síly
-2. rozklad na prvočísla (Vybereme taková čísla, která se vyskytují ve všech řádcích a vybereme to číslo, které má nejmenší mocninu. NSD je součin těchto čísel)
-
-![Příklad NSD pomocí prvočísel](NSD_prvočísla.PNG)
-
+2. rozklad na prvočísla
 3. Euklidův algoritmus
-![Příklad euklidova algoritmu](Euklidův algoritmus.PNG)
 
 Pro více čísel:
 - rozklad na prvočísla
@@ -64,6 +60,7 @@ Existuje a je určen jednoznačně.
 
 1. metoda hrubé síly
 2. Euklidův algoritmus
+3. Rozklad na prvočísla
 
 Pro více čísel: obdobně jako u NSD.
 
@@ -72,7 +69,7 @@ Pro více čísel: obdobně jako u NSD.
 ![a \cdot b = NSN(a, b) \cdot NSD(a, b)](https://latex.codecogs.com/svg.latex?a%20%5Ccdot%20b%20%3D%20NSN%28a%2C%20b%29%20%5Ccdot%20NSD%28a%2C%20b%29)
 
 
-### Kanonické rozklady
+### Rozklad na prvočísla
 
 ![192 = 2^6 \cdot 3](https://latex.codecogs.com/svg.latex?192%20%3D%202%5E6%20%5Ccdot%203)
 
@@ -150,8 +147,6 @@ Konguence *se stejným modulem* lze upravovat.
 
 - ![a \equiv b (m) \rightarrow \forall k \in \mathbb{N}^+: k \cdot a \equiv k \cdot b~(k \cdot m)](https://latex.codecogs.com/svg.latex?a%20%5Cequiv%20b%20%28m%29%20%5Crightarrow%20%5Cforall%20k%20%5Cin%20%5Cmathbb%7BN%7D%5E&plus;%3A%20k%20%5Ccdot%20a%20%5Cequiv%20k%20%5Ccdot%20b%7E%28k%20%5Ccdot%20m%29)
 - ![a \equiv b (m), d \mid m \rightarrow a \equiv b (d)](https://latex.codecogs.com/svg.latex?a%20%5Cequiv%20b%20%28m%29%2C%20d%20%5Cmid%20m%20%5Crightarrow%20a%20%5Cequiv%20b%20%28d%29)
-- ![a \equiv b (m),~d \mid NSD(a, b, m) \rightarrow \frac{a}{d} \equiv \frac{b}{d} (\frac{m}{d})](https://latex.codecogs.com/svg.latex?a%20%5Cequiv%20b%20%28m%29%2C%7Ed%20%5Cmid%20NSD%28a%2C%20b%2C%20m%29%20%5Crightarrow%20%5Cfrac%7Ba%7D%7Bd%7D%20%5Cequiv%20%5Cfrac%7Bb%7D%7Bd%7D%20%28%5Cfrac%7Bm%7D%7Bd%7D%29)
-- ![a \equiv b (m_1)~\wedge~a \equiv b (m_2) \rightarrow a \equiv b (NSN(m_1, m_2))](https://latex.codecogs.com/svg.latex?a%20%5Cequiv%20b%20%28m_1%29%7E%5Cwedge%7Ea%20%5Cequiv%20b%20%28m_2%29%20%5Crightarrow%20a%20%5Cequiv%20b%20%28NSN%28m_1%2C%20m_2%29%29)
 
 ### Rozklad na třídy ekvivalence
 
@@ -171,15 +166,6 @@ Pro výpočty se používají reprezentanti ze zbytkových tříd, označované 
 ![Zbytková třída modulo m](02_rozklad_celych_cisel_na_zbytkove_tridy.jpg)
 
 *Zbytková třída modulo ![m](https://latex.codecogs.com/svg.latex?m)*
-
-**Redukovaná soustava zbytků modulo m**
-
-- zůstanou pouze zbytky, které jsou nesoudělné s ![m](https://latex.codecogs.com/svg.latex?m)
-- označení ![Z_m^*](https://latex.codecogs.com/svg.latex?Z_m%5E*)
-
-![Z_5^* = \{1, 2, 3, 4\}](https://latex.codecogs.com/svg.latex?Z_5%5E*%20%3D%20%5C%7B1%2C%202%2C%203%2C%204%5C%7D)
-
-![Z_6^* = \{1, 5\}](https://latex.codecogs.com/svg.latex?Z_6%5E*%20%3D%20%5C%7B1%2C%205%5C%7D)
 
 ## Počítání v ![(Z_m, +, \cdot)](https://latex.codecogs.com/svg.latex?%5Clarge%20%28Z_m%2C%20&plus;%2C%20%5Ccdot%29)
 
@@ -334,47 +320,3 @@ Pokud ![NSD(a, m) \mid b](https://latex.codecogs.com/svg.latex?NSD%28a%2C%20m%29
   ![x \equiv 44347 (3960)](https://latex.codecogs.com/svg.latex?x%20%5Cequiv%2044347%20%283960%29)
 
   ![x \equiv \mathbf{787} (3960)](https://latex.codecogs.com/svg.latex?x%20%5Cequiv%20%5Cmathbf%7B787%7D%20%283960%29)
-
-### Zobecněná Čínská věta o zbytku
-
-Umožňuje řešit obecné soustavy kongruencí, kde
-
-![\forall i \neq j : NSD(m_i, m_j) \mid (b_i - b_j)](https://latex.codecogs.com/svg.latex?%5Cforall%20i%20%5Cneq%20j%20%3A%20NSD%28m_i%2C%20m_j%29%20%5Cmid%20%28b_i%20-%20b_j%29)
-
-Postup:
-
-1. Ověřím řešitelnost (viz výše): Pro všechny dvojice kongruencí musí platit, že NSD modulů *musí* dělit rozdíl pravých stran.
-
-2. Vypočítám ![M = NSN(m_1, m_2, \ldots, m_n)](https://latex.codecogs.com/svg.latex?M%20%3D%20NSN%28m_1%2C%20m_2%2C%20%5Cldots%2C%20m_n%29)
-
-3. Naleznu ![M_i](https://latex.codecogs.com/svg.latex?M_i) taková, že dělí původní ![m_i](https://latex.codecogs.com/svg.latex?m_i) a zároveň jsou po dvou nesoudělná.
-
-  ![M_i | m_i~\wedge \forall i \neq j~NSD(M_i, M_j) = 1](https://latex.codecogs.com/svg.latex?M_i%20%7C%20m_i%7E%5Cwedge%20%5Cforall%20i%20%5Cneq%20j%7ENSD%28M_i%2C%20M_j%29%20%3D%201)
-
-4. Řešení soustavy získam jako kongruenci
-
-  ![x \equiv x_1b_1 + x_2b_2 + \ldots + x_nb_n~(M)](https://latex.codecogs.com/svg.latex?x%20%5Cequiv%20x_1b_1%20&plus;%20x_2b_2%20&plus;%20%5Cldots%20&plus;%20x_nb_n%7E%28M%29)
-
-5. Jednotlivá ![x_i](https://latex.codecogs.com/svg.latex?x_i) získám pomocí řešení dílčích soustav kongruencí:
-
-  ![x_i \equiv 0~ (\frac{M}{M_i})~\wedge~x_i \equiv 1~(M_i)](https://latex.codecogs.com/svg.latex?x_i%20%5Cequiv%200%7E%20%28%5Cfrac%7BM%7D%7BM_i%7D%29%7E%5Cwedge%7Ex_i%20%5Cequiv%201%7E%28M_i%29)
-
-### Pozn.: Brute-force reseni v jazyce Haskell
-
-Pro nalezeni reseni soustavy kongruenci pomoci metody brute-force lze velice efektivne vyuzit programovaci jazyk Haskell:
-
-```
-ghci> [x | x <- [1..(5*8*11*9)], x `mod` 5 == 2, x `mod` 8 == 3, x `mod` 11 == 6, x `mod` 9 == 4]
-[787]
-```
-
-Vyse uvedeny kod nalezne vsechny prvky od 1 do M pro zadane kongruence. Tento zapis funguje bez ohledu na pocet reseni:
-
-```
-ghci> [x | x <- [1..(2*5*8)], x `mod` 2 == 1, x `mod` 5 == 4, x `mod` 8 == 3]
-[19,59]
-ghci> [x | x <- [1..(2*5*8)], x `mod` 2 == 1, x `mod` 5 == 4, x `mod` 8 == 2]
-[]
-```
-
-Hodi se pro rychle overeni spravneho reseni uloh. Vice o jazyce Haskell: [http://learnyouahaskell.com/chapters](http://learnyouahaskell.com/chapters)
