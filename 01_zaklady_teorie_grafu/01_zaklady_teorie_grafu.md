@@ -9,8 +9,6 @@
 
 **Jednoduchý graf** - neobsahuje smyčky a paralelní hrany
 
-**Metagraf** - může obsahovat smyčky a paralelní hrany
-
 **Jednoduchý neorientovaný graf**
 
 - uspořádáná dvojice G = (V,H)
