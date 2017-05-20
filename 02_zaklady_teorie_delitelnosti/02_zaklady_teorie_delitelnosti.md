@@ -44,12 +44,11 @@ Platí: ![1 \leq NSD(a, b) \leq min(a, b)](https://latex.codecogs.com/svg.latex?
 
 1. metoda hrubé síly
 2. rozklad na prvočísla (Vybereme taková čísla, která se vyskytují ve všech řádcích a vybereme to číslo, které má nejmenší mocninu. NSD je součin těchto čísel)
-NSD(32, 54, 16) = ?
-32=25
-54=21*33
-16=24
-NSD(32, 54, 16) = 2^1
+
+![Příklad NSD pomocí prvočísel](NSD_prvočísla.PNG)
+
 3. Euklidův algoritmus
+![Příklad euklidova algoritmu](Euklidův algoritmus.PNG)
 
 Pro více čísel:
 - rozklad na prvočísla
