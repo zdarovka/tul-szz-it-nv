@@ -12,8 +12,8 @@
 **Jednoduchý neorientovaný graf**
 
 - uspořádáná dvojice G = (V,H)
- - V je konečná množina vrcholů
- - H je podmnožina množiny **neuspořádaných** dvojic prvků V (množina hran) ![H\subseteq \binom{V}{2}](https://latex.codecogs.com/svg.latex?H%5Csubseteq%20%5Cbinom%7BV%7D%7B2%7D)
+- V je konečná množina vrcholů
+- H je podmnožina množiny **neuspořádaných** dvojic prvků V (množina hran) ![H\subseteq \binom{V}{2}](https://latex.codecogs.com/svg.latex?H%5Csubseteq%20%5Cbinom%7BV%7D%7B2%7D)
 
 **Jednoduchý orientovaný graf**
 - uspořádáná dvojice G = (V,H)
@@ -72,18 +72,13 @@
 - G je strom
 - G je acyklický a zároveň |V| = |H| + 1
 - G je souvislý a zároveň |V| = |H| + 1
-- Pro mezi libovolnými vrcholy existuje právě jedna cesta
+- Mezi libovolnými vrcholy existuje právě jedna cesta
 
 **Kostra grafu** -  takový podgraf souvislého grafu G na množině všech jeho vrcholů, který je stromem (strom, obsahující všechny vrcholy grafu G)
 
-**Isomorfní graf** - graf který vznikne grafickým přeházením, či přeznačením hran
+**Isomorfní graf** - graf který vznikne přeznačením vrcholů (bijektivní zobrazení vrcholů starého grafu do vrcholů nového grafu)
 
-**Homeomorfní graf** - je takový graf, který je buď izomorfní, nebo je-li možné izomorfismu dosáhnout pomocí konečné počtu operací půlení hran
-
-**Úplný graf** - je takový, kde je každý vrchol propojen s každým a rozlišujeme
-
-- K5 - úplný graf (pentagram)
-- K3,3 - úplný bipartiní graf (dvě trojice, kde je každý vrchol propojen se všemi v protější trojici)
+**Úplný graf** - je takový, kde je každý vrchol propojen s každým
 
 **Stupeň vrcholu**
 
@@ -104,7 +99,7 @@
 ## Eulerovský graf
 
 - tzv. "jednotažky", lze je nakreslit jedním tahem
-- je souvislý graf G (obecně s paralelními hranami), kde existuje **Eulerův tah** (je jedno jestli otevřený nebo uzavřený)
+- je souvislý graf G, kde existuje **Eulerův tah** (je jedno jestli otevřený nebo uzavřený)
 
 **Eulerovský tah**
 
@@ -117,9 +112,6 @@
 - souvislý graf je eulerovský práve tehdy, když má všechny vrcholy sudého stupně, nebo právě 2 vrcholy lichého
 - pokud má všechny sudé, tak existuje eulerovská kružnice
 - pokád má 2 liché, tak existuje neuzavřený eul. tah, který začíná v libovolném 1 z vrcholů lichého stupně a končí v tom druhém
-
-**Problém čínského listonoše**
-- hledáme uzavřený sled nejmenší možné váhy, který obsahuje každou hranu alespoň jednou
 
 ## Hamiltonovský grafy
 - je souvislý graf, ve kterém existuje **Hamiltonovská kružnice**.
@@ -135,12 +127,8 @@
 
 - jsou grafy, u kterých existuje rovinné nakreslení, tj. nakreslení bez křížení hran
 
-**Kuratovského věta**
-- graf G je rovinný, pokud neobsahuje podgraf homeomorfní s **K3,3** (úplný bipartitní graf) nebo **K5** (úplný graf)
-
 ## Prohledávání grafu
-
-Hledáme cestu z vrcholu u do vrcholu v.
+Chceme projít všechny vrcholy grafu.
 
 ### Do hloubky (DFS - LIFO)
 
@@ -157,6 +145,7 @@ Hledáme cestu z vrcholu u do vrcholu v.
 
 - algoritmus nejprve vyčerpá všechny dostupné hrany a až pak se přesune na další vrchol  
 - při procházení do šířky se využívá fronta (FIFO)
+- veškeří následovníci uzlu získaní expandujícím uzlem jsou vkládani do FIFO fronty
 
 ![Prohledávání do šířky](01_bfs.gif)
 
@@ -188,15 +177,6 @@ Minimální kostra je kostra s nejmenší možnou váhou.
 
 *Borůvkův algoritmus*
 
-**Kruskalův algoritmus**
-
-- seřadí si hrany od nejlevnější po nejdražší a postupně přidává hrany
-- hrana je přidána, pokud alespoň jeden z vrcholů dané hrany ještě nebyl viděn
-
-![Kruskalův algoritmus](01_kruskal.gif)
-
-*Kruskalův algoritmus*
-
 ## Nejkratší cesta
 
 Hledání nejkratší cesty z vrcholu u do vrcholu v.
@@ -211,15 +191,3 @@ Hledání nejkratší cesty z vrcholu u do vrcholu v.
 ![Dijkstrův algoritmus](01_dijkstra.gif)
 
 *Dijkstrův algoritmus*
-
-**Floydův-Warshallův algoritmus**
-- hledá nejkratší cestu mezi všemi dvojicemi vrcholů
-- umí pracovat s negativně ohodnocenými hranami, pokud se nevyskytuje záporný cyklus
-- https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
-- https://www.youtube.com/watch?v=KQ9zlKZ5Rzc
-
-**Bellmanův-Fordův algoritmus**
-- narozdíl od Dijkstrova algoritmu umí pracovat se záprně ohodnocenými hranami, je ale pomalejší
-- umí poznat, zda je v grafu tzv. záporný cyklus dozažitelný ze startu (a úloha v tomto případě nemá smysl)
-- https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm
-- https://www.youtube.com/watch?v=hxMWBBCpR6A
