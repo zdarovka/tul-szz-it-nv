@@ -43,13 +43,16 @@ Platí: ![1 \leq NSD(a, b) \leq min(a, b)](https://latex.codecogs.com/svg.latex?
 #### Jak nalézt NSD?
 
 1. metoda hrubé síly
-2. Euklidův algoritmus
-3. dvojkový NSD algortimus
-4. pomocí kanonických rozkladů
+2. rozklad na prvočísla (Vybereme taková čísla, která se vyskytují ve všech řádcích a vybereme to číslo, které má nejmenší mocninu. NSD je součin těchto čísel)
+NSD(32, 54, 16) = ?
+32=25
+54=21*33
+16=24
+NSD(32, 54, 16) = 2^1
+3. Euklidův algoritmus
 
 Pro více čísel:
-
-- kanonické rozklady (prvočísla)
+- rozklad na prvočísla
 - udělám NSD dvou a postupně přidávám další čísla ![NSD(a, b, c) = NSD(NSD(a, b), c)](https://latex.codecogs.com/svg.latex?NSD%28a%2C%20b%2C%20c%29%20%3D%20NSD%28NSD%28a%2C%20b%29%2C%20c%29)
 
 ### Nejmenší společný násobek (NSN)
