@@ -58,6 +58,12 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
 
 ![f(n) \in \Theta(g(n)) \leftrightarrow \exists K_1, K_2 > 0 ~ \exists n_0 ~ \forall n > n_0 ~ K_1 \cdot g(n) \leq f(n) \leq K_2 \cdot g(n)](https://latex.codecogs.com/svg.latex?f%28n%29%20%5Cin%20%5CTheta%28g%28n%29%29%20%5Cleftrightarrow%20%5Cexists%20K_1%2C%20K_2%20%3E%200%20%7E%20%5Cexists%20n_0%20%7E%20%5Cforall%20n%20%3E%20n_0%20%7E%20K_1%20%5Ccdot%20g%28n%29%20%5Cleq%20f%28n%29%20%5Cleq%20K_2%20%5Ccdot%20g%28n%29)
 
+## Asymptotická složitost
+
+ - Určuje operační náročnost algoritmu tak, že zjišťuje, jakým způsobem se bude chování algoritmu měnit v závislosti na změně velikosti (počtu) vstupních dat. Zapisuje se pomocí Omikron notace jako O(f(N)).
+ - Používaný zápis znamená, že náročnost algoritmu je menší než A + B * f(N), kde A a B jsou vhodně zvolené konstanty a N je veličina popisující velikost vstupních dat.
+ - Zandebáváme tedy multiplikativní i aditivní konstantu.
+
 ## Průměrná a nejhorší složitost
 
 - V praxi se často udává
@@ -82,8 +88,6 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
 ## Úlohy P, NP, NP-úplné
 
 ![Porovnání P, NP, NP-úplných úloh](07_p_np_np_complete.png)
-
-[Video na youtube](https://www.youtube.com/watch?v=YX40hbAHx3s)
 
 1. Úlohy P (polynomial time)
     - Úlohy řešitelné v polynomiálním čase ![\mathcal{O}(f(n)) \subset \mathcal{O}(n^k)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28f%28n%29%29%20%5Csubset%20%5Cmathcal%7BO%7D%28n%5Ek%29)
