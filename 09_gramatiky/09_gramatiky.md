@@ -104,94 +104,10 @@ Různé typy gramatik jsou schopné rozpoznávat různé typy jazyků a pro jeji
 | *Bezkontextová* (typ 2) | Bezkontextové | nedeterministický KSZ1 | ![A \rightarrow \gamma](https://latex.codecogs.com/svg.latex?A%20%5Crightarrow%20%5Cgamma)
 | *Regulární* (typ 3) | Regulární | KA | ![A \rightarrow a, A \rightarrow aB](https://latex.codecogs.com/svg.latex?A%20%5Crightarrow%20a%2C%20A%20%5Crightarrow%20aB) |
 
-U přepisovacích pravidel platí konvence:
-
-- *písmena řecké abecedy* ![\in (\Pi \cup \Sigma)*](https://latex.codecogs.com/svg.latex?%5Cin%20%28%5CPi%20%5Ccup%20%5CSigma%29*)
-- *velká písmena* představují **neterminální symboly**
-- *malá písmena* představují **terminální symboly**
-
 ### Vztah ke konečným strojům
+Viz předchozí tabulka.
 
-Viz předchozí tabulka. Připomenutí:
-
-#### Turingův stroj (TS)
-
-- čtecí hlava, nekonečná páska, program
-- na pásce se lze pohybovat doleva/doprava, je možné číst a zapisovat
-
-#### Postův stroj (PS)
-
-- pamět je typu fronta (FIFO)
-- z jednoho konce se čte, z druhého se zapisuje
-
-#### Konečný stroj se zásobníky (KSZn)
-
-- paměť je typu zásobník (LIFO)
-- zapisuje se i se čte z vrcholu zásobníku
-- pokud má alespoň 2 zásobníky, dokáže to,co TS nebo PS
-
-#### Zásobníkový automat (KSZ1)
-
-- jiné označení pro KSZ1
-- konečný stroj s jedním zásobníkem nedokáže to, co TS, PS nebo KSZ2+
-
-#### Konečný automat (KA)
-
-- žádná paměť pro zápis
-- pouze si pamatuje (se nachází v) aktuální stav
-
-## Vlastnosti binárních relací
-
-> Není to úplně součástí otázky, ale mohla by na to přijít řeč. Je to dobré vědět, ale pokud se na to někdo vyložené nezeptá, asi bych to nezmiňoval.
-
-Pro libovolnou binární relaci mohou (a nemusí) platit následující vlasnosti.
-
-Nechť ![\varrho](https://latex.codecogs.com/svg.latex?%5Cvarrho) je binární relace.
-
-1. **Reflexivita**
-
-  ![\forall a \in A: a \varrho a](https://latex.codecogs.com/svg.latex?%5Cforall%20a%20%5Cin%20A%3A%20a%20%5Cvarrho%20a)
-
-  Všechny prvky z ![A](https://latex.codecogs.com/svg.latex?A) jsou v relaci samy se sebou.
-
-2. **Symetrie**
-
-  ![\forall a, b \in A: a \varrho b \leftrightarrow b \varrho a](https://latex.codecogs.com/svg.latex?%5Cforall%20a%2C%20b%20%5Cin%20A%3A%20a%20%5Cvarrho%20b%20%5Cleftrightarrow%20b%20%5Cvarrho%20a)
-
-  Pokud ![a](https://latex.codecogs.com/svg.latex?a) je v relaci s ![b](https://latex.codecogs.com/svg.latex?b), potom i ![b](https://latex.codecogs.com/svg.latex?b) je v relaci s ![a](https://latex.codecogs.com/svg.latex?a). (nebo *právě tehdy když* - zde to lze zaměnit)
-
-3. **Antisymetrie**
-
-  ![\forall a, b \in A: a \varrho b \wedge b \varrho a \rightarrow a = b](https://latex.codecogs.com/svg.latex?%5Cforall%20a%2C%20b%20%5Cin%20A%3A%20a%20%5Cvarrho%20b%20%5Cwedge%20b%20%5Cvarrho%20a%20%5Crightarrow%20a%20%3D%20b)
-
-  Pokud ![a](https://latex.codecogs.com/svg.latex?a) je v relaci s ![b](https://latex.codecogs.com/svg.latex?b) a zároveň je i ![b](https://latex.codecogs.com/svg.latex?b) v relaci s ![a](https://latex.codecogs.com/svg.latex?a), potom se jedná o totožný prvek.
-
-4. **Tranzitivita**
-
-  ![\forall a, b, c \in A: a \varrho b \wedge b \varrho c \rightarrow a \varrho c](https://latex.codecogs.com/svg.latex?%5Cforall%20a%2C%20b%2C%20c%20%5Cin%20A%3A%20a%20%5Cvarrho%20b%20%5Cwedge%20b%20%5Cvarrho%20c%20%5Crightarrow%20a%20%5Cvarrho%20c)
-
-  Pokud ![a](https://latex.codecogs.com/svg.latex?a) je v relaci s ![b](https://latex.codecogs.com/svg.latex?b) a zároveň je ![b](https://latex.codecogs.com/svg.latex?b) v relaci s ![c](https://latex.codecogs.com/svg.latex?c), potom je i ![a](https://latex.codecogs.com/svg.latex?a) v relaci s ![c](https://latex.codecogs.com/svg.latex?c).
-
-### Relace ekvivalence
-
-Pro relaci ekvivalence ![\sim](https://latex.codecogs.com/svg.latex?%5Csim) platí:
-
-- reflexivita
-- symetrie
-- tranzitivita
-
-K libovolné relaci ekvivalence existuje právě jediný rozklad na třídy ekvivalence.
-
-### Částečné uspořádání
-
-Pro relaci částečného uspořádání ![\leq](https://latex.codecogs.com/svg.latex?%5Cleq) platí:
-
-- reflexivita
-- antisymetrie
-- tranzitivita
-
-## Syntaktická analýza
-
-![Příklad syntaktické analýzy](09_syntakticka_analyza.png)
-
-*Příklad syntaktické analýzy*
+- Jazyky rozpoznávané konečnými stroji jsou generovány jen a pouze regulárními gramatikami.
+- Jazyk rozpoznatelný konečným automatem je jazykem typu 3 (viz. Chomského hierarchie).
+- Každý jazyk typu 3 je rozpoznatelný nějakým konečným automatem.
+- Jazyk je typu 3 pouze tehdy, je-li rozpoznatelný nějakým konečným automatem.
