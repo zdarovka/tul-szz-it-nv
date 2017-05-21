@@ -6,8 +6,6 @@ Konečný automat (KA) je teoretický výpočetní model reprezentovaný pomocí
 
  *Konečné automaty se používají například při vyhodnocování regulárních výrazů. Obvykle jsou tedy součástí lexikálního analyzátoru v překladačích.*
 
-Definice základních pojmů jako slovo a abeceda je vysvětleno zde: http://www.matematika.cz/formalni-jazyky
-
 **Formální definice:**
 
 Konečným automatem je uspořádaná pětice ![A = (Q, \Sigma, \delta, q_0, F)](https://latex.codecogs.com/svg.latex?A%20%3D%20%28Q%2C%20%5CSigma%2C%20%5Cdelta%2C%20q_0%2C%20F%29), kde
@@ -25,8 +23,6 @@ Konečným automatem je uspořádaná pětice ![A = (Q, \Sigma, \delta, q_0, F)]
 - ![q_0 \in Q](https://latex.codecogs.com/svg.latex?q_0%20%5Cin%20Q) je počáteční stav,
 
 - ![F \subset Q](https://latex.codecogs.com/svg.latex?F%20%5Csubset%20Q) je množina koncových stavů.
-
-Složitější automaty lze vytvářet spojováním jednodušších automatů do komplexních celků s využitím tzv. uzávěrových vlastností.
 
 ## Jazyk rozpoznávaný KA
 
@@ -134,22 +130,3 @@ Předpokládám, že automat má ![n_0](https://latex.codecogs.com/svg.latex?n_0
 - Slabším nástrojem je zásobníkový automat s jedním zásobníkem (KSZ1). Nedeterministické jsou zde silnější, než deterministické (narozdíl od KA).
 - Poté jsou konečné automaty, které jsou schopny rozpoznávat regulární jazyky.
 - Konečné automaty jsou silnější nástroj než kombinační logika.
-
-## Uzávěrové vlastnosti
-
-Automat rozpoznávající libovolný jazyk lze sestavit tak, že sestavím více jednodušších automatů, které pak vhodně spojím. Lze použít následující pravidla (uzávěrové vlastnosti):
-
-![\\L_1 \cup L_2\\
-L_1 \cap L_2 \\
-\Sigma^* - L_1 = L_1^c\\
-L_1 - L_2~(L_1 \setminus L_2) = L_1 \cap L_2^c\\
-(L_1 \cap L_2)^c = L_1^c \cup L_2^c\\
-(L_1 \cup L_2)^c = L_1^c \cap L_2^c\\
-L_1 \cdot L_2 = \{uw; u \in L_1~\&~w \in L_2\}\\
-L_1^0 = \{e\}, ~L_1^1 = L_1, ~L_1^2 = L_1 \cdot L_1, \ldots \\
-L_1^+ = \bigcup_{n=1}^{\infty } L_1^n,~L_1^* = \bigcup_{n=0}^{\infty } L_1^n\\
-L_1 \cdot \varnothing = \varnothing,~ \varnothing \cdot L_2 = \varnothing](https://latex.codecogs.com/svg.latex?%5C%5CL_1%20%5Ccup%20L_2%5C%5C%20L_1%20%5Ccap%20L_2%20%5C%5C%20%5CSigma%5E*%20-%20L_1%20%3D%20L_1%5Ec%5C%5C%20L_1%20-%20L_2%7E%28L_1%20%5Csetminus%20L_2%29%20%3D%20L_1%20%5Ccap%20L_2%5Ec%5C%5C%20%28L_1%20%5Ccap%20L_2%29%5Ec%20%3D%20L_1%5Ec%20%5Ccup%20L_2%5Ec%5C%5C%20%28L_1%20%5Ccup%20L_2%29%5Ec%20%3D%20L_1%5Ec%20%5Ccap%20L_2%5Ec%5C%5C%20L_1%20%5Ccdot%20L_2%20%3D%20%5C%7Buw%3B%20u%20%5Cin%20L_1%7E%5C%26%7Ew%20%5Cin%20L_2%5C%7D%5C%5C%20L_1%5E0%20%3D%20%5C%7Be%5C%7D%2C%20%7EL_1%5E1%20%3D%20L_1%2C%20%7EL_1%5E2%20%3D%20L_1%20%5Ccdot%20L_1%2C%20%5Cldots%20%5C%5C%20L_1%5E&plus;%20%3D%20%5Cbigcup_%7Bn%3D1%7D%5E%7B%5Cinfty%20%7D%20L_1%5En%2C%7EL_1%5E*%20%3D%20%5Cbigcup_%7Bn%3D0%7D%5E%7B%5Cinfty%20%7D%20L_1%5En%5C%5C%20L_1%20%5Ccdot%20%5Cvarnothing%20%3D%20%5Cvarnothing%2C%7E%20%5Cvarnothing%20%5Ccdot%20L_2%20%3D%20%5Cvarnothing)
-
-**Sjednocení** vytvořím tak, že vezmu oba dílčí automaty a výsledek prohlásím za **jeden nedeterministický automat**. Následně mohu použít determinizační algoritmus na sestavení deterministického automatu. Lze také použít způsob jako u průniku, ale konečné stavy budou ty, kde **aspoň jeden** ze stavů původního automatu je **konečným**.
-
-**Průnik** lze vytvořit tím, že stavy nového automatu budou **kartézským součinem** stavů obou původních automatů. Například, mají-li oba původní automaty 3 stavy, nový automat bude mít 9 stavů a to (1,1), (1,2), (1,3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2) a (3, 3). Analogicky s přechody, má-li první automat přechod na daný symbol ze stavu 1 do stavu 2, nový automat bude mít tento přechod ze stavu (1, 1) do (2, 1), z (1, 2) do (2, 2) a (1, 3) do (2, 3). Konečné stavy jsou ty, kde **všechny** dílčí stavy původních automatů jsou konečnými stavy, tj. aby stav (3, 2) byl konečný, tak stav 3 prvního automatu a zároveň stav 2 druhého automatu musí být konečnými stavy.
