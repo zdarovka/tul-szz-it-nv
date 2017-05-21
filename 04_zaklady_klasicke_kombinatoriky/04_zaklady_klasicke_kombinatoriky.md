@@ -68,14 +68,6 @@ Máme n objektů, vybíráme k-tice.
 
   ![\binom{n}{k}](https://latex.codecogs.com/svg.latex?%5Cbinom%7Bn%7D%7Bk%7D) ... kombinační číslo "n nad k" (*binomický koeficient*)
 
-  **Vlastnosti**
-
-  - ![C^k_n = P(k, n-k)](https://latex.codecogs.com/svg.latex?C%5Ek_n%20%3D%20P%28k%2C%20n-k%29) (charakteristický vektor - pro každý prvek určím zda je/není v kombinaci)
-  - ![C^k_n = C^{n-k}_n](https://latex.codecogs.com/svg.latex?C%5Ek_n%20%3D%20C%5E%7Bn-k%7D_n) ... symetrie
-  - ![C^k_n = C^k_{n-1} + C^{k-1}_{n-1}](https://latex.codecogs.com/svg.latex?C%5Ek_n%20%3D%20C%5Ek_%7Bn-1%7D%20&plus;%20C%5E%7Bk-1%7D_%7Bn-1%7D) ... Pascalova identita
-  - ![\sum^n_{k=0} C^k_n = 2^n](https://latex.codecogs.com/svg.latex?%5Csum%5En_%7Bk%3D0%7D%20C%5Ek_n%20%3D%202%5En)
-  - ![\sum^n_{k=0} (-1)^k C^k_n = 0](https://latex.codecogs.com/svg.latex?%5Csum%5En_%7Bk%3D0%7D%20%28-1%29%5Ek%20C%5Ek_n%20%3D%200)
-
   **Příklad**: Mám k dispozici pět lidí. Kolika způsoby z nich můžu vybrat trojici?
 
 - **S opakováním**
@@ -206,19 +198,6 @@ Nechť ![|x| < 1, \alpha \in \mathbb{R}](https://latex.codecogs.com/svg.latex?%7
 
 Kolik existuje permutací, ve kterých žádný prvek není na svém místě?
 
-Použije se princip IE, kde ![\alpha_i](https://latex.codecogs.com/svg.latex?%5Calpha_i) je vlastnost, že ![i](https://latex.codecogs.com/svg.latex?i)-tý prvek je na svém místě.
-
-![D(n) = N(\overline{\alpha_1}, \overline{\alpha_2}, \ldots, \overline{\alpha_n}) = N - \sum_{i=1}^n N(\alpha_i) + \sum_{1\leq i_1 < i_2 \leq n} N(\alpha_{i_1}, \alpha_{i_2}) - \ldots](https://latex.codecogs.com/svg.latex?D%28n%29%20%3D%20N%28%5Coverline%7B%5Calpha_1%7D%2C%20%5Coverline%7B%5Calpha_2%7D%2C%20%5Cldots%2C%20%5Coverline%7B%5Calpha_n%7D%29%20%3D%20N%20-%20%5Csum_%7Bi%3D1%7D%5En%20N%28%5Calpha_i%29%20&plus;%20%5Csum_%7B1%5Cleq%20i_1%20%3C%20i_2%20%5Cleq%20n%7D%20N%28%5Calpha_%7Bi_1%7D%2C%20%5Calpha_%7Bi_2%7D%29%20-%20%5Cldots)
-
-![\\
-N = n! \\
-N(\alpha_i) = (n-1)!~\ldots~C^1_n \\
-N(\alpha_{i_1}, \alpha_{i_2}) = (n-2)!~\ldots~C^2_n](https://latex.codecogs.com/svg.latex?%5C%5C%20N%20%3D%20n%21%20%5C%5C%20N%28%5Calpha_i%29%20%3D%20%28n-1%29%21%7E%5Cldots%7EC%5E1_n%20%5C%5C%20N%28%5Calpha_%7Bi_1%7D%2C%20%5Calpha_%7Bi_2%7D%29%20%3D%20%28n-2%29%21%7E%5Cldots%7EC%5E2_n)
-
-![D_n = n! - C^1_n(n-1)! + C^2_n(n-2)! - \ldots + (-1)^nC^n_n0!](https://latex.codecogs.com/svg.latex?D_n%20%3D%20n%21%20-%20C%5E1_n%28n-1%29%21%20&plus;%20C%5E2_n%28n-2%29%21%20-%20%5Cldots%20&plus;%20%28-1%29%5EnC%5En_n0%21)
-
-![D_n = n! - \frac{n!(n-1)!}{1!(n-1)!} + \frac{n!(n-2)!}{2!(n-2)!} - \ldots + (-1)^n \frac{n!0!}{n!0!}](https://latex.codecogs.com/svg.latex?D_n%20%3D%20n%21%20-%20%5Cfrac%7Bn%21%28n-1%29%21%7D%7B1%21%28n-1%29%21%7D%20&plus;%20%5Cfrac%7Bn%21%28n-2%29%21%7D%7B2%21%28n-2%29%21%7D%20-%20%5Cldots%20&plus;%20%28-1%29%5En%20%5Cfrac%7Bn%210%21%7D%7Bn%210%21%7D)
-
 ![D_n = n! \underbrace{\begin{bmatrix}
 1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + \ldots + (-1)^n\frac{1}{n!}
 \end{bmatrix}}_{rozvoj~rady~e^{-1}}](https://latex.codecogs.com/svg.latex?D_n%20%3D%20n%21%20%5Cunderbrace%7B%5Cbegin%7Bbmatrix%7D%201%20-%20%5Cfrac%7B1%7D%7B1%21%7D%20&plus;%20%5Cfrac%7B1%7D%7B2%21%7D%20-%20%5Cfrac%7B1%7D%7B3%21%7D%20&plus;%20%5Cldots%20&plus;%20%28-1%29%5En%5Cfrac%7B1%7D%7Bn%21%7D%20%5Cend%7Bbmatrix%7D%7D_%7Brozvoj%7Erady%7Ee%5E%7B-1%7D%7D)
@@ -246,8 +225,8 @@ N(\alpha_{i_1}, \alpha_{i_2}) = (n-2)!~\ldots~C^2_n](https://latex.codecogs.com/
     - S omezujícími podmínkami
   - _Nerozlišitelné skupiny_
 - **Rozlišitelné objekty**
- - _Rozlišitelné skupiny_
- - _Nerozlišitelné skupiny_
+  - _Rozlišitelné skupiny_
+  - _Nerozlišitelné skupiny_
 
 ### Nerozlišitelné objekty do rozlišitelných skupin
 
