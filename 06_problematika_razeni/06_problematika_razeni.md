@@ -23,11 +23,11 @@ Cílem je nalézt permutaci ![\pi \in S_n](https://latex.codecogs.com/svg.latex?
 
 ## Rozlišujeme
 
-a. Postupné rozšřování setříděné části
+a. Postupné rozšiřování setříděné části
 - Selection sort ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
 - Insertion sort ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
 
-b. Záměnu dvojic po sobě jsdoucích prvků
+b. Záměnu dvojic po sobě jdoucích prvků
 - Bubble sort ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
 - Sinking sort ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
 - Shaker ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
@@ -35,10 +35,6 @@ b. Záměnu dvojic po sobě jsdoucích prvků
 c. Divide and Conquer
 - Merge sort ![f(n) \in \mathcal{O}(n \cdot \log_2 n)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%20%5Ccdot%20%5Clog_2%20n%29)
 - Quick sort ![f(n) \in \mathcal{O}(n \cdot \log_2 n)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%20%5Ccdot%20%5Clog_2%20n%29)
-
-d. Sorting by distribution
- - Radix sort
- - Bucket sort
 
 | Anglicky       | Česky             | Nejlepší   | Průměrně   | Nejhorší   | Dodatečná pamět | Stabilní  | Přirozené | Metoda    |
 |----------------|-------------------|------------|------------|------------|-----------------|-----------|-----------|-----------|
@@ -48,51 +44,25 @@ d. Sorting by distribution
 | Merge sort     | Řazení slučováním | O(n log n) | O(n log n) | O(n log n) | O(log n)        | ano       | ano       | slučování |
 | Quicksort      | Rychlé řazení     | O(n log n) | O(n log n) | O(n²)      | O(log n)        | ne        | ne        | záměna    |
 
-[Sorting Algorhitm Animations](http://www.sorting-algorithms.com/)
-
-[Rozbor mnoha algoritmu](https://www.algoritmy.net/article/75/Porovnani-algoritmu)
-
-## a) Rozšřování setříděné části
+## a) Rozšiřování setříděné části
 
 ### Selection Sort
 
 V každém kroku vybere z nesetříděné části nejmenší prvek a vloží nakonec setříděné části.
 
-**Příklad:**
-
-- 6, 5, 2, 4, 8
-- **2**, 5, 6, 4, 8
-- **2**, **4**, 6, 5, 8
-- **2**, **4**, **5**, 6, 8
-- **2**, **4**, **5**, **6**, 8
-- **2**, **4**, **5**, **6**, **8**
+![](SelectionSortNguyen.gif)
 
 ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
-
-![f(n) = f(n - 1) + (n - 1)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%3D%20f%28n%20-%201%29%20&plus;%20%28n%20-%201%29)
-
-- [Řazení výběrem (cs wiki)](https://cs.wikipedia.org/wiki/%C5%98azen%C3%AD_v%C3%BDb%C4%9Brem)
-- [Selection Sort (en wiki)](https://en.wikipedia.org/wiki/Selection_sort)
 
 ### Insertion Sort
 
 Vyberu první prvek z nesetříděné části a zařadím ho na správné místo v setříděné části.
 
-**Příklad:**
-
-- 6, 5, 2, 4, 8
-- **6**, 5, 2, 4, 8
-- **5**, **6**, 2, 4, 8
-- **2**, **5**, **6**, 4, 8
-- **2**, **4**, **5**, **6**, 8
-- **2**, **4**, **5**, **6**, **8**
+![](insertion-sort-o.gif)
 
 v nejhorším případě ... ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
 
 pro téměř seřazenou posloupnost ... ![f(n) \in \mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%29)
-
-- [Řazení vkládáním (cs wiki)](https://cs.wikipedia.org/wiki/%C5%98azen%C3%AD_vkl%C3%A1d%C3%A1n%C3%ADm)
-- [Insertion Sort (en wiki)](https://en.wikipedia.org/wiki/Insertion_sort)
 
 ## b) Záměna dvojic mimo pořadí
 
@@ -100,19 +70,9 @@ pro téměř seřazenou posloupnost ... ![f(n) \in \mathcal{O}(n)](https://latex
 
 Nesetříděnou posloupnost procházím shora dolů a porovnávám dvojice po sobě jdoucích prvků; dvojice mimo pořadí zaměním. Tím se na přední pozici dostane vždy nejmenší prvek.
 
-**Příklad:**
-
-- 6, 5, 2, 4, 8
-- **2**, 6, 5, 4, 8
-- 2, **4**, 6, 5, 8
-- 2, 4, **5**, 6, 8
-- 2, 4, 5, **6**, 8
-- 2, 4, 5, 6, **8**
+![Bubble sort](Sorting_bubblesort_anim.gif)
 
 ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
-
-- [Bubble Sort (cs wiki)](https://cs.wikipedia.org/wiki/Bublinkov%C3%A9_%C5%99azen%C3%AD)
-- [Bubble Sort (en wiki)](https://en.wikipedia.org/wiki/Bubble_sort)
 
 ### Sinking Sort
 
@@ -122,8 +82,7 @@ Stejné jako bubble sort, akorát procházím od zdola nahoru.
 
 Kombinace Bubble Sort a Sinking Sort. Střídá se procházecí pořadí.
 
-- [Koktejlové řazení (cs wiki)](https://cs.wikipedia.org/wiki/Koktejlov%C3%A9_%C5%99azen%C3%AD)
-- [Cocktail Shaker Sort (en wiki)](https://en.wikipedia.org/wiki/Cocktail_shaker_sort)
+![](Sorting_shaker_sort_anim.gif)
 
 ## c) Divide and conquer
 
@@ -133,14 +92,7 @@ Vstupní posloupnost se rekurzivně dělí na dvě poloviny až jsou poslopnosti
 
 ![Ukázka merge sort](06_merge_sort.jpg)
 
-*Ukázka algoritmu merge sort*
-
-![f(n) = 2f(\frac{n}{2}) + n](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%3D%202f%28%5Cfrac%7Bn%7D%7B2%7D%29%20&plus;%20n)
-
 ![f(n) \in \mathcal{O}(n \cdot \log_2 n)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%20%5Ccdot%20%5Clog_2%20n%29)
-
-- [Merge Sort (cs wiki)](https://cs.wikipedia.org/wiki/Merge_sort)
-- [Merge Sort (en wiki)](https://en.wikipedia.org/wiki/Merge_sort)
 
 ### Quick sort
 
@@ -148,11 +100,8 @@ Zvolíme tzv. pivota a posloupnost rozdělíme na dvě části. Jedna z nich obs
 
 ![Ukázka algoritmu quick sort](06_quick_sort.jpg)
 
-*Ukázka algoritmu quick sort*
+![](Quicksort.gif)
 
 složitost v nejhorším případě ... ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
 
 průměrná složitost ... ![f(n) \in \mathcal{O}(n \cdot \log_2 n)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%20%5Ccdot%20%5Clog_2%20n%29)
-
-- [Quick Sort (cs wiki)](https://cs.wikipedia.org/wiki/Quicksort)
-- [Quick Sort (en wiki)](https://en.wikipedia.org/wiki/Quicksort)
