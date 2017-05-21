@@ -1,7 +1,7 @@
 # 05. - Vytvořující funkce
 >Vytvořující funkce (obyčejná, exponenciální), otevřený a uzavřený tvar, základní operace s vytvořujícími funkcemi, vytvořující funkce (uzavřený tvar) základních posloupností, věžové polynomy.
 
-##Obyčejná vytvořující funkce
+## Obyčejná vytvořující funkce
 
 - Vytvořující funkce nám definuje posloupnost 
 - je to tedy jedna z možností zápisu posloupností, ovšem ne všechny posloupnosti lze vyjádřit pomocí vytvořujících funkcí (anebo jdou, ale takoáv funkce bude asi hodně složitá)
@@ -13,7 +13,7 @@
 
 ![](obyc_fce.png)
 
-##Exponenciální vytvořující funkce
+## Exponenciální vytvořující funkce
 
 - Mějme posloupnost reálných čísel ( ![a_n](https://latex.codecogs.com/svg.latex?a_n) ). Exponenciální vytvořující řadou této posloupnosti rozumíme řadu 
 
@@ -26,11 +26,11 @@ Příklad
 
 ![](expo_fce.png)
 
-##Otevřený a uzavřený tvar
+## Otevřený a uzavřený tvar
 
 - vytvořující funkci f(x) lze zapsat v otevřeném a uzavřeném tvaru, převod mezi nimi není vždy jednoduchý
 
-###Otevřený tvar
+### Otevřený tvar
 
 - obecný předpis  ![\sum_{i=0}^{\infty} a_ix^i](https://latex.codecogs.com/svg.latex?%5Csum_%7Bi%3D0%7D%5E%7B%5Cinfty%7D%20a_ix%5Ei)
 
@@ -40,7 +40,7 @@ Příklad
 
 ![\sum_{i=0}^{\infty} i\cdot x^i \Rightarrow 0 \cdot x^0 + 1\cdot x^1 + 2\cdot x^2 +  \dots](https://latex.codecogs.com/svg.latex?%5Csum_%7Bi%3D0%7D%5E%7B%5Cinfty%7D%20i%5Ccdot%20x%5Ei%20%5CRightarrow%200%20%5Ccdot%20x%5E0%20&plus;%201%5Ccdot%20x%5E1%20&plus;%202%5Ccdot%20x%5E2%20&plus;%20%5Cdots)
 
-###Uzavřený tvar
+### Uzavřený tvar
 
 - generuje posloupnost ![a_n](https://latex.codecogs.com/svg.latex?a_n)
 
@@ -50,11 +50,11 @@ Příklad
 
 ![\frac{x}{(1-x)^2} \Rightarrow 0,1,2,3,\dots](https://latex.codecogs.com/svg.latex?%5Cfrac%7Bx%7D%7B%281-x%29%5E2%7D%20%5CRightarrow%200%2C1%2C2%2C3%2C%5Cdots)
 
-##vytvořující funkce (uzavřený tvar) základních posloupností
+## vytvořující funkce (uzavřený tvar) základních posloupností
 
 ![](vytv_fce.png)
 
-##Operace s vytvořujícími funkcemi
+## Operace s vytvořujícími funkcemi
 
 ![f(x) = \sum_{n=0}^{\infty} a_nx^n ; g(x) = \sum_{n=0}^{\infty} b_nx^n](https://latex.codecogs.com/svg.latex?f%28x%29%20%3D%20%5Csum_%7Bn%3D0%7D%5E%7B%5Cinfty%7D%20a_nx%5En%20%3B%20g%28x%29%20%3D%20%5Csum_%7Bn%3D0%7D%5E%7B%5Cinfty%7D%20b_nx%5En)
 
@@ -86,7 +86,7 @@ Příklad
  
 ![a[n] = \frac{f^n(x)}{n!}](https://latex.codecogs.com/gif.latex?a%5Bn%5D%20%3D%20%5Cfrac%7Bf%5En%28x%29%7D%7Bn%21%7D)
 
-##Vežové polynomy
+## Vežové polynomy
 
 - Věžové polynomy jsou polynomy, jejichž koeficienty udávají, kolika různými způsoby lze na daná políčka šachovnice rozmístit určený počet neohrožujících se věží (tzn. žádné 2 věže nesmí být na stejném řádku či sloupci)
 - tuto metodu lze použít k výpočtu počtu kombinací pro jiné (i reálné) problematiky
