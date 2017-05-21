@@ -79,15 +79,6 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
   - Průměrná složitost ![\mathcal{O}(\frac{n}{2})](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Cfrac%7Bn%7D%7B2%7D%29)
   - *Pozn. autora*: Zde to asi nemá význam příliš rozlišovat, jelikož se jedná o stejnou složitost, která se liší pouze konstantou.
 
-### Amortizovaná složitost
-
-**Příklad: dynamické pole**
-
-- Vložení prvku má nejhorší časovou složitost ![\mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%29), protože při přidání prvku může být potřeba zvětšit velikost celého pole
-- Reálně se ovšem po zvětšení pole vložení dalších n prvků nijak nezpomalí
-- **Amortizovaná složitost** "rozpočítá" náročnost n operací mezi n prvků. V tomto případě by došlo n krát k vložení (konstnatní složitost) a k jednomu rozšíření pole (lineární složitost). Tyto složitosti se sečtou a vydělí počtem prvků.
-- Ve výsledku je amortizovaná složitost vkládání do dynamického pole ![\mathcal{O}(1)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%281%29).
-
 ## Úlohy P, NP, NP-úplné
 
 ![Porovnání P, NP, NP-úplných úloh](07_p_np_np_complete.png)
@@ -95,19 +86,19 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
 [Video na youtube](https://www.youtube.com/watch?v=YX40hbAHx3s)
 
 1. Úlohy P (polynomial time)
-  - Úlohy řešitelné v polynomiálním čase ![\mathcal{O}(f(n)) \subset \mathcal{O}(n^k)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28f%28n%29%29%20%5Csubset%20%5Cmathcal%7BO%7D%28n%5Ek%29)
-  - Příklady:
-    - Násobení
-    - Řazení
+    - Úlohy řešitelné v polynomiálním čase ![\mathcal{O}(f(n)) \subset \mathcal{O}(n^k)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28f%28n%29%29%20%5Csubset%20%5Cmathcal%7BO%7D%28n%5Ek%29)
+    - Příklady:
+      - Násobení
+      - Řazení
 
 2. Úlohy NP (non-deterministic polynomial time)
-  - Úlohy, jejichž *řešení lze ověřit v polynomiálním čase*
-  - Patří sem všechny úlohy z P, ale kromě toho i další, které už nepatří do P, např.:
-    - Faktorizace - rozklad na prvočísla (asymetrická kryptografie)
-    - Návrh desek plošných spojů
-    - Problém obchodního cestujícího
+    - Úlohy, jejichž *řešení lze ověřit v polynomiálním čase*
+    - Patří sem všechny úlohy z P, ale kromě toho i další, které už nepatří do P, např.:
+      - Faktorizace - rozklad na prvočísla (asymetrická kryptografie)
+      - Návrh desek plošných spojů
+      - Problém obchodního cestujícího
 
 3. Úlohy NP-úplné
-  - Jsou úlohy, které jsou NP, nejsou P a *lze na ně převést všechny ostatní NP úlohy*
-  - Pokud by se našlo řešení NP-úplné úlohy, které by bylo schopné řešit danou úlohu v polynomiálním čase, znamenalo by to, že ![P = NP](https://latex.codecogs.com/svg.latex?P%20%3D%20NP) (všechny NP úlohy bychom dokázali vyřešit v polynomiálním čase)
-  - Konsenzus je, že ![P \neq NP](https://latex.codecogs.com/svg.latex?P%20%5Cneq%20NP), ale zatím to nebylo dokázáno (jedná se o jeden z [Millenium Prize Problems](https://en.wikipedia.org/wiki/Millennium_Prize_Problems))
+    - Jsou úlohy, které jsou NP, nejsou P a *lze na ně převést všechny ostatní NP úlohy*
+    - Pokud by se našlo řešení NP-úplné úlohy, které by bylo schopné řešit danou úlohu v polynomiálním čase, znamenalo by to, že ![P = NP](https://latex.codecogs.com/svg.latex?P%20%3D%20NP) (všechny NP úlohy bychom dokázali vyřešit v polynomiálním čase)
+    - Konsenzus je, že ![P \neq NP](https://latex.codecogs.com/svg.latex?P%20%5Cneq%20NP), ale zatím to nebylo dokázáno (jedná se o jeden z [Millenium Prize Problems](https://en.wikipedia.org/wiki/Millennium_Prize_Problems))
