@@ -6,8 +6,6 @@ Operační systém je základní programové vybavení počítače, které je za
 
 ![Operační systém](13_os.png)
 
-*Operační systém*
-
 **Požadavky na OS:**
 
 - Rychlost
@@ -22,26 +20,26 @@ Operační systém je základní programové vybavení počítače, které je za
 ### Funkce operačního systému
 
 - **Správa programů (procesů)**
- - Zavedení do paměti, přidělení paměti, spuštění
- - Přidělování zdrojů a procesového času
- - Ukončení a uvolnění zdrojů
- - Dobré rozhraní pro programátora
- - Správa paměti
- - Přidělování operační paměti
- - Práce s úložišti
+  - Zavedení do paměti, přidělení paměti, spuštění
+  - Přidělování zdrojů a procesového času
+  - Ukončení a uvolnění zdrojů
+  - Dobré rozhraní pro programátora
+  - Správa paměti
+  - Přidělování operační paměti
+  - Práce s úložišti
 - **I/O operace**
- - Jednotný přístup k souborům a zařízením
- - Ochrana před kolizí a nekonzistencí dat
+  - Jednotný přístup k souborům a zařízením
+  - Ochrana před kolizí a nekonzistencí dat
 - **Manipulace se soubory**
- - Prostřednictvím souborového systému přístup k souborům v úložištích
- - Ochrana před kolizí a nekonzistencí
- - Bezpečnost přístupu
+  - Prostřednictvím souborového systému přístup k souborům v úložištích
+  - Ochrana před kolizí a nekonzistencí
+  - Bezpečnost přístupu
 - **Komunikační služby**
- - Zajištění komunikace mezi spuštěnými programy
- - Např.: sdílení paměti nebo zasílání zpráv
+  - Zajištění komunikace mezi spuštěnými programy
+  - Např.: sdílení paměti nebo zasílání zpráv
 - **Detekce chyb a obnova**
- - Odchycení HW chyb (nedostatek papíru v tiskárně) i SW chyb (dělení nulou)
- - Správná odpověď na každý typ chyby, programy jen předávají chybové hlášení
+  - Odchycení HW chyb (nedostatek papíru v tiskárně) i SW chyb (dělení nulou)
+  - Správná odpověď na každý typ chyby, programy jen předávají chybové hlášení
 
 ### Základní části operačního systému
 
