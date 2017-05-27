@@ -302,6 +302,6 @@ Pro dešifrování pak:
 
 ### Asymetrická kryptografie v praxi
 
-![Asymetrická kryptografie v praxi](_ras.gif)
+![Asymetrická kryptografie v praxi](_rsa.gif)
 
 *Asymetrická kryptografie  v praxi*
