@@ -15,7 +15,7 @@
 
 Kraftova nerovnost je věta užívaná v teorii kódování. Udává omezení na délky kódových slov, které musí splňovat daný kód, aby mohl být kódem prefixovým. Zobecnění Kraftovy nerovnosti pro libovolný jednoznačně dekódovatelný kód se pak nazývá McMillanova věta.
 
-Matematicky lze Kraftovu nerovnost formulovat takto: Uvažujme \scriptstyle D-znakový prefixový kód kódující  r různých zpráv pomocí kódových slov délek ![l_1, l_2, \ldots, l_r ](https://latex.codecogs.com/svg.latex?l_1%2C%20l_2%2C%20%5Cldots%2C%20l_r). Pak musí být splněna nerovnost
+Matematicky lze Kraftovu nerovnost formulovat takto: Uvažujme D-znakový prefixový kód kódující  r různých zpráv pomocí kódových slov délek ![l_1, l_2, \ldots, l_r ](https://latex.codecogs.com/svg.latex?l_1%2C%20l_2%2C%20%5Cldots%2C%20l_r). Pak musí být splněna nerovnost
 
 ![](pic1.png)
 
@@ -28,8 +28,6 @@ McMillanova věta je tvrzení z oblasti teorie informace, které dává do vztah
 Délky slov ![l_i](https://latex.codecogs.com/svg.latex?l_i) libovolného jednoznačně dekódovatelného D-znakového kódu splňují nerovnost
 
 ![](pic2.png)
-
->Pozn: Číslo D tedy představuje počet znaků, pomocí nichž kódujeme zprávy přicházející ze zdroje, pro binární kód je D = 2, což odpovídá znakům 0 a 1. Po zakódování takovýmto kódem tedy z dané zprávy dostaneme posloupnost nul a jedniček. Pro ternární kódy máme D = 3 (tj. znaky 0, 1, 2) atd. Čísla ![l_1, l_2, \ldots](https://latex.codecogs.com/svg.latex?l_1%2C%20l_2%2C%20%5Cldots) pak označují délky jednotlivých kódových slov. To znamená, máme-li danou i-tou zprávu, tak ![l_i](https://latex.codecogs.com/svg.latex?l_i) udává počet znaků v posloupnosti použité pro zakódování této zprávy, např. pro \scriptstyle i-tou zprávu, jejíž kódové slovo je 00101, je ![l_i](https://latex.codecogs.com/svg.latex?l_i) = 5 .
 
 #### Komprese dat
 
@@ -47,7 +45,6 @@ Délky slov ![l_i](https://latex.codecogs.com/svg.latex?l_i) libovolného jednoz
 
 - je prefixový kód, který má ze všech prefixových kódů dané zdrojové abecedy nejkratší střední délku kódového slova
 - algoritmy snažící se bezztrátově zredukovat velké množství informace
-- RLE Run lenght encoding – opakování znaků 
 - Statistické metody
 	- Huffmanovo kódování
 	- Aritmetické kódování
@@ -61,35 +58,6 @@ Délky slov ![l_i](https://latex.codecogs.com/svg.latex?l_i) libovolného jednoz
 
 - Použití: zřídka pro kompresi textů, častěji pro obrazovou informaci
 - Princip: opakující se symboly se kódují dvojicí (počet opakování , symbol)
-- Na výstupní stream se pak často aplikuje některá ze statistických metod (velmi rozdílná pravděpodobnost hlavně u počtu opakování)
-- pro jaké obrázky RLE výhodné?
-	- obrázek s mnoha vodorovnými čarami
--  pro jaké obrázky RLE neefektivní?
-	-   obrázek se svislými čarami 
-	- obrázek, kde se neopakují hodnoty sousedních pixelů (např. šachovnice)
-	-  může nastat i případ „záporné komprese“ → zvětšení výsledného souboru 
-
-**Příklad: znakový řetězec AAAAFFFFCHHH**
-
-*Kódování:*
-
-1. Postupně čteme znaky na vstupu a ukládáme si počet jejich opakování.
-2. Když se znak změní, zapíšeme na výstup hodnotu čítače a opakovaný znak.
-3. Čítač resetujeme na jedničku a pokračujeme pro nový znak od opět od bodu jedna.
-
-| A | A | A |  A | F | F | F |  F |  C | H | H |  H |
-|:-:|:-:|:-:|:--:|:-:|:-:|:-:|:--:|:--:|:-:|:-:|:--:|
-|   |   |   | 4A |   |   |   | 4F | 1C |   |   | 3H |
-
-Výsledek: AAAAFFFFCHHH (12 znaků) => **4A4F1C3H** (8 znaků)
-
-Kompresní poměr: (nová délka) / (stará délka) = 8 / 12 = 0.66 => **66%**
-
-*Dekódování:*
-
-Postup dekódování je obdobný, čteme vstup a jakmile narazíme na číslo tak ho přepíšeme jako rozvinutý tvar opakujících se znaků za číslem.
-
-_Tento postup není specifický pro textové soubory, lze ho s úpravami aplikovat i pro binární reprezentaci._
 
 ### Huffmanův minimální kód  
 
@@ -143,8 +111,6 @@ Kompresní poměr: (nový počet bitů) / (původní počet bitů) = 23 / 88 = 0
 	- pomocí tabulky zjistíme poměrné rozdělení jednotlivých znaků a následně z daného racionálního čísla sestavíme řetězec
 
 ![ukazka aritm. kod](aritm_kod.png)
-
-![ukazka aritm. kod2](aritm_kod2.png)
 
 ##### Komprese
 
