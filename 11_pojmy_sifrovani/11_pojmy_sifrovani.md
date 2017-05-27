@@ -292,16 +292,10 @@ Pro dešifrování pak:
 
 - dešifruj(855) = 855^2753 mod 3233 = 123
 
-## Extra
-
-### Elektronický podpis
-
-![Elektronický podpis](11_elektronicky_podpis.png)
-
-*Elektronický podpis*
-
 ### Asymetrická kryptografie v praxi
 
 ![Asymetrická kryptografie v praxi](_rsa.gif)
 
-*Asymetrická kryptografie  v praxi*
+### Elektronický podpis
+
+![Elektronický podpis](11_elektronicky_podpis.png)
