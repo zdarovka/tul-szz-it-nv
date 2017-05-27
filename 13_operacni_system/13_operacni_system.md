@@ -75,7 +75,7 @@ Typicky má procesor dva režimy provozu:
 
 ### Kernel
 
-- Pracuje v nechráněném režimu. (chráněné režimy jsou funkcí procesoru)
+- Pracuje v nechráněném režimu.
 - Přiděluje a spravuje paměť.
 - Přiděluje procesorový čas – řídí procesy.
 - Ovládá HW zařízení, přiděluje HW aplikacím.
@@ -99,8 +99,6 @@ Typicky má procesor dva režimy provozu:
    - Teoreticky spojuje výhody obour.
  
  ![Typy jader](13_jadro.png)
- 
-*Typy jader*
 
 ### Přerušení
 Událost, která nastává nahodile a asynchronně vzhledem k procesorovému času, probíhajícímu výpočtu a hodinovému taktu. Při vzniku události je přerušen stávající výpočet, vyřešena událost a následně je výpočet obnoven.
@@ -110,24 +108,24 @@ Během přerušení dochází ke změně **kontextu**. Kontext je vše, co potř
 **Změna IP (instruction pointeru):**
 
 - **Skok (nedochází ke změně kontextu)**
- - podmíněný
- - nepodmíněný
+  - podmíněný
+  - nepodmíněný
 - **Přerušení (dochází k zálohování kontextu)**
 
 **Zdroje přerušení:**
 
 - **Vnější (hardwarové)**
- - *Řadič přerušení*, obvod budí procesor a stanovuje důležitost přerušení.
- - *Maskovatelné přerušení* lze za chodu systému zakázat a ignorovat.
- - *Nemaskovatelné přerušení* nastává vždy a ignorovat jej nelze (například reset).
+  - *Řadič přerušení*, obvod budí procesor a stanovuje důležitost přerušení.
+  - *Maskovatelné přerušení* lze za chodu systému zakázat a ignorovat.
+  - *Nemaskovatelné přerušení* nastává vždy a ignorovat jej nelze (například reset).
 - **Vnitřní (procesorové)**
- - Obsloužení chyb výpočtu
- - Dáno procesorem: u „intelů“ např. dělení nulou, problémy s pamětí, chyba koprocesoru
+  - Obsloužení chyb výpočtu
+  - Dáno procesorem: u „intelů“ např. dělení nulou, problémy s pamětí, chyba koprocesoru
 - **Softwarové**
- - Vyvoláno programově instrukcí pro přerušení (Intel: INT n)
- - Probíhá synchronně s taktem procesoru
- - Slouží zejména k volání služeb OS = systémová volání a přechod mezi chráněným a nechráněným režimem
- - Ve srovnání s podprogramy má pevnou adresu pro obslužnou rutinu
+  - Vyvoláno programově instrukcí pro přerušení (Intel: INT n)
+  - Probíhá synchronně s taktem procesoru
+  - Slouží zejména k volání služeb OS = systémová volání a přechod mezi chráněným a nechráněným režimem
+  - Ve srovnání s podprogramy má pevnou adresu pro obslužnou rutinu
 
 **Obsluha přerušeni**
 
@@ -166,14 +164,14 @@ proti přepsání.
 - **Stavové registry** – cca 10 – 50, vnitřní paměťové buňky procesoru, uchovávají informaci o kontextu
 - **Datové registry** – dle typu procesoru – cca 10 – 50, slouží k výpočtům a zpracování dat při vykonávání instrukce; vypovídají o „síle“ procesoru
 - **Cache** – vyrovnávací paměť mezi vnější pamětí a registry; snižuje zpoždění způsobené přístupem do vnější paměti
- - Velikost od 10k do řádově jednotek MB (64bitové procesory, nová jádra)
- - L1, L2, L3: úrovně (level 1, level 2, ...): čím nižší úroveň, tím je paměť rychlejší a zároveň menší; L1 je v jádře procesoru a na jeho frekvenci, L2 někdy ano, někdy ne
+  - Velikost od 10k do řádově jednotek MB (64bitové procesory, nová jádra)
+  - L1, L2, L3: úrovně (level 1, level 2, ...): čím nižší úroveň, tím je paměť rychlejší a zároveň menší; L1 je v jádře procesoru a na jeho frekvenci, L2 někdy ano, někdy ne
 - **Vnitřní paměť** – RAM:
- - Operační paměť: zde probíhají všechny „operace“; zde je uloženo vše, s čím spuštěný OS pracuje; zde OS aplikuje svou správu paměti.
- - Základní vlastnost: po odpojení napájení data mizí
+  - Operační paměť: zde probíhají všechny „operace“; zde je uloženo vše, s čím spuštěný OS pracuje; zde OS aplikuje svou správu paměti.
+  - Základní vlastnost: po odpojení napájení data mizí
 - **Vnější paměť** – trvalá úložiště – disky, CD, DVD, flash…
- - Obrovské kapacity, ale nejmenší přístupová rychlost
- - Slouží jen jako zdroj dat, případně jako „odkladiště“ čekajících procesů
+  - Obrovské kapacity, ale nejmenší přístupová rychlost
+  - Slouží jen jako zdroj dat, případně jako „odkladiště“ čekajících procesů
 
 
 ### Metody správy paměti
