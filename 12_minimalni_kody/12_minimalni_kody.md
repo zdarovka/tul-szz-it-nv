@@ -2,7 +2,7 @@
 
 > Minimální kódy, princip, použití, konstrukce Huffmanova kódu, aritmetické kódy
 
-###Kódování
+### Kódování
 
 - Kódování je proces transformace dat (např. pomocí speciální znakové tabulky) do podoby definované příslušným kódovacím algoritmem, za účelem prevence ztráty (či znehodnocení) dat při přenosu nebo snížení celkového objemu dat apod.
 
@@ -11,7 +11,7 @@
 - **zmenšení objemu** přenášené zprávy ( *kompresní kódy* - minimální(huffmanův kód), aritmetické, slovníkové)
 - **zabezepečení** zprávy proti chybám (*opravné kódy* - CRC, Hamming, Paritní bit)
 
-###Kraftova nerovnost
+### Kraftova nerovnost
 
 Kraftova nerovnost je věta užívaná v teorii kódování. Udává omezení na délky kódových slov, které musí splňovat daný kód, aby mohl být kódem prefixovým. Zobecnění Kraftovy nerovnosti pro libovolný jednoznačně dekódovatelný kód se pak nazývá McMillanova věta.
 
@@ -21,7 +21,7 @@ Matematicky lze Kraftovu nerovnost formulovat takto: Uvažujme \scriptstyle D-zn
 
 Naopak, pokud přirozená čísla ![l_1, l_2, \ldots, l_r ](https://latex.codecogs.com/svg.latex?l_1%2C%20l_2%2C%20%5Cldots%2C%20l_r) splňují výše uvedenou nerovnost, tak existuje prefixový kód s D znaky a délkami kódových slov ![l_1, l_2, \ldots, l_r ](https://latex.codecogs.com/svg.latex?l_1%2C%20l_2%2C%20%5Cldots%2C%20l_r).
 
-####McMillanova věta
+#### McMillanova věta
 
 McMillanova věta je tvrzení z oblasti teorie informace, které dává do vztahu délky kódových slov jednoznačně dekódovatelných kódů. Jedná se o zobecnění Kraftovy nerovnosti, která je primárně dokázána pro prefixové kódy (ty tvoří podmnožinu množiny jednoznačně dekódovatelných kódů). Větu lze vyslovit v následujícím znění:
 
@@ -31,19 +31,19 @@ Délky slov ![l_i](https://latex.codecogs.com/svg.latex?l_i) libovolného jednoz
 
 >Pozn: Číslo D tedy představuje počet znaků, pomocí nichž kódujeme zprávy přicházející ze zdroje, pro binární kód je D = 2, což odpovídá znakům 0 a 1. Po zakódování takovýmto kódem tedy z dané zprávy dostaneme posloupnost nul a jedniček. Pro ternární kódy máme D = 3 (tj. znaky 0, 1, 2) atd. Čísla ![l_1, l_2, \ldots](https://latex.codecogs.com/svg.latex?l_1%2C%20l_2%2C%20%5Cldots) pak označují délky jednotlivých kódových slov. To znamená, máme-li danou i-tou zprávu, tak ![l_i](https://latex.codecogs.com/svg.latex?l_i) udává počet znaků v posloupnosti použité pro zakódování této zprávy, např. pro \scriptstyle i-tou zprávu, jejíž kódové slovo je 00101, je ![l_i](https://latex.codecogs.com/svg.latex?l_i) = 5 .
 
-####Komprese dat
+#### Komprese dat
 
 - algoritmy pro snížení objemu dat
 	- ztrátová komprese (např. jpeg)
 	- bezztrátová komprese (minimální kódy)
 
-####Prefixový kód
+#### Prefixový kód
 
 - žádné kódové slovo není prefixem jiného kódového slova
 - každý prefixový kód je jednoznačně dekódovatelný
 - lze je dekódovat znak po znaku(průběžně)
 
-##Minimální(nejkratší) kód
+## Minimální(nejkratší) kód
 
 - je prefixový kód, který má ze všech prefixových kódů dané zdrojové abecedy nejkratší střední délku kódového slova
 - algoritmy snažící se bezztrátově zredukovat velké množství informace
@@ -57,7 +57,7 @@ Délky slov ![l_i](https://latex.codecogs.com/svg.latex?l_i) libovolného jednoz
 	- LZ78
 	- LZW (GIF) 
 
-###RLE
+### RLE
 
 - Použití: zřídka pro kompresi textů, častěji pro obrazovou informaci
 - Princip: opakující se symboly se kódují dvojicí (počet opakování , symbol)
@@ -91,7 +91,7 @@ Postup dekódování je obdobný, čteme vstup a jakmile narazíme na číslo ta
 
 _Tento postup není specifický pro textové soubory, lze ho s úpravami aplikovat i pro binární reprezentaci._
 
-###Huffmanův minimální kód  
+### Huffmanův minimální kód  
 
 - též známé jako prefixový kód
 - využívá optimálního (nejkratšího) prefixového kódu  (kód žádného znaku není 
@@ -100,7 +100,7 @@ prefixem jiného znaku).
 znaků v kódovaném souboru a kódování znaků s největší četností 
 slovem s nejkratší délkou. 
 
-#####Algoritmus kódování: 
+##### Algoritmus kódování: 
 
 1. Zjištění četnosti jednotlivých znaků v kódovaném souboru (nebo absolutní počet) 
 2. Vytvoření binárního stromu (Huffmanova kódu jednotlivých znaků) 
@@ -136,7 +136,7 @@ Kompresní poměr: (nový počet bitů) / (původní počet bitů) = 23 / 88 = 0
 
 *Výsledek je distribuován spolu s tabulkou kódu, díky prefixovosti je pak možné řetězec jednoznačné rekonstruovat opětovným přepsáním zpět.*
 
-###Aritmetické kódování
+### Aritmetické kódování
 
 - Aritmetické kódování reprezentuje zprávu jako podinterval intervalu <0,1)
 - Výstupem je jedno racionální číslo a tabulka četností
@@ -146,7 +146,7 @@ Kompresní poměr: (nový počet bitů) / (původní počet bitů) = 23 / 88 = 0
 
 ![ukazka aritm. kod2](aritm_kod2.png)
 
-#####Komprese
+##### Komprese
 
 - zjistíme pravděpodobnostní rozdělení jednotlivých znaků
 	- pomocí toho sestrojíme intervaly v rozmezi <0;1)
@@ -164,26 +164,26 @@ Konkrétní číslo se pak vybírá takové, aby šlo zapsat pomocí co nejmén�
 
 - vybrané číslo se spolu s pravděpodobnostní tabulkou uloží (to je výsledek aritmetické komprese)
 
-#####Dekomprese
+##### Dekomprese
 
 - Postupuje se podobně, rozdělíme nejdřív interval <0;1), podle toho do kterého intervalu dané číslo spadá, takový je první znak atd.
  
 
-##Extra
+## Extra
 
 ![bezp. kod](bezp_kody.png)
 
-###Paritní bit
+### Paritní bit
 
 - lichá parita - kontrolní bit doplní jedničku(nebo nulu) tak, aby byl v daném řádku (či sloupci) lichý počet jedniček
 - sudá parita - kontrolní bit doplní jedničku(nebo nulu) tak, aby byl v daném řádku (či sloupci) sudý počet jedniček
 
-###Hammingův bezpečnostní kód
+### Hammingův bezpečnostní kód
 
 - rozšířený hammingův kód (8,4) je schopný detekovat 2 chyby a opravit 1 chybu
 - hammingův kód (7,4) je schopný opravit 1 chybu
 
-####Kódování
+#### Kódování
 
 Zakódovaný řetězec pro 5 informačních bitů (a je informační bit) je ve tvaru \
 ![B = p_1p_2a_1p_3a_2a_3a_4p_4a_5](https://latex.codecogs.com/svg.latex?B%20%3D%20p_1p_2a_1p_3a_2a_3a_4p_4a_5)
@@ -196,7 +196,7 @@ Zakódovaný řetězec pro 5 informačních bitů (a je informační bit) je ve 
 - ... 
 - tedy první paritní bit se počítá jako XOR bitů na lichých pozicích 3,5,7,9... apod.
 
-####Dekódování
+#### Dekódování
 
 - vypočítá se tzv. Syndromový vektor, kde je jeho jednotlivé prvky vypočítají podobně jako paritní bity při kódování
 	- vektor je stejně dlouhý jako počet paritních bitů, které byly použity při jeho zakódování
@@ -208,7 +208,7 @@ Zakódovaný řetězec pro 5 informačních bitů (a je informační bit) je ve 
 **Rozšířený Hammingův kód**
 - pokud je přidán celkový bit parity, tak je kód schopen detekovat (nikoli opravit) 2 chyby
   
-###CRC bezpečnostní kód (Cyclic redundancy check)
+### CRC bezpečnostní kód (Cyclic redundancy check)
 
 - cyklické kódy vychází z polynomu
 - slouží k detekci chyb, ale neupravují je
