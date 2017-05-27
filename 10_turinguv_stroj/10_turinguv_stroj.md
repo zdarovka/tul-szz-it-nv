@@ -3,7 +3,7 @@
 
 ## Turingův stroj
 - Teoretický model počítače popsaný matematikem Alanem Turingem
-- Lze pomocí něj implementovat libovolný algoritmus (algoritmus a TS stroj často chápáno jako synonymum)
+- Lze pomocí něj implementovat libovolný algoritmus (algoritmus a TS často chápáno jako synonymum)
 - V porovnání s KA je to silnější nástroj
 - Rozpoznává jazyky typu 0
 - Stejně složité úlohy jsou schopny řešit i Postovy stroje nebo Konečné stroje se dvěma a více zásobníky
@@ -35,20 +35,11 @@
 
 **Výsledek činnosti Turingova stroje:**
 
-  - **Akceptování** (AKC) - (přijetím) slova w (ANO)
-   - dosáhne-li stroj stavu STOP (koncového) a výpočet pak končí
-  - **Zamítnutí** (ZAM) - slova w (NE)
-   - hlava je nad nejlevějším polem a je dán příkaz pohybu vlevo-
-   - dosáhne-li výpočet jistého stavu odkud nevede cesta pro právě přečtený symbol
+  - **Akceptování slova w** (AKC) - dosáhne li stroj konečného přijímacího stavu
+  - **Zamítnutí slova w** (ZAM) - dosáhne li stroj konečného zamítacího stavu nebo není definován stav pro daný přechod
   - **Cyklování** (CYK) - znamená, že se stroj dostal do cyklu, kdy se periodicky opakuje jeho činnost bez možnosti zastavení.
 
 Turingovy stroje lze považovat za **ekvivaletní**, pokud **akceptují stejná slova**.
-
-**Turingův stroj lze považovat za:**
-
-  1. **AKCEPTOR** - akceptuje rekurzívní nebo rekurzivně spočetné množiny.
-  2. **GENERÁTOR** - vyčísluje totálně rekurzívní nebo částečně rekurzívní funkce.
-  3. **ALGORITMUS** - rozhoduje nebo částečně rozhoduje třídu problémů typu ano/ne.
 
 **Formální definice:**
 
@@ -68,7 +59,7 @@ Máme třídu problémů na které lze odpovědět ANO/NE a k nim odpovídajíc�
 
 ### Totálně rozhodnutelné problémy
 
-Třída problému je **totálně rozhodnutelná** právě tehdy, když existuje TS A, který pro všechny problémy z dané třídy zastaví svoji činnost a vydá odpověď (AKC/ZAM), tedy **nikdy necykluje**.
+Třída problému je **totálně rozhodnutelná** právě tehdy, když existuje TS, který pro všechny problémy z dané třídy zastaví svoji činnost a vydá odpověď (AKC/ZAM), tedy **nikdy necykluje**.
 
 Příklad:
   - Problém ekvivalence automatů
@@ -78,10 +69,10 @@ Pokud je třída problémů *totálně rozhodnutelná*, tak je i *parciálně ro
 
 ### Parciálně rozhodnutelné problémy
 
-- Třída problémů je **parciálně rozhodnutelná** právě tehdy, když existuje TS A, který:
+- Třída problémů je **parciálně rozhodnutelná** právě tehdy, když existuje TS, který:
 
-  - je-li odpověď na daný problém ANO, tak zastaví **akceptováním** AKC(A),
-  - je-li odpověď na daný problém NE, tak buď zastaví **zamítnutím** ZAM(A) nebo **cykluje** CYK(A)
+  - je-li odpověď na daný problém ANO, tak zastaví **akceptováním** AKC,
+  - je-li odpověď na daný problém NE, tak buď zastaví **zamítnutím** ZAM nebo **cykluje** CYK
 
 Příklad:
    - *problém zastavení* TS je parciálně rozhodnutelný
@@ -91,7 +82,7 @@ Pokud jsou obě třídy problémů ![\mathcal{P}, \overline{{\mathcal{P}}}](http
 *Poznámka:* Existují i problémy, které nejsou ani parciálně rozhodnutelné, např. problém **ne**zastavení TS.
 
 ## Problém zastavení
->Existuje takový Turingův stroj, který do dokázal rozhodnout, zda pro libovolný TS M a vstupní slovo w stroj M zastaví?
+>Existuje takový Turingův stroj, který by dokázal rozhodnout, zda pro libovolný TS M a vstupní slovo w stroj M zastaví?
 
 **Takový TS neexistuje**, problém zastavení pro Turingovy stroje je nerozhodnutelný.
 
@@ -106,7 +97,7 @@ Na vstupu je kód stroje M a slovo w. Tento TS ukončí činnost akceptováním,
 TS A rozšíříme na TS B tak, že:
 - vstupem bude pouze kód stroje a ten bude zároveň i vstupním slovem,
 - stroj B bude cyklovat právě tehdy, když stroj A skončí akceptováním (když stroj M zastaví),
-- stroj B zastaví, pokud stroj A skončí zatítnutím (a tedy stroj M cykluje).
+- stroj B zastaví, pokud stroj A skončí zamítnutím (a tedy stroj M cykluje).
 
 ![Halting problem B](10_halting_problem_B.jpg)
 
