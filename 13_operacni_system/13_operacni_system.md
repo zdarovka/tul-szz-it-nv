@@ -221,13 +221,13 @@ Aby systém fungoval jak má, je nutné, aby současně zpracovával více proce
 
 ### Strategie rozhodování o spuštění procesů 
 
-1. **Dlouhodobá** - při pokusu o spuštění programu se zjišťuje, zda byl vytvořen proces; určuje počet současně běžících procesů
-2. **Střednědobá** - ve všech systémech s virtuální pamětí; odklad procesů do záložní paměti; odstraňovány jsou dlouhodobě nespuštěné nebo s nízkou prioritou
-3. **Krátkodobá** - s časovým rámcem se vyhodnocuje, jaký proces bude běžící; řídí se i přepínání procesů při přerušení
- 1. FIFO, FCFS - first come first server; procesy se řadí ve frontě; přidělování procesoru vždy na zásobník - dlouhé odezvy; bez priorit, jednoduché
- 2. SJF, SRT - nejkratší očekávaný úsek; přednost mají kratší ůlohy nebo ty, které nevyužijí celé časové kvantum; odhad dle minulé činnosti; dobrá průchodnost nečeká se na ukončení dlouhých úloh
- 3. Preemptivní plánování s prioritou - řazení do fronty dle důležitosti; proces s nízkou důležitostí může být přerušen procesem s vyšší důležitostí; mohou i čekat pokud je více procesů s vyšší prioritou
- 4. Round Robin - cyklická obsluha; úlohy jsou cyklicky střídány; rychlá odezva; doba závisí pouze na počtu spuštěných procesů; rychlé procesy jsou dokončeny dříve než FCFS, delší dříve než SJF
+- **Dlouhodobá** - při pokusu o spuštění programu se posuzuje, zda bude vůbec vytvořen proces; určuje počet současně běžících procesů
+- **Střednědobá** - ve všech systémech s virtuální pamětí; odklad procesů do záložní paměti; odstraňovány jsou dlouhodobě nespuštěné nebo s nízkou prioritou
+- **Krátkodobá** - s časovým rámcem se vyhodnocuje, jaký proces bude běžící; řídí se i přepínání procesů při přerušení
+  - **FIFO, FCFS** - first come first server; procesy se řadí ve frontě; přidělování procesoru vždy na zásobník - dlouhé odezvy; bez priorit, jednoduché
+  - **SJF, SRT** - nejkratší očekávaný úsek; přednost mají kratší ůlohy nebo ty, které nevyužijí celé časové kvantum; odhad dle minulé činnosti; dobrá průchodnost nečeká se na ukončení dlouhých úloh
+  - **Preemptivní plánování s prioritou** - řazení do fronty dle důležitosti; proces s nízkou důležitostí může být přerušen procesem s vyšší důležitostí; mohou i čekat pokud je více procesů s vyšší prioritou
+  - **Round Robin** - cyklická obsluha; úlohy jsou cyklicky střídány; rychlá odezva; doba závisí pouze na počtu spuštěných procesů; rychlé procesy jsou dokončeny dříve než FCFS, delší dříve než SJF
 
 ### Stavy procesu
 
@@ -237,12 +237,10 @@ Aby systém fungoval jak má, je nutné, aby současně zpracovával více proce
 - **Ukončený proces** (terminated) zůstává v paměti, dokud není vymazán, ale už nedostane přidělen procesor; není-li vymazán, stává se z procesu zombie.
 - **Blokovaný proces** (blocked) čeká na nějaký další zdroj (vstup uživatele, čtení ze souboru). Až se dočká, převede jej správce procesů do stavu čekajícího procesu.
 - Procesy, které nebyly dlouho aktivní, jsou odsunuty do záložní paměti:
- - **Odložený a čekající** (swapped and waiting)
- - **Odložený a blokovaný** (swapped and blocked)
+  - **Odložený a čekající** (swapped and waiting)
+  - **Odložený a blokovaný** (swapped and blocked)
 
 ![Stavy procesu](13_stavy_procesu.png)
-
-*Stavy procesu*
 
 ### Komunikace mezi procesy
 
@@ -257,19 +255,19 @@ Operační systém poskytuje **abstrakci** přístupu k hardware, ke kterému p�
 ### Typy zařízení
 
 - **Znaková (character devices):**
- - K zařízení lze přistupovat jako ke proudu (stream) znaků.
- - Narozdíl od souboru je zařízení většinou tunel, do nějž a z nějž čerpáme data.
- - Ovladač většinou podporuje systémová volání open, close, read, write.
- - Příklad: terminály v Linuxu, klávesnice, myš, tiskárna.
+  - K zařízení lze přistupovat jako ke proudu (stream) znaků.
+  - Narozdíl od souboru je zařízení většinou tunel, do nějž a z nějž čerpáme data.
+  - Ovladač většinou podporuje systémová volání open, close, read, write.
+  - Příklad: terminály v Linuxu, klávesnice, myš, tiskárna.
 - **Bloková (block devices):**
- - Zařízení se jeví jako souborový systém.
- - Podporovaná volání různá dle OS. (Např. Unix jen přesouvání bloků dat, Linux podobné operace jako znaková zařízení.)
- - Rozdíl oproti znakovým zařízením zejména v rozhraní mezi zařízením a jádrem (správa dat).
- - Příklad: Magnetické disky, CD a spol., flash…
+  - Zařízení se jeví jako souborový systém.
+  - Podporovaná volání různá dle OS. (Např. Unix jen přesouvání bloků dat, Linux podobné operace jako znaková zařízení.)
+  - Rozdíl oproti znakovým zařízením zejména v rozhraní mezi zařízením a jádrem (správa dat).
+  - Příklad: Magnetické disky, CD a spol., flash…
 - **Síťová (network interfaces, devices):**
- - Přijímají a vysílají datové pakety.
- - Umožňují výměnu dat s jinými systémy.
- - Lze realizovat s pomocí HW (karta) nebo SW (loopback).
+  - Přijímají a vysílají datové pakety.
+  - Umožňují výměnu dat s jinými systémy.
+  - Lze realizovat s pomocí HW (karta) nebo SW (loopback).
 
 ### Požadované vlastnosti
 
@@ -288,36 +286,36 @@ Operační systém poskytuje **abstrakci** přístupu k hardware, ke kterému p�
 **Ovladače dělíme na:**
 
 - **Producent**
- - Logická vrstva směrem k OS.
- - Přebírá data od procesů a řadí je do fronty.
- - Závislá jen na typu zařízení, ale ne na HW.
- - Může být obecná pro více zařízení („klávesnice“, „tiskárna“ apod.).
+  - Logická vrstva směrem k OS.
+  - Přebírá data od procesů a řadí je do fronty.
+  - Závislá jen na typu zařízení, ale ne na HW.
+  - Může být obecná pro více zařízení („klávesnice“, „tiskárna“ apod.).
 - **Konzument**
- - Fyzická vrstva směrem k zařízení (přímá komunikace se zařízením)
- - Odbavuje frontu směrem k zařízení.
- - Závislé na typu HW.
+  - Fyzická vrstva směrem k zařízení (přímá komunikace se zařízením)
+  - Odbavuje frontu směrem k zařízení.
+  - Závislé na typu HW.
 
 **Ovladač obstarává:**
 
 - **Inicializace:**
- - Slouží k zavedení zařízení do OS.
- - Používá se při startu OS, při zapnutí zařízení nebo při aktualizaci jeho nastavení.
+  - Slouží k zavedení zařízení do OS.
+  - Používá se při startu OS, při zapnutí zařízení nebo při aktualizaci jeho nastavení.
 - **Připoj zařízení:**
- - Pro zařízení typu plug and play.
+  - Pro zařízení typu plug and play.
 - **Ovládání zařízení:**
- - Zápis a čtení dat, jiné I/O operace, vlastní práce zařízení.
+  - Zápis a čtení dat, jiné I/O operace, vlastní práce zařízení.
 - **Start I/O:**
- - Slouží k zahájení (a ukončení) přenosu dat do a ze zařízení.
+  - Slouží k zahájení (a ukončení) přenosu dat do a ze zařízení.
 - **Obsluha přerušení:**
- - Používá se, pokud zařízení pracuje v přerušení.
+  - Používá se, pokud zařízení pracuje v přerušení.
 - **Zrušení operace:**
- - Obnova při zrušení I/O operace z libovolného důvodu.
+  - Obnova při zrušení I/O operace z libovolného důvodu.
 - **Rychlý průchod:**
- - Umožní realizovat I/O rychleji něž při komunikaci se zařízením - např. čtením souboru z cache namísto z disku.
+  - Umožní realizovat I/O rychleji něž při komunikaci se zařízením - např. čtením souboru z cache namísto z disku.
 - **Oznámení o vypnutí:**
- - Při oznámení vypnutí systému se může řadič korektně ukončit.
+  - Při oznámení vypnutí systému se může řadič korektně ukončit.
 - **Záznam chyb:**
- - Zaznamenává chyby a může o nich informovat I/O subsystém.
+  - Zaznamenává chyby a může o nich informovat I/O subsystém.
 
 ![Ovladače zařízení](13_ovladace_zarizeni.png)
 
