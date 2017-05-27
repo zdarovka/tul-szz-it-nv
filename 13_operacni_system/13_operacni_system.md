@@ -136,52 +136,20 @@ Během přerušení dochází ke změně **kontextu**. Kontext je vše, co potř
 5. Volitelně povolení ostatních přerušení.
 6. Obnoví se původní výpočet s pomocí uloženého kontextu.
 
-### Start systému
-
-- **Linux**
- 1. Spustí se jádro (typicky /boot/vmlinuzXXX)
- 2. Osahání dostupného HW
- 3. Start démona init, který startuje zbytek systému a řídí ostatní procesy
- 4. Připojení kořenového diskového oddílu
- 5. Start terminálů a možnost přihlášení uživatele
- 6. Variabilně start automaticky spouštěných úloh (dle konfigurace)
- 7. Variabilně start grafického uživatelského prostředí dle konfigurace
-- **Windows**
- 1. Načte se soubor ntldr z kořenového adresáře startovacího oddílu
- 2. Je-li v souboru boot.ini definováno menu pro start systému, je zobrazeno
- 3. Spuštění detekce HW
- 4. Spuštění jádra systému (dle obsahu boot.ini, typicky ntoskrnl.exe)
- 5. Spuštěna vrstva pro abstrakci HW (hal.dll)
- 6. Variabilně start automaticky spouštěných úloh (dle konfigurace)
- 7. Jádro spouští programy winlogon.exe a Isass.exe – umožní připojení uživatelů
-
 ## Správa paměti
 Soubor metod, které využívá OS při přidělování operační paměti jednotlivým procesům, které jsou v počítači spuštěny. Proces při vzniku musí mít přidělenou část paměti, a jinde pracovat nesmí. Jádro řídí přidělování paměti procesům, udržuje stav o volné/využité paměti, ochraňuje paměť
 proti přepsání.
 
-**Druhy pamětí:**
-
-- **Stavové registry** – cca 10 – 50, vnitřní paměťové buňky procesoru, uchovávají informaci o kontextu
-- **Datové registry** – dle typu procesoru – cca 10 – 50, slouží k výpočtům a zpracování dat při vykonávání instrukce; vypovídají o „síle“ procesoru
-- **Cache** – vyrovnávací paměť mezi vnější pamětí a registry; snižuje zpoždění způsobené přístupem do vnější paměti
-  - Velikost od 10k do řádově jednotek MB (64bitové procesory, nová jádra)
-  - L1, L2, L3: úrovně (level 1, level 2, ...): čím nižší úroveň, tím je paměť rychlejší a zároveň menší; L1 je v jádře procesoru a na jeho frekvenci, L2 někdy ano, někdy ne
-- **Vnitřní paměť** – RAM:
-  - Operační paměť: zde probíhají všechny „operace“; zde je uloženo vše, s čím spuštěný OS pracuje; zde OS aplikuje svou správu paměti.
-  - Základní vlastnost: po odpojení napájení data mizí
-- **Vnější paměť** – trvalá úložiště – disky, CD, DVD, flash…
-  - Obrovské kapacity, ale nejmenší přístupová rychlost
-  - Slouží jen jako zdroj dat, případně jako „odkladiště“ čekajících procesů
-
+Správu paměti aplikuje operační systém ve vnitřní paměti (RAM).
 
 ### Metody správy paměti
 
 1. **Přidělování bez dělení do bloků** - typicky pro starší systém, kde běží jen jedna úloha (bez multitaskingu), ve víceúlohových systémech se vše ukládá a vrací do OP z disku
- - Výhody: jednodušší jádro - nemusí obsahovat rutinu pro přidělení paměti
- - Ochrana paměti: nutná jen kontrola přístupu do oblasti jádra, napřříklad hodnoty z registrů může měnit pouze jádro
+   - Výhody: jednodušší jádro - nemusí obsahovat rutinu pro přidělení paměti
+   - Ochrana paměti: nutná jen kontrola přístupu do oblasti jádra
 2. **Přidělování pevných bloků pamětí (segmentace)** - po startu systému se paměť rozdělí do bloků 16kB, 32kB, ... Tyto bloky mají konstatntní velikost po celou dobu běhu systému. Procesy na základě požadavku na paměť dostanou patřičně velký blok.
- - Výhody: rychlejší přepínání kontextu - více procesů v paměti, jednoduchá správa paměti - pouze tabulka s využitím bloků
- - Nevýhoda: nelze spouštět procesy, které mají nárok větší než je největší blok, neefektivní využití paměti
+   - Výhody: rychlejší přepínání kontextu - více procesů v paměti, jednoduchá správa paměti - pouze tabulka s využitím bloků
+   - Nevýhoda: nelze spouštět procesy, které mají nárok větší než je největší blok, neefektivní využití paměti
 3. **Dynamické přidělování paměti** - po startu systému je paměť nerozdělená, procesy po spuštění berou paměť, kolik potřebují. Při ukončení ji uvolní. Náročné na implementaci
 
 **Memory Management Unit (MMU)** - speciální jednotka procesoru, která řeší:
@@ -207,22 +175,12 @@ proti přepsání.
 ### Strategie přidělování
 
 1. **Best FIT** - přidělení nejmenšího možného bloku - snaha šetřit paměť
- - Nevýhody: proces vrací malé množství pamětí. Nutné projít všechny volné bloky paměti
+   - Nevýhody: proces vrací malé množství pamětí. Nutné projít všechny volné bloky paměti
 2. **Worst FIT** - použije se nějvětší blok, co proces nevyužije, to vrátí. Dobrá strategie, protože se vrací velké bloky dat které jsou dále použitelné, ale dlouhodobě nevýhodné, neboť velké bloky brzy dojdou Vhodné kombinovat s jinými strategiemi.
 3. **First FIT** - použije se první blok (bloky jsou seřazeny), co vyhovuje, co proces nevyužije, to vrátí. Dost používaná, dobré výsledky.
- - Nevýhody: velké bloky na začátku paměti jsou rozporcovány na menší
+   - Nevýhody: velké bloky na začátku paměti jsou rozporcovány na menší
 4. **Next FIT** - přidělí se první blok, který se po posledním použitým blokem, optimalizace FirstFitu - snaha o rychlejší hledání.
- - Nevýhody - sklony k fragmentaci (měřením se ukazuje, že výrazněji, než předchozí metody)
-
-# Správa paměti ve Windows, Linux, ...
-
-- Paměť je rozdělena do stránek o pevné velikosti
-- Když proces potřebuje paměť, jádro mu přidělí tolik stránek, kolik je potřeba
-- Jádro OS si udržuje tabulku stránek, kde má informace, kterému procesu patří daná stránka
-- Každý proces má oddělený adresní prostor, v rámci kterého používá *virtuální adresy*
-- Jádro OS řídí chod MMU, která zajišťuje překlad *virtuálních adres* na *fyzické adresy*
-- Pokud je v systému povoleno **swapování** (odkládání na disk), tak systém může odsunout stránky nejméně používaných procesů na disk a tím uvolnit místo v RAM
-- Pokud se odložený proces opět spustí, paměť je z disku přesunuta opět do RAMů jelikož tato operace chvíli trvá, tak je proces mezitím blokovaný, protože čeká na přístup do paměti
+   - Nevýhody - sklony k fragmentaci (měřením se ukazuje, že výrazněji, než předchozí metody)
 
 ## Správa procesů
 
@@ -230,13 +188,13 @@ proti přepsání.
 
 - **Obraz kódu programu** - kopie originálního programu načtená do paměti
 - **Paměť** (typicky oblast ve virtuální paměti), která obsahuje:
- - Kód
- - Statická data
- - Halda (dynamická data)
- - Zásobník (pro volání procedur, skoky a další události)
+  - Kód
+  - Statická data
+  - Halda (dynamická data)
+  - Zásobník (pro volání procedur, skoky a další události)
 - **Práva** - informace o vlastníkovi procesu a o oprávněních procesu
 - **Kontext** - registry procesoru, fyzické paměťové adresy
- - Je-li proces vykonáván, uloženo typicky jako registry v procesoru, jinak v paměti
+  - Je-li proces vykonáván, uloženo typicky jako registry v procesoru, jinak v paměti
 - **Informace o zdrojích** uložena v datových strukturách nazývaných PCB – process control blocks (přesná podoba dána OS)
 - **Virtuální paměť** - „iluze“ souvislého paměťového prostoru pro procesy (ve skutečnosti různě fragmentováno a fyzicky různě implementováno)
 
