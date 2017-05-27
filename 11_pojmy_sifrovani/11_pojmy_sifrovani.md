@@ -1,4 +1,4 @@
-# 11. - Pojmy šifrování
+# 11. - Šifrování a kódování
 > Pojmy šifrování, kódování, symetrické šifry (afinní, Vigener, Hill, jednoduchá transpozice), asymetrické šifry (RSA), Feistelovy šifry, princip, příklady (DES, AES, NDS).
 
 ## Základní pojmy
@@ -17,8 +17,6 @@ Rozlišujeme dva procesy:
 **Kryptosystém** je systém umožňující šifrování a dešifrování zpráv. Bezpečnost šifrovacího systému není závislá na utajení šifrovacího algoritmu.
 
 **Klíč** je tajná informace, bez níž nelze šifrový text přečíst.
-
-**Kompromitace** je ztráta klíče jiným způsobem než kryptoanalýzou.
 
 Šifra může být:
 
@@ -40,10 +38,6 @@ Asi nejjednoduší metodou zlomení některých šifer je **frekvenční analýz
 **Moderní kryptografie je postavena na pricipu, že dvě prvočísla umíme snadno vynásobit, ale jejich faktorizace (rozklad na prvočísla) je výpočetně velmi složitý (u dostatečně velkých čísel).**
 
 **V současné době je šifrování velice aktuální, některé procesory mohou mít i vyhrazený kryptografický koprocesor, který akceleruje hardwarově ty nejpoužívanější algoritmy.**
-
-Celkem dobrý kanál na youtube: [https://www.youtube.com/channel/UC1usFRN4LCMcfIV7UjHNuQg](https://www.youtube.com/channel/UC1usFRN4LCMcfIV7UjHNuQg)
-
-Slidy k tomu v sekci online courses/slides: [http://www.crypto-textbook.com/](http://www.crypto-textbook.com/)
 
 ## Šifrování vs kódování
 **Šifrování** si klade za cíl převest prostý text do takové podoby (šifrovaný text), tak aby nebylo možné ho bez znalosti klíče přečíst.
@@ -89,7 +83,7 @@ Ti = (Ci - k) mod m - dešifrování
 
 *Caesarova šifra s posunem o tři písmena*
 
-AHOJ => DHRM
+AHOJ => DKRM
 
 #### Tabulka záměny
 Šifrování pomocí tabulky záměny, které je založeno na záměně znaku za jiný bez jakékoli vnitřní souvislosti či na základě znalosti klíče (hesla). Písmena v hesle se při vypisování zbylé abecedy vynechávají.
@@ -100,13 +94,7 @@ AHOJ => DHRM
 
 *Tabulka záměny s použitím hesla VESLO*
 
-| Otevřená abeceda | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Šifrovaná abeceda | V | E | S | L | O | P | Q | R | T | U | W | X | Y | Z | A | B | C | D | F | G | H | I | J | K | M | N |
-
-*Možná varianta tabulky záměny s použitím hesla VESLO*
-
-AHOJ => VCKF nebo AHOJ => VRAU
+AHOJ => VRAU
 
 #### Affiní šifra
 Afinní šifra je substituční šifra, která částečně eliminuje zásadní nevýhodu Caesarovy šifry, kterou je málo možností transformace a tím i velmi primitivní kryptoanalýzu.
@@ -117,9 +105,9 @@ Ti = (Ci -b) . a ^ (-1) mod m - dešifrování
 
 - Ci – i-té písmeno šifrovaného textu
 - Ti – i-té písmeno otevřeného textu
-- a – parametr a, gcd(a,m) = 1
+- a – parametr a, NSD(a,m) = 1
 - b – parametr b
-- m – modulo (jako modulo obvykle volíme prvočíslo, aby bylo předem jasné, že gcd(a, m) = 1, a zároveň abychom útočníkovi nezjednodušovali práci (pokud modulo není prvočíslo, tak je méně možností, jak se text dá šifrovat - je tedy snazší šifru prolomit)).
+- m – modulo (jako modulo obvykle volíme prvočíslo, aby bylo předem jasné, že NSD(a, m) = 1, a zároveň abychom útočníkovi nezjednodušovali práci (pokud modulo není prvočíslo, tak je méně možností, jak se text dá šifrovat - je tedy snazší šifru prolomit)).
 
 Otevřený text: THEINITIAL (a = 5, b = 9, m = 26)
 
@@ -151,10 +139,6 @@ THEINITIAL => ASDXWXAXJM
 - H – Hillova matice (klíč)
 - B – matice šifrovaného textu
 
-![Násobenní matic](11_nasobeni_matic.png)
-
-*Připomenutí násobenní matic*
-
 Dešifrujte NTBWWFYN pomocí Hillovy matice H(3, 2; 7, 5).
 
 *Pozn.:* Délka vstupní abecedy je 26, všechna záporná čísla (získaná např. při výopčtu inverzní matice) jsou převedena na kladná pomocí mod 26.
@@ -173,9 +157,9 @@ NTBWWFYN => KFHMXXDR
 #### Viegnerova šifra
 Jedná se o speciální případ polyalfabetické šifry, což znamená, že pro šifrování není použita celá abeceda. Caesarova šifra je speciálním případ Vigenèrovy šifry s heslem o délce jeden znak. Viegenèrova šifra používá heslo, jehož znaky určují posunutí otevřeného textu a to tak, že otevřený text se rozdělí na bloky znaků dlouhé stejně jako heslo a každý znak se sečte s odpovídajícím znakem hesla. Vigenèrova šifra způsobuje změny pravděpodobnosti rozložení znaků a tím podstatně znemožňuje kryptoanalýzu na základě analýzy četnosti znaků v textu. (obvykle se pro šifrování používá spíše Viegnerův čtverec - předpočítané kombinace)
 
-**Ci = Ti + Ki mod m** - šifrování
+**Ci = (Ti + Ki) mod m** - šifrování
 
-Ti = Ci - Ki mod m - dešifrování
+Ti = (Ci - Ki) mod m - dešifrování
 
 - Ci - i-tý znak šifrovaného textu 
 - Ti - i-tý znak otevřeného textu 
@@ -203,10 +187,8 @@ Principem transpoziční šifry je změna pořadí znaků (jejich permutace) na 
 
 ### Blokové šifry
 
-[http://euler.fd.cvut.cz/predmety/y2kk/kzk-krypto-blok.pdf](http://euler.fd.cvut.cz/predmety/y2kk/kzk-krypto-blok.pdf)
-
 #### Feistelovo šifrování
-Jako Feistelova šifra či Feistelova síť se v kryptografii označuje základní struktura použitá v mnoha blokových šifrách včetně DES. Její výhodou je, že šifrování a dešifrování fungují prakticky stejně, což zjednodušuje a zlevňuje implementaci. Nazývá se podle Horsta Feistela, který tuto konstrukci použil v šifře Lucifer.
+Jako Feistelova šifra či Feistelova síť se v kryptografii označuje základní struktura použitá v mnoha blokových šifrách včetně DES. Její výhodou je, že šifrování a dešifrování fungují prakticky stejně, což zjednodušuje a zlevňuje implementaci.
 
 ![Feistelovo šifrování](11_fiestel.png)
 
@@ -224,9 +206,6 @@ Možným způsobem jak zvýšit bezpečnost této šifry, je vícenásobná apli
 *Diagram pro DES*
 
 **Popisováno jako 16 kolová Fiestelova síť s rotací klíče.**
-
-Česky: [http://www.brtnik.eu/des.php](http://www.brtnik.eu/des.php)
-Na youtube: [https://www.youtube.com/watch?v=UgFoqxKY7cY](https://www.youtube.com/watch?v=UgFoqxKY7cY)
 
 #### AES
 Advanced Encryption Standard (algoritmus Rijndael) je standardizovaný algoritmus používaný k šifrování dat v informatice. Jedná se o symetrickou blokovou šifru šifrující i dešifrující stejným klíčem data rozdělená do bloků pevně dané délky. Norma **nahradila dříve užívanou šifru DES**. Je používána například pro bezdrátové Wi-Fi sítě v rámci zabezpečení **WPA2** dle standardu IEEE 802.11i. Používá **klíče délky 128, 192, 256 bitů**.
@@ -313,19 +292,6 @@ Pro dešifrování pak:
 
 - dešifruj(855) = 855^2753 mod 3233 = 123
 
-**Příklad s menšími exponenty**
-
-- Choose p = 3 and q = 11
-- Compute n = p * q = 3 * 11 = 33
-- Compute φ(n) = (p - 1) * (q - 1) = 2 * 10 = 20
-- Choose e such that 1 < e < φ(n) and e and n are coprime. Let e = 7
-- Compute a value for d such that (d * e) % φ(n) = 1. One solution is d = 3 [(3 * 7) % 20 = 1]
-- Public key is (e, n) => (7, 33)
-- Private key is (d, n) => (3, 33)
-- The encryption of m = 2 is c = 2^7 % 33 = 29
-- The decryption of c = 29 is m = 29^3 % 33 = 2
-
-
 ## Extra
 
 ### Elektronický podpis
@@ -336,6 +302,6 @@ Pro dešifrování pak:
 
 ### Asymetrická kryptografie v praxi
 
-![Asymetrická kryptografie  v praxi](11_asymetricka_kryptografie.png)
+![Asymetrická kryptografie v praxi](_ras.gif)
 
 *Asymetrická kryptografie  v praxi*
