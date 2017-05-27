@@ -319,16 +319,14 @@ Operační systém poskytuje **abstrakci** přístupu k hardware, ke kterému p�
 
 ![Ovladače zařízení](13_ovladace_zarizeni.png)
 
-*Ovladače zařízení*
-
 ## Souběh
-Dva (a více) provádí současně nějakou operaci nad stejnými daty; přitom operace nejsou korektně ukončeny a překrývají se. Zmatek v datech (nekonzistentní data). Viz také okruh [27. Paralelní systémy](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/27_paralelni_systemy/27_paralelni_systemy.md).
+Dva (a více) procesů provádí současně nějakou operaci nad stejnými daty; přitom operace nejsou korektně ukončeny a překrývají se. Zmatek v datech (nekonzistentní data). Viz také okruh [27. Paralelní systémy](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/27_paralelni_systemy/27_paralelni_systemy.md).
 
 ![Souběh](13_soubeh.png)
 
 *Souběh*
 
-###Ochrana před souběhem
+### Ochrana před souběhem
 **Atomické operace**
 
 - Lze u jednoduchých operací či datových struktur.
@@ -337,8 +335,8 @@ Dva (a více) provádí současně nějakou operaci nad stejnými daty; přitom 
 **Výlučný přístup**
 
 - Dalšími prostředky zajistíme, že v kritické oblasti s daty pracuje vždy jen jeden proces.
- - Zákaz přerušení
- - Synchronizační primitiva (vyžaduje čekání, operační systém přiřadí čas jinému procesu)
+  - Zákaz přerušení
+  - Synchronizační primitiva (vyžaduje čekání, operační systém přiřadí čas jinému procesu)
 
 ### Transakce
 Aby nedocházelo k nekonzistencím , zavádíme transakce.
@@ -346,16 +344,16 @@ Aby nedocházelo k nekonzistencím , zavádíme transakce.
 **Vlastnosti transakcí** (ACID)
 
 - Atomicity (atomičnost):
- - Operace zahrnuté v transakci se chápou jako atomické.
- - Provedou se buď všechny, nebo žádná z nich.
+  - Operace zahrnuté v transakci se chápou jako atomické.
+  - Provedou se buď všechny, nebo žádná z nich.
 - Consistency (konzistence):
- - Při realizaci transakce musí být zachována konzistence dat.
- - Je-li konzistence ohrožena, je transakce zrušena.
+  - Při realizaci transakce musí být zachována konzistence dat.
+  - Je-li konzistence ohrožena, je transakce zrušena.
 - Isolation (izolace):
- - Celá transakce se zvenku jeví jako celek.
- - Při kroku zpět se nekrokují jednotlivé operace, vrací se celá transakce.
+  - Celá transakce se zvenku jeví jako celek.
+  - Při kroku zpět se nekrokují jednotlivé operace, vrací se celá transakce.
 - Durability (trvalost):
- - Když transakce proběhne, jsou výsledky uloženy a nemohou být ztraceny.
+  - Když transakce proběhne, jsou výsledky uloženy a nemohou být ztraceny.
 
 **Kroky**
 
@@ -366,16 +364,16 @@ Aby nedocházelo k nekonzistencím , zavádíme transakce.
 **Realizace**
 
 - Pesimistická realizace: předpokládáme, že nastane chyba.
- - Změny dat během transakce zaznamenávány do dočasných objektů.
- - Po ukončení transakce jsou dočasné objekty označeny jako trvalé.
- - Existují dvojí data: nově vytvářená a původní.
- - Rychle se ruší, ale náročná na paměť.
+  - Změny dat během transakce zaznamenávány do dočasných objektů.
+  - Po ukončení transakce jsou dočasné objekty označeny jako trvalé.
+  - Existují dvojí data: nově vytvářená a původní.
+  - Rychle se ruší, ale náročná na paměť.
 - Optimistická realizace: předpokládáme, že chyba spíše nenastane.
- - Změny dat rovnou trvalé.
- - Během transakce se vytváří záznam o změnách, aby bylo možné obnovit původní data (roll-back record).
- - Je-li transakce úspěšně dokončena, záznam se smaže.
- - Data existují jen jednou.
- - K návratu zpět slouží záznam, což je pracnější, šetříme ale paměť v průběhu transakce.
+  - Změny dat rovnou trvalé.
+  - Během transakce se vytváří záznam o změnách, aby bylo možné obnovit původní data (roll-back record).
+  - Je-li transakce úspěšně dokončena, záznam se smaže.
+  - Data existují jen jednou.
+  - K návratu zpět slouží záznam, což je pracnější, šetříme ale paměť v průběhu transakce.
 
 **Moderní systémy používají transakce, takže když vypadne proud nezhroutí se celý systém.** (Může být implementováno například na úrovni filesystému.)
 
