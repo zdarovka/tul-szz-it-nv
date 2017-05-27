@@ -5,9 +5,9 @@
 ## Databázové systémy
 **databáze** = organizovaná kolekce dat
 
-**DBS** (databázový systém) = **SŘBD** (systém řízení báze dat; nebo anglicky DBMS - database management system) + **DB** (databáze; data)
+**DBS** (databázový systém) = **SŘBD** (systém řízení báze dat) + **DB** (databáze; data)
 
-SŘBD typicky obsahuje:
+**SŘBD typicky obsahuje:**
 - parser - převod dotazovacího jazyka (např. SQL) do strojové podoby
 - optimalizátor - optimalizace výrazu z pohledu výkonu
 - operator evaluator (vyhodnocovatel výrazů)
@@ -16,68 +16,63 @@ SŘBD typicky obsahuje:
 - transaction manager - správa transakcí
 
 ### Základní modely DBS
-- [Navigační databáze](https://en.wikipedia.org/wiki/Navigational_database) - [hiearchický model](https://en.wikipedia.org/wiki/Hierarchical_database_model), [síťový model](https://en.wikipedia.org/wiki/Network_model) a [grafový model](https://en.wikipedia.org/wiki/Graph_database)
-- [Relační model](https://en.wikipedia.org/wiki/Relational_model)
-- [Objektový model](https://en.wikipedia.org/wiki/Object_database)
-- [Dokumentový model](https://en.wikipedia.org/wiki/Document-oriented_database)
+- Navigační databáze - hiearchický model, síťový model a grafový model
+- Relační model
+- Objektový model
+- Dokumentový model
 
 ## Relační model dat - RMD
-Založen na pevném matematickém základu roku 1970 panem E. F. Coddem. 
+Založen na pevném matematickém aparátu relačních množin a predikátové logice. Databázová relace se od matematické poněkud liší. Má zavedený pomocný aparát nazvaný schéma relace. Schéma relace říká, jaký je název relace, kolik má sloupců a jaké jsou jejich názvy a domény (doména je množina přípustných hodnot pro daný sloupec). V databázích je schématem relace definice struktury tabulky. Ovšem relací nemusí být pouze tabulka, nýbrž jakákoliv struktura dělená do řádků a sloupců. Relací je například i výsledek jakéhokoliv dotazu, a podle toho s ním je možno i dále pracovat.
 
-### Základní rysy
-- oddělení dat a jejich implementace
-- symetrický přístup k datům - při manipulaci s daty se nezajímáme o přístupové mechanizmy k datům
-- prostředky pro manipulaci s daty:
- - **relační kalkul**
- - **relační algebra** 
+Relační databázový model sdružuje data do tzv. relací (tabulek), které obsahují n-tice (řádky). Tabulky (relace) tvoří základ relační databáze. Tabulka je struktura záznamů s pevně stanovenými položkami (sloupci - atributy). Každý sloupec má definován jednoznačný název, typ a rozsah, neboli doménu. Záznam se stává n-ticí (řádkem) tabulky. Pokud jsou v různých tabulkách sloupce stejného typu, pak tyto sloupce mohou vytvářet vazby mezi jednotlivými tabulkami. Tabulky se poté naplňují vlastním obsahem - konkrétními daty.
+
+Relační model klade velký důraz na zachování integrity dat. Zavádí pojmy referenční integrita, cizí klíč, primární klíč, normální tvar apod.
+
+Relační model dat je nezávislý na na fyzickém uložení dat (Na konkrétní implementaci relační databáze).
 
 ### Základní pojmy
-- **databázová relace** - množina (výsledek dotazu, tabulka, aj.); nesmí obsahovat duplicitní prvky
+- **relace** - pojmenovaná tabulka s řádky a sloupci - množina n-tic (výsledek dotazu, tabulka, aj.)
 - **entita** - definovaná množina dat (např. tabulka)
-- **atribut** - An; jméno atributu
-- **doména atributu** - Dn; definiční množina hodnot atributu
+- **atribut** - An; pojmenovaný sloupec
+- **doména atributu** - Dn; množina přípustných hodnot pro atribut
 - **schema relace** - je R(An:Dn); říká nám to, jaký je název relace, kolik má sloupců a jaké jsou jejich názvy a domény = definice databázové tabulky
 - **atribut relace** - je dvojice An:Dn
-- **n-tice** - jsou prvky relace
-- **řád relace** - n z pojmu n-tice určuje řád relace
+- **n-tice** - jsou prvky relace (řádky)
+- **řád relace** - počet atributů relace
 - **relační schema** - je dvojice (R,I), kde R je schema relace a I je množina integritních omezení
 
-### Integrita databáze a integritní omezení
-Integrita databáze znamená, že databáze vyhovuje zadaným pravidlům – integritním omezením. Tato integritní omezení jsou součástí definice databáze, a za jejich splnění zodpovídá SŘBD.
-
-Mezi integritní omezení patří:
-- **primární klíč** - množina atributů jednoznačně určující n-tici relace,
-- **kandidáti primárního klíče** - obdoba primárního klíče, avšak kandidátů může být více,
-- **klíčový atribut** - atribut, který je součástí některého klíče,
-- **neklíčový atribut** - atribut, který není součástí žádného klíče,
-- **referenční integrita** - popisuje vztahy mezi daty ve dvou relacích,
-- **cizí klíč** - atribut, kterého se týká referenční integrita (foreign key).
-- **kardinalita** - vlastnost binárních vztahů která určuje kolik instancí entit vstupuje do vztahu (např. 1:1, 1:N, M:N),
-- **parcialita** - vyjadřuje, zda je účast ve vztahu povinná nebo volitelná,
-- silné entitní typy - součástí klíče jsou atributy pouze z dané entity (nikoli z jiných)
-- slabé entitní typy - součástí klíče je atribut z jiné entity,
-- duplicitní prvek - relace nesmí obsahovat duplicitní prvky.
-
-### Relační tabulka
-Každá relační tabulka musí splňovat následující podmínky:
+### Vlastnosti relace
 - sloupce mohou být v libovolném pořadí,
 - řádky mohou být v libovolném pořadí,
 - sloupce musí být homogenní = ve sloupci musí být údaje stejného typu,
 - každému sloupci musí být přiřazeno jednoznačné jméno (tzv. atribut),
-- v relační tabulce nesmí být dva zcela stejné řádky,
-- dle relační teorie lze pomocí základních operací (sjednocení, kartézský součin, rozdíl, selekce, projekce, přejmenování) uskutečnit veškeré operace s daty.
+- v relační tabulce nesmí být dva zcela stejné řádky
 
-### Základní operace
-Dle relační teorie lze pomocí základních operací
+### Integrita databáze a integritní omezení
+Integrita databáze znamená, že databáze vyhovuje zadaným pravidlům – integritním omezením. Tato integritní omezení jsou součástí definice databáze, a za jejich splnění zodpovídá SŘBD.
 
-- sjednocení,
-- kartézský součin,
-- rozdíl,
-- selekce,
-- projekce,
-- přejmenování
+Entitní integrita
+- **primární klíč** - množina atributů jednoznačně určující n-tici relace,
+- **kandidáti primárního klíče** - obdoba primárního klíče, avšak kandidátů může být více,
+- **klíčový atribut** - atribut, který je součástí některého klíče,
+- **neklíčový atribut** - atribut, který není součástí žádného klíče,
 
-uskutečnit veškeré operace s daty.
+Referenční integrita
+- popisuje vztahy mezi daty ve dvou relacích,
+- **cizí klíč** - atribut, kterého se týká referenční integrita (foreign key).
+- **kardinalita** - vlastnost binárních vztahů která určuje kolik instancí entit vstupuje do vztahu (např. 1:1, 1:N, M:N),
+- **parcialita** - vyjadřuje, zda je účast ve vztahu povinná nebo volitelná,
+
+### Relační algebra
+Pomocí základních operací (relační algebry) uskutečnit veškeré operace s daty. Aplikuje se na relace a výsledkem je opět relace.
+
+- unární
+  - selekce (výsledkem je podmnožina n-tic z relace, které splňují danou podmínku)
+  - projekce (výběr sloupců)
+- binární
+  - sjednocení (výsledkem je relace, kde k n-ticím z R jsou přidány n-tice z S  - relace musí mít kompatibilní schéma)
+  - kartézský součin (kombinace každé n-tice z R s každou n-ticí z S, podmnožinou této operace je spojené vnější/vnitřní)
+  - rozdíl (výsledkem je relace, která obsahuje jenom ty n-tice z R, které nejsou v S - relace musí mít kompatibilní schéma)
 
 ## Objektový model dat - OMD
 Objektová databáze je systém správy databází, ve kterém je informace reprezentována formou objektů. To by mělo přirozeněji a věrněji popisovat
