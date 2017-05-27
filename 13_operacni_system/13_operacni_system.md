@@ -61,15 +61,15 @@ Operační systém je základní programové vybavení počítače, které je za
 Typicky má procesor dva režimy provozu:
 
 - **Nechráněný – bez omezení**
- - Dostupná celá instrukční sada
- - Lze adresovat celou operační paměť
- - Lze měnit všechny registry procesoru
- - Kernel mode, unprotected mode, ...
+   - Dostupná celá instrukční sada
+   - Lze adresovat celou operační paměť
+   - Lze měnit všechny registry procesoru
+   - Kernel mode, unprotected mode, ...
 - **Chráněný – s omezením**
- - Pokus vykonat některé instrukce končí chybou
- - Část paměti je skrytá, nelze ji adresovat
- - Pokus o změnu některých registrů končí chybou
- - User mode, protected mode, ...
+   - Pokus vykonat některé instrukce končí chybou
+   - Část paměti je skrytá, nelze ji adresovat
+   - Pokus o změnu některých registrů končí chybou
+   - User mode, protected mode, ...
 
 **Režim je vlastnost procesoru, OS ji jen využívá. Některé procesory implementují hned několik režimů, takzvaných protection rings (nepoužívá se kvůli přenositelnosti). Přecházení mezi režimy je náročná operace, ale chrání OS před napadením nebo neúmyslným poškozením.**
 
@@ -84,19 +84,19 @@ Typicky má procesor dva režimy provozu:
 **Typy jader**
 
 - **„Maximální jádro“ - monolytické**
- - Všechny systémové funkce jsou zahrnuty v jádře OS.
- - Rychlé a efektivní.
- - Náročné na pamět.
- - Náchylné k chybám.
+   - Všechny systémové funkce jsou zahrnuty v jádře OS.
+   - Rychlé a efektivní.
+   - Náročné na pamět.
+   - Náchylné k chybám.
 - **„Minimální jádro“ - mikrojádro** (hlavně realtime OS)
- - Zajišťuje pouze abstrakci HW, správu procesů a komunikaci.
- - Zbylé funkce jsou realizovány jako procesy.
- - Pomalé, kvůli častému přepínaní režimu.
- - Malé a odolné vůči chybám.
+   - Zajišťuje pouze abstrakci HW, správu procesů a komunikaci.
+   - Zbylé funkce jsou realizovány jako procesy.
+   - Pomalé, kvůli častému přepínaní režimu.
+   - Malé a odolné vůči chybám.
 - **„Hybridní jádro“ - modulární**
- - Jádro „malé“ jako u mikrokernelu.
- - Služby OS jsou oddělené od jádra, ale také v prostoru jádra.
- - Teoreticky spojuje výhody obour.
+   - Jádro „malé“ jako u mikrokernelu.
+   - Služby OS jsou oddělené od jádra, ale také v prostoru jádra.
+   - Teoreticky spojuje výhody obour.
  
  ![Typy jader](13_jadro.png)
  
