@@ -43,19 +43,19 @@ Operační systém je základní programové vybavení počítače, které je za
 
 ### Základní části operačního systému
 
-1. **Kernel (jádro)**
- 1. přiděluje paměť i procesorový čas
- 2. řídí optimální spolupráci mezi procesy
- 3. zodpovídá za abstrakci HW (poskytuje API - abstraktní vrstva pro lepší programování)
- 4. přiděluje HW aplikacím
-2. **Systémové nástroje**
- 1. Správa zařízení (formát disku, kopírování, ...)
- 2. Správa uživatelů
- 3. Pomocné nástroje - skripty, utility (pomocné programy)
-3. **Rozhraní**
- 1. API - programátorské rozhraní (standartní knihovny, přístup k hw)
- 2. ABI - binární rozhraní (pravidla definující spolupráci na úrovni strojového kódu mezi procesy a jádrem operačního systému, procesy a jimi používanými knihovnami nebo mezi součástmi aplikací)
- 3. UI - uživatelské rozhraní (nemusí být součástí, do jádra se řadí kvůli zvýšení výkonu)
+- **Kernel (jádro)**
+   - přiděluje paměť i procesorový čas
+   - řídí optimální spolupráci mezi procesy
+   - zodpovídá za abstrakci HW (poskytuje API - abstraktní vrstva pro lepší programování)
+   - přiděluje HW aplikacím
+- **Systémové nástroje**
+   - Správa zařízení (formát disku, kopírování, ...)
+   - Správa uživatelů
+   - Pomocné nástroje - skripty, utility (pomocné programy)
+- **Rozhraní**
+   - API - programátorské rozhraní (standartní knihovny, přístup k hw)
+   - ABI - binární rozhraní (pravidla definující spolupráci na úrovni strojového kódu mezi procesy a jádrem operačního systému, procesy a jimi používanými knihovnami nebo mezi součástmi aplikací)
+   - UI - uživatelské rozhraní (nemusí být součástí, do jádra se řadí kvůli zvýšení výkonu)
 
 ### Režimy procesoru
 Typicky má procesor dva režimy provozu:
