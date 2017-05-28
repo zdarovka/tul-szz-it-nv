@@ -122,9 +122,13 @@ Relace je ve čtvrté normální formě tehdy, je-li v BCNF a všechny vícehodn
 Relace je v páté normální formě jestliže je ve 4NF a nemůže být dále bezeztrátově rozložena. Jinými slovy relace, která má n klíčových atributů (n >= 3) a která se rozloží na relace o n-1 klíčových atributech, nemůže být opětovně spojena operací přirozeného spojení do jedné relace, aniž by došlo ke ztrátě informace.
 
 ## Bezztrátová dekompozice
-**bezztrátová dekompozice** = proces dělení původní relace na více schémat bez ztráty sémantiky 
+**bezztrátová dekompozice** = proces dělení původní relace na více schémat bez ztráty sémantiky a dat 
 
-- spojení tabulek, které vzniknou dekompozicí musí dát přesně původní tabulku (musí se zachovat závislosti)
+- výsledná schémata by měly mít stejnou sémantiku
+  - Sémantika schématu j dána pomocí integritních omezení, která nejsou vyjádřena pouze pomocí funkčních závislostí
+- výsledná schémata by měly obsahovat stejná data 
+
+Respektive spojení tabulek, které vzniknou dekompozicí musí dát přesně původní tabulku (musí se zachovat závislosti).
 
 S dekompozicí se setkáme při normalizování jednotlivých entit.
 
@@ -168,7 +172,7 @@ Chyby, které je nutné při vytváření DFD eliminovat:
 - samogenerující fce - proces má pouze výstupy,
 - sklady, ve kterých se jen čte nebo zapisuje.
 
-![Ukázka DFD](15_dfd.png)
+![Ukázka DFD](dfd.gif)
 
 ## Optimalizace databázových struktur
 **Index** = pomocná datová struktura, která slouží k urychlení základních operací nad záznamy
