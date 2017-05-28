@@ -15,21 +15,16 @@
 
 - server pouze vydává data
 
-### Třívrstvá architektura
-
-- dynamická
+### Dynamické stránky
 - kód stránek je generován
 
-**Vrstvy:**
+**Třívrstvá architektura:**
 
 1. prezentační vrstva (HTML, CSS, JavaScript)
 2. aplikační vrstva (PHP, Python, Ruby, JavaScript, Java, ...)
-3. datová vrstva (SQL, PostreSQL, MongoDB, ...)
+3. datová vrstva (SQL, PostgreSQL, MongoDB, ...)
 
 ## Server-side
-
-### Vlasnosti, omezení prog. na serveru
-
 - pro dynamické generování stránek
 - klientovi se posílá pouze výsledný kód, který vznikne interpretací skriptu
 - interakce se skriptem - *pomocí URL*
@@ -49,17 +44,7 @@
 - globální proměnné obsahují užitečná externí data ($_GET, $_POST)
 - umožňuj pracovat s HTTP hlavičkami
 
-### Python
-
-- skriptovací jazyk
-- modul pro jednoduchý HTTP server
-- dynamicky typované proměnné se silnou typovou kontrolou
-- Django framework pro psaní webovýh aplikací
-
 ## Client-side
-
-### Vlasnosti, omezení prog. na straně klienta
-
 - nutná podpora prohlížeče
 - kód je součástí stránky, kterou si klient vyžádal
 - asynchronní komunikace se serverem pomocí Javascriptu - AJAX
@@ -147,6 +132,11 @@ selektor {
 - data uložena na straně serveru
 - k datům lze přistupovat pomocí $_SESSION
 
+### LocaleStorage
+
+- permanentní uložiště v prohlížeči na straně klienta
+- key : value uložiště
+
 ## Webové služby
 
 ### SOAP
@@ -158,8 +148,6 @@ selektor {
 - založené na XML
 
 ![SOAP, WSDL a UDDI](18_komunikace_webservices.png)
-
-*Komunikace webservices: Jiří Kosek, http://www.kosek.cz/diplomka/html/websluzby.html*
 
 ### REST
 
