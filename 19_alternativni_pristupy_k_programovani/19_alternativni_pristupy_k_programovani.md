@@ -9,18 +9,13 @@ Hlavní dva přístupy k programování jsou:
 Vyšší programovací jazyky se dále dělí takto:
 
 - **Procedurální (imperativní)**
-  - Strukturované (např. C, BASIC, Cobol)
-  - Objektově orientované (např. Smalltalk, Java)
+  - Strukturované (např. C)
+  - Objektově orientované (např. Java)
 - **Neprocedurální (deklarativní)**
-  - Funkcionální (např. **Lisp**, Haskell)
-  - Logické (např. **Prolog**, Gödel)
+  - Funkcionální (např. Lisp (Scheme) )
+  - Logické (např. Prolog)
 
-Toto rozdělení není absolutní a moderní  programovací jazyky jsou obvykle **multiparadigmatické**. To znamená, že různá paradigmata nějakým způsobem podporují a kombinují. Například Python podporuje *procedurální*, *objektově orientované* i *funkcionální* paradigma. Z historického pohledu je za **alternativní** považován **deklarativní přístup**, protože ten imperativní (jako sada instrukcí) je pro nizkoúrovňové programování přirozenější.  Ale například funkcionální jazyky nejsou žádnou novinkou (Lisp 1958), jen poslední dobou získávájí na popularitě. Jde však spíš o jazyky, které jsou částečně (přebírají to nejlepší - impure) funkcionální, ty strikně (pure) funkcionální příliš rozšířené nejsou (příliš formální a tím nepraktické na psaní).
-
-Na TUL se v rámci předmětu Alternativní metody programování učí (učí to Pavel Satrapa a je asi jediný také, kdo by se na to mohl zeptat) především dva jazyky, kterými se budeme dále zabývat.
-
-- **Prolog** - zástupce *logického paradigmatu*
-- **Scheme** (dialekt Lispu)  - zástupce *funkcionálního paradigmatu*
+Toto rozdělení není absolutní a moderní  programovací jazyky jsou obvykle **multiparadigmatické**. To znamená, že různá paradigmata nějakým způsobem podporují a kombinují. Například Python podporuje *procedurální*, *objektově orientované* i *funkcionální* paradigma.
 
 ## Funcionální programování
 
@@ -34,54 +29,6 @@ Na TUL se v rámci předmětu Alternativní metody programování učí (učí t
 - výpočtem funkcionálního programu je posloupnost vzájemně ekvivalentních výrazů, které se postupně zjednodušují 
 - výsledkem výpočtu je výraz v normální formě, tedy dále nezjednodušitelný
 - program je chápán jako jedna funkce obsahující vstupní parametry mající jediný výstup, tato funkce pak může být dále rozložitelná na podfunkce
-
-### Lambda kalkul
-Lambda kalkulus je formální systém pro deklaraci funkcí s pravidly pro jejich vyhodnocování. Jeho první verze pochází ze třicátých let 20. století. Popsal jej Alonzo Church, který se snažil vytvořit nový funkcionální základ pro matematiku. K tomuto účelu sice jeho systém použit zatím nebyl, ale našel využití jinde.
-
-Lambda kalkulus lze chápat jako jednoduchý, univerzální, netypovaný a striktně formální programovací jazyk. Je výpočetně ekvivalentní s Turingovým strojem. V šedesátých letech 20. století se začal používat v informatice, především pro studium vyčíslitelnosti a formálních jazyků. Lambda kalkulus se také stal inspirací a teoretickým základem mnoha funkcionálních programovacích jazyků. Je totiž výsledným programům a lidskému myšlení bližší, než klasické výpočetní modely (např. Turingův stroj), které příliš připomínají hardware.
-
-Základní stavební jednotkou lambda kalkulu je tzv. lambda výraz. Množinu lambda výrazů lze chápat jako soubor pravidel pro výpočet.
-
-Formálně lze každý lambda výraz vyjádřit v Backus-Naurově formě takto:
-
-```
- <výraz> ::= <proměnná>
-<výraz> ::= ( λ <identifikátor> . <výraz> )
-<výraz> ::= ( <výraz> <výraz> )
-```
-
-Funkce s více parametry sice v lambda kalkulu neexistují, ale každou takovou funkci lze převést na funkci s parametrem jedním tak, že vnější funkce vrací vnitřní funkci, které předá parametr. Tento převodní proces se nazývá Currying.
-
-
-### Náhrada cyklu rekurzí
-Každý algoritmus využívající rekurzi lze přepsat do nerekurzivního tvaru struktury a naopak. Rekurze viz rekurze.
-
-```java
-//iterativni pristup
-public static long factorial(int num) {
-        long result = 1;
-        if(num == 0) {
-            return 1;
-        }
-        else {
-            for(int i = 2; i <= num; i++) {
-                result *= i;
-            }
-            return result;
-        }
-
-//rekurzivni pristup
-public static long factorial(int num) {
-        if(num == 0) {
-            return 1;
-        }
-        else {
-            return num * factorial(num - 1);
-        }
-    }
-```
-
-**Oblíbená technika ve funkcionálním programování, viz příklad ve Scheme.**
 
 ### Scheme
 - jeden ze dvou hlavních dialektů funkcionálního programovacího jazyka Lisp.
@@ -107,7 +54,154 @@ Pro seznam máme dvě základní procedury:
 (minim '(3 4 2 9 3 8)) 
 ```
 
-**Příklad demonstruje také nahrazení cyklu rekurzí.**
+### Lambda kalkul
+Lambda kalkulus je formální systém pro deklaraci funkcí s pravidly pro jejich vyhodnocování. Lambda kalkulus lze chápat jako jednoduchý, univerzální, netypovaný a striktně formální programovací jazyk. Je výpočetně ekvivalentní s Turingovým strojem. Základní stavební jednotkou lambda kalkulu je tzv. lambda výraz. Množinu lambda výrazů lze chápat jako soubor pravidel pro výpočet.
+
+Formálně lze každý lambda výraz vyjádřit takto:
+
+```
+<expression> := <name> | <function> | <application> 
+<function> := ( λ <name> . <expression> )
+<application> := ( <expression> <expression> )
+```
+
+Funkce s více parametry sice v lambda kalkulu neexistují, ale každou takovou funkci lze převést na funkci s parametrem jedním tak, že vnější funkce vrací vnitřní funkci, které předá parametr. Tento převodní proces se nazývá Currying.
+
+Příklad:
+```
+(λx.x*x) 5 = 5*5
+(λx.x*x)(λy.y+3) = (λy.(y+3)*(y+3))
+(λx.x*x)(λy.y+3) 5  = 8*8 = 64
+```
+
+### Náhrada cyklu rekurzí
+Každý algoritmus využívající rekurzi lze přepsat do nerekurzivního tvaru struktury a naopak.
+
+Start with this code.
+```
+unsigned foo (...)
+{
+  ...
+
+  unsigned a = f();
+  unsigned b = g();
+
+  ...
+
+  while (a != b)
+  {
+    if (a > b)
+    {
+      a -= b;
+    }
+    else if (b > a)
+    {
+      b -= a;
+    }
+  }
+
+  unsigned c = a;
+
+  ...
+}
+```
+  
+This code has a pretty horrible loop: fortunately, we know what it does:
+```
+unsigned foo (...)
+{
+  ...
+
+  unsigned a = f();
+  unsigned b = g();
+
+  ...
+
+  unsigned c = greatest_common_divisor(a, b);
+
+  ...
+}
+
+unsigned greatest_common_divisor (unsigned a, unsigned b)
+{
+  while (a != b)
+  {
+    if (a > b)
+    {
+      a -= b;
+    }
+    else if (b > a)
+    {
+      b -= a;
+    }
+  }
+  return a;
+}
+```
+
+Now that I've extracted the loop (which may, itself, be a sufficient refactoring), I can change it to a recursive form:
+```
+unsigned greatest_common_divisor (unsigned a, unsigned b)
+{
+  if (a != b)
+  {
+    if (a > b)
+    {
+      a -= b;
+    }
+    else if (b > a)
+    {
+      b -= a;
+    }
+    return greatest_common_divisor(a, b);
+  }
+  else
+  {
+    return a;
+  }
+}
+```
+
+This form isn't much better yet. There are 2 further simplifications: we fir st avoid modifying the parameters,
+```
+unsigned greatest_common_divisor (const unsigned a, const unsigned b)
+{
+  if (a != b)
+  {
+    if (a > b)
+    {
+      return greatest_common_divisor(a-b, b);
+    }
+    else if (b > a)
+    {
+      return greatest_common_divisor(a, b-a);
+    }
+   }
+  else
+  {
+    return a;
+  }
+}
+```
+
+and, finally, we simplify the conditionals:
+```
+unsigned greatest_common_divisor (const unsigned a, const unsigned b)
+{
+  if (a > b)
+  {
+    return greatest_common_divisor(a-b, b);
+  }
+  else if (b > a)
+  {
+    return greatest_common_divisor(a, b-a);
+  }
+  else // a == b
+  {
+    return a;
+  }
+}
+```
 
 ## Logické programování
 
@@ -119,17 +213,17 @@ Pro seznam máme dvě základní procedury:
 
 - využivá se v oboru umělé inteligence a počítačové lingvistiky
 - 2 režimy :
- - **konzultační** (zadávají se fakta a pravidla)
- - **dotazovací** (kladou se otázky)
+  - **konzultační** (zadávají se fakta a pravidla)
+  - **dotazovací** (kladou se otázky)
 - základní částí:
- - definice faktů o objektech a vztazích mezi nimi
- - definice pravidel pro odvozování dalších faktů
- - kladení otázek
+  - definice faktů o objektech a vztazích mezi nimi
+  - definice pravidel pro odvozování dalších faktů
+  - kladení otázek
 - program rozdělen na termy (term je buď atom, číslo, proměnná, nebo složený term)
- - atom => ‘nazdar’
- -  číslo => 23
- - proměnná => X
- - složený term => prarodic(X, Y):- rodic(X, Z), rodic(Z, Y).
+  - atom => ‘nazdar’
+  -  číslo => 23
+  - proměnná => X
+  - složený term => prarodic(X, Y):- rodic(X, Z), rodic(Z, Y).
 
 **Příklad**
 
@@ -148,19 +242,8 @@ prarodic(X,Y) :- rodic(X,Z), rodic(Z,Y).
 ### Rezoluční mechanismus v prologu (jediné co jsem našel a moc tomu nerozumím)
 Způsob vyhdonocování na základě predikátů => tvorba derivačního stromu.
 
-![Rezoluční mechanismus](19_rezolucni_mechanismus.png)
+Ve zjednodušeném případě, kdy pracujeme s výrokovou logikou a logický program ani hlavní cíl atomický neobsahují proměnné, zpětné usuzování (backward reasoning) určí logický a-nebo strom, který stanovuje prostor řešení cíle.
 
-> V dotazovacím režimu vrátí Prolog pouze první větev s hodnotou True, pro druhý dotaz se provede backtracking a vrátí se další. To lze opakovat, dokud jsou k dispozici nějaké platné hodnoty.
+Hlavní cíl je vrchol stromu. Za předpokladu, že nějaký uzel ve stromu odpovídá hlavě klauzule, pak existuje množina potomků tohoto uzlu, která odpovídá mezi-cílům v těle této klauzuli. Potomci uzlu jsou spojení logickou spojkou a. Alternativní množina potomků odpovídající alternativní cestě řešení uzlu je spojeni pomocí logického nebo.
 
-Prohledávám strom do hloubky dokud nenaleznu výsledek pro který je predikát TRUE, pokud dojdu k listu (TRUE,FALSE) bud vrátím výsledek a nebo se vracím.
-
-Během průchod stromem se používá srovnávání
-
-- srovnávání (unifikace)
- - stejné jméno a struktura predikátu (není zobrazeno ve stromu nahoře)
- - konstanta vůči konstantě – musí být shodné ( 5 )
- - proměnná vůči konstantě – vytvoří se vazba ( 7,8,9,10)
- - proměnná vůči proměnné – zůstane volná (2,3,4)
-
-
-
+K prohledání prostoru řešení mohou být použity různé strategie. Prolog využívá sekvenční, LIFO a backtracking strategii, při které najednou zpracovává pouze jeden mezi-cíl a alternativní cestu. K hledání řešení je možné využívat i jiné strategie jako paralelní vyhledávání, inteligentní backtracking a nebo hledání metodou nejlepší-první (best-first).
