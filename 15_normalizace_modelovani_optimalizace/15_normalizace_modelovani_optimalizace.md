@@ -148,9 +148,9 @@ Základní pojmy:
 - M:N.
 
 ![Ukázka ERD](15_erd.png)
-![Ukázka ERD](ERD1.png)
-![Ukázka ERD](ERD2.png)
-![Ukázka ERD](ERD3.png)
+![Ukázka ERD1](ERD1.PNG)
+![Ukázka ERD2](ERD2.PNG)
+![Ukázka ERD3](ERD3.PNG)
 
 ## Funkční analýza (DFD diagramy)
 **DFD diagram** = diagram datových toků (data flow diagram) používaný v softwarovém inženýrství pro modelování funkcí systému.
