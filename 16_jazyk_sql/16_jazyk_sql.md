@@ -3,23 +3,13 @@
 > Jazyk SQL (DDL, DML, množinové operace), uložené procedury a spouště v SQL, transakce (ACID, typy konfliktů, stupně izolace).
 
 ## Jazyk SQL
-**SQL** = Structured Query Language; standardizovaný strukturovaný dotazovací jazyk, který je používán pro práci s daty v relačních databázích; založen na relačním kalkulu a [relační algebře](https://cs.wikipedia.org/wiki/Rela%C4%8Dn%C3%AD_algebra)
+**SQL** = Structured Query Language; standardizovaný strukturovaný dotazovací jazyk, který je používán pro práci s daty v relačních databázích; založen na relačním kalkulu a relační algebře.
 
 SQL příkazy se dělí na čtyři základní skupiny:
 - **DML** (data manipulation language) - příkazy pro manipulaci s daty (SELECT, INSERT, UPDATE, DELETE, ...),
 - **DDL** (data definition language) - příkazy pro definici dat (CREATE, ALTER, DROP, ...),
 - **DCL** (data control language) - příkazy pro řízení přístupových práv (GRANT, REVOKE),
 - příkazy pro řízení transakcí (START TRANSACTION, COMMIT, ROLLBACK).
-
-### Množinové operace
-- **sjednocení** - sjednocením množin A a B vznikne nová množina, která bude obsahovat všechny prvky z množiny A a také všechny prvky z množiny B
-- **kartézský součin** - je množina, označená A x B, která obsahuje všechny uspořádané dvojice, ve kterých je první položka prvkem množiny A a druhá položka je prvkem množiny B; kartézský součin obsahuje všechny takové kombinace těchto prvků
-- **rozdíl** - rozdílem dvou množin A a B chápeme takovou množinu, která bude obsahovat všechny prvky z A a zároveň nebude obsahovat žádný prvek z B
-- **selekce** (restrikce) - je unární relační operace odpovídající výběru řádků z tabulky na základě nějakého kritéria
-- **projekce** - je relační operace, která odpovídá výběru sloupců z tabulky (tedy se omezíme pouze na některé atributy)
-- **přejmenování** - má formální význam a využívá se zejména v souvislosti s join pro přejmenování atributu A na B
-
-[množinové operace](https://www.interval.cz/clanky/sql-skladani-dotazu/)
 
 ### Typy dat v SQL (SQL92)
 **Numerické typy** - INTEGER, SMALLINT, NUMERIC, DECIMAL, FLOAT, REAL, DOUBLE  PRECISION
@@ -30,7 +20,7 @@ SQL příkazy se dělí na čtyři základní skupiny:
 
 **Integritní omezení** - NOT NULL, DEFAULT, UNIQUE, PRIMARY KEY, FOREIGN KEY, CHECK
 
-### DML / [SELECT](https://cs.wikipedia.org/wiki/SELECT)
+### DML / SELECT
 Základním konstruktem pro výběr dat je **SELECT**-**FROM**-**WHERE** blok. Klauzule **SELECT** obsahuje seznam sloupců vytvářejících schéma tabulky. Klauzule **FROM** obsahuje seznam tabulek, nad kterými je dotaz definován a klauzule **WHERE** obsahuje podmínku, kterou musí splňovat vyhledávaná data. **Select** neeliminuje z výsledku duplicitní hodnoty (k tomu slouží další operátory).
 
 #### Základní pojmy a klíčová slova
@@ -327,13 +317,3 @@ Pravidla pro přidělování zámků transakcím:
 **Příklad Dirty Reads**
 
 Dirty read nastává, pokud transakce čte data, která byla modifikována jinou transakcí, která není potvrzena. Transakce B vidí data, která jsou upravena transakcí A. Tyto změny však nejsou potvrzeny.
-
-*Transakce A*
-``` sql
-UPDATE employee SET salary = 31650 WHERE empno = '000090'
-```
-
-*Transakce B*
-``` sql
-SELECT * FROM employee
-```
