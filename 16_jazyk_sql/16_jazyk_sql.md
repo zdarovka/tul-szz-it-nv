@@ -11,7 +11,7 @@ SQL příkazy se dělí na čtyři základní skupiny:
 - **DCL** (data control language) - příkazy pro řízení přístupových práv (GRANT, REVOKE),
 - příkazy pro řízení transakcí (START TRANSACTION, COMMIT, ROLLBACK).
 
-###Množinové operace
+### Množinové operace
 - **sjednocení** - sjednocením množin A a B vznikne nová množina, která bude obsahovat všechny prvky z množiny A a také všechny prvky z množiny B
 - **kartézský součin** - je množina, označená A x B, která obsahuje všechny uspořádané dvojice, ve kterých je první položka prvkem množiny A a druhá položka je prvkem množiny B; kartézský součin obsahuje všechny takové kombinace těchto prvků
 - **rozdíl** - rozdílem dvou množin A a B chápeme takovou množinu, která bude obsahovat všechny prvky z A a zároveň nebude obsahovat žádný prvek z B
@@ -21,7 +21,7 @@ SQL příkazy se dělí na čtyři základní skupiny:
 
 [množinové operace](https://www.interval.cz/clanky/sql-skladani-dotazu/)
 
-###Typy dat v SQL (SQL92)
+### Typy dat v SQL (SQL92)
 **Numerické typy** - INTEGER, SMALLINT, NUMERIC, DECIMAL, FLOAT, REAL, DOUBLE  PRECISION
 
 **Znakové řetězce** - CHARACTER (CHAR), CHARACTER VARYING (VARCHAR)
@@ -52,7 +52,7 @@ Základním konstruktem pro výběr dat je **SELECT**-**FROM**-**WHERE** blok. K
 
 **UNION, INTERSECT, EXCEPT**: množinové operace; tabulky musejí být kompatibilní (stejný počet sloupců, stejný typy dat odpovídajících si sloupců)
 
-####Spojení tabulek
+#### Spojení tabulek
 **přirozené spojení**
 ``` sql
 SELECT * FROM R NATURAL JOIN S;
@@ -75,7 +75,7 @@ Vnější spojení slouží k přidání některých řádků, které se s nič�
 SELECT * FROM R INNER(LEFT, RIGHT) JOIN S USING (A, B);
 ```
 
-####Příklady
+#### Příklady
 
 *Názvy kin*
 ``` sql
