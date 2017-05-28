@@ -75,7 +75,7 @@ Telefon výrobce ovšem není závislý na celém klíči, ale pouze na atributu
 *Tabulka 6: Entita Výrobce v 2NF*
 
 ### 3. normální forma
-Relace se nachází ve třetí normální formě, splňuje-li předchází dvě formy a žádný z jejich atributů není tranzitivně závislý na klíči. Jiné vyjádření téhož říká, že relace je v 3NF, pokud je ve 2NF a všechny neklíčové atributy jsou navzájem nezávislé.
+Relace se nachází ve třetí normální formě, splňuje-li předcházející dvě formy a žádný z jejich atributů není tranzitivně závislý na klíči. Jiné vyjádření téhož říká, že relace je v 3NF, pokud je ve 2NF a všechny neklíčové atributy jsou navzájem nezávislé.
 
 Volně přeloženo lze říci, že tranzitivní závislost je taková závislost mezi minimálně dvěma atributy a klíčem, kde jeden atribut je funkčně závislý na klíči a druhý atribut je funkčně závislý na prvním atributu.
 
@@ -121,11 +121,6 @@ Relace je ve čtvrté normální formě tehdy, je-li v BCNF a všechny vícehodn
 ### 5. normální forma
 Relace je v páté normální formě jestliže je ve 4NF a nemůže být dále bezeztrátově rozložena. Jinými slovy relace, která má n klíčových atributů (n >= 3) a která se rozloží na relace o n-1 klíčových atributech, nemůže být opětovně spojena operací přirozeného spojení do jedné relace, aniž by došlo ke ztrátě informace.
 
-*Konkrétní příklady 4. a 5. formy jsou dostupné na:*
-
-- [http://www.manualy.net/article.php?articleID=13](http://www.manualy.net/article.php?articleID=13)
-- [http://programujte.com/clanek/2008071900-normalizace-relacnich-databazi/](http://programujte.com/clanek/2008071900-normalizace-relacnich-databazi/)
-
 ## Bezztrátová dekompozice
 **bezztrátová dekompozice** = proces dělení původní relace na více schémat bez ztráty sémantiky 
 
@@ -153,6 +148,9 @@ Základní pojmy:
 - M:N.
 
 ![Ukázka ERD](15_erd.png)
+![Ukázka ERD](ERD1.png)
+![Ukázka ERD](ERD2.png)
+![Ukázka ERD](ERD3.png)
 
 ## Funkční analýza (DFD diagramy)
 **DFD diagram** = diagram datových toků (data flow diagram) používaný v softwarovém inženýrství pro modelování funkcí systému.
