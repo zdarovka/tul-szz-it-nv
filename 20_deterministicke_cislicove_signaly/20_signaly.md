@@ -39,17 +39,7 @@ pak signál ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) je ![N](https
 
 ### Účel Fourierovy transformace
 
-Ze signálu, který nese informaci, jak se veličina vyvíjí **v čase** (případně v prostoru - pro obraz), přecházím pomocí Fourierovy informace do **frekvenční oblasti**, ve které vidím, jak jsou v signálu zastoupené jednotlivé frekvence.
-
-### Základem
-
-Komplexní exponenciela
-
-![x[n] = e^{j \omega_0 n}, \omega_0 \in \mathbb{R}](https://latex.codecogs.com/svg.latex?x%5Bn%5D%20%3D%20e%5E%7Bj%20%5Comega_0%20n%7D%2C%20%5Comega_0%20%5Cin%20%5Cmathbb%7BR%7D)
-
-kde ![\omega_0](https://latex.codecogs.com/svg.latex?%5Comega_0) je číslicová frekvence
-
-![obrázek komplexní exponenciely](http://m.eet.com/media/1068017/lyons_pt2_3.gif)
+Ze signálu, který nese informaci, jak se veličina vyvíjí **v čase** (případně v prostoru - pro obraz), přecházím pomocí Fourierovy transformace do **frekvenční oblasti**, ve které vidím, jak jsou v signálu zastoupené jednotlivé frekvence.
 
 ### DTFT
 
@@ -57,31 +47,27 @@ Zobrazení z množiny posloupnosti prvků (časová oblast) do množiny spojitý
 
 ![X(e^{j\omega}) = \sum\limits_{n=-\infty}^{\infty}{x[n] e^{-j n \omega}}](https://latex.codecogs.com/svg.latex?X%28e%5E%7Bj%5Comega%7D%29%20%3D%20%5Csum%5Climits_%7Bn%3D-%5Cinfty%7D%5E%7B%5Cinfty%7D%7Bx%5Bn%5D%20e%5E%7B-j%20n%20%5Comega%7D%7D)
 
-kde ![\omega \in \mathbb{R}](https://latex.codecogs.com/svg.latex?%5Comega%20%5Cin%20%5Cmathbb%7BR%7D) je číslicová frekvence
+kde ![\omega \in \mathbb{R}](https://latex.codecogs.com/svg.latex?%5Comega%20%5Cin%20%5Cmathbb%7BR%7D) je číslicová frekvence (f/Fs)
 
-![X(e^{j\omega})](https://latex.codecogs.com/svg.latex?X%28e%5E%7Bj%5Comega%7D%29) je spojitá komplexní funkce reálného parametru ![\omega](https://latex.codecogs.com/svg.latex?%5Comega). V bodě ![\omega_0](https://latex.codecogs.com/svg.latex?%5Comega_0) se pak jedná o korelaci signálu ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) a komplexní exponenciely ![e^{j n \omega_0}](https://latex.codecogs.com/svg.latex?e%5E%7Bj%20n%20%5Comega_0%7D) (v podstatě jak moc se signál podobá kosinusovce dané frekvence)
-Ve výsledku se jedná o rozložení signálu ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) na součet nekonečně mnoha funkcí ![\cos(\omega n + \Phi(\omega))](https://latex.codecogs.com/svg.latex?%5Ccos%28%5Comega%20n%20&plus;%20%5CPhi%28%5Comega%29%29), nazýváme DTFT spektrum.
+![X(e^{j\omega})](https://latex.codecogs.com/svg.latex?X%28e%5E%7Bj%5Comega%7D%29) je spojitá komplexní funkce reálného parametru ![\omega](https://latex.codecogs.com/svg.latex?%5Comega). DTFT si můžeme představit jako rozklad posloupnosti x[n] do množiny komplexních exponenciál. Aplikací DTFT na diskrétní signál x[n] získáme spojité DTFT spektrum ![X(e^{j\omega})](https://latex.codecogs.com/svg.latex?X%28e%5E%7Bj%5Comega%7D%29)
 
-DTFT spektrum se rozděluje na *magnitudu* (míra podobnosti ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) a ![e^{j n \omega_0}](https://latex.codecogs.com/svg.latex?e%5E%7Bj%20n%20%5Comega_0%7D))
+### DTFT spektrum
 
-![|X(e^{j n \omega_0})|](https://latex.codecogs.com/svg.latex?%7CX%28e%5E%7Bj%20n%20%5Comega_0%7D%29%7C)
-
-a fázi (fázový posun mezi ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) a ![e^{j n \omega_0}](https://latex.codecogs.com/svg.latex?e%5E%7Bj%20n%20%5Comega_0%7D))
-
-![\Phi(\omega_0)](https://latex.codecogs.com/svg.latex?%5CPhi%28%5Comega_0%29)
-
-Dohromady
+Komplexní funkce reálné proměnné ![\omega](https://latex.codecogs.com/svg.latex?%5Comega), vyjadřující míru korelace komplexních exponenciál na frekvencích ![\omega](https://latex.codecogs.com/svg.latex?%5Comega) a signálu x[n]  (v podstatě jak moc se signál podobá kosinusovce dané frekvence). Ve výsledku se jedná o rozložení signálu ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) na součet nekonečně mnoha funkcí ![\cos(\omega n + \Phi(\omega))](https://latex.codecogs.com/svg.latex?%5Ccos%28%5Comega%20n%20&plus;%20%5CPhi%28%5Comega%29%29) - harmonických signálů.
 
 ![X(e^{j n \omega_0}) = |X(e^{j n \omega_0})| e^{j \Phi \omega_0}](https://latex.codecogs.com/svg.latex?X%28e%5E%7Bj%20n%20%5Comega_0%7D%29%20%3D%20%7CX%28e%5E%7Bj%20n%20%5Comega_0%7D%29%7C%20e%5E%7Bj%20%5CPhi%20%5Comega_0%7D)
 
-### Inverze
-Inverze je dána jako
+DTFT spektrum se rozděluje na **magnitudové spektrum** (míra podobnosti ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) a ![e^{j n \omega_0}](https://latex.codecogs.com/svg.latex?e%5E%7Bj%20n%20%5Comega_0%7D))
 
-![x[n] = \frac{1}{2\pi} \int\limits_{-\pi}^{\pi} X(e^{j\omega}) e^{j n \omega} d\omega](https://latex.codecogs.com/svg.latex?x%5Bn%5D%20%3D%20%5Cfrac%7B1%7D%7B2%5Cpi%7D%20%5Cint%5Climits_%7B-%5Cpi%7D%5E%7B%5Cpi%7D%20X%28e%5E%7Bj%5Comega%7D%29%20e%5E%7Bj%20n%20%5Comega%7D%20d%5Comega)
+![|X(e^{j n \omega_0})|](https://latex.codecogs.com/svg.latex?%7CX%28e%5E%7Bj%20n%20%5Comega_0%7D%29%7C)
+
+a **fázové spektrum** (fázový posun mezi ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) a ![e^{j n \omega_0}](https://latex.codecogs.com/svg.latex?e%5E%7Bj%20n%20%5Comega_0%7D))
+
+![\Phi(\omega_0)](https://latex.codecogs.com/svg.latex?%5CPhi%28%5Comega_0%29)
 
 ### Vlastnosti
 
-- Periodicita - DTFT je periodická s periodou ![2\pi](https://latex.codecogs.com/svg.latex?2%5Cpi) (číslicová frekvence od ![-\pi](https://latex.codecogs.com/svg.latex?-%5Cpi) do ![\pi](https://latex.codecogs.com/svg.latex?%5Cpi))
+- Periodicita - DTFT je periodická s periodou ![2\pi](https://latex.codecogs.com/svg.latex?2%5Cpi)
 
 - Linearita
  
@@ -92,18 +78,13 @@ Inverze je dána jako
 
   ![x[-n] = X(e^{-j n \omega})](https://latex.codecogs.com/svg.latex?x%5B-n%5D%20%3D%20X%28e%5E%7B-j%20n%20%5Comega%7D%29)
   
+- Posunutí - posunutí řady v čase vede k vynásobení ![X(e^{j\omega})](https://latex.codecogs.com/svg.latex?X%28e%5E%7Bj%5Comega%7D%29) komplexní exponenciálou, tedy:
+
+![x[-n] = X(e^{-j n \omega})](https://latex.codecogs.com/gif.latex?x%5Bn-n_%7B0%7D%5D%20%3D%20e%5E%7B-j%5Comega%20n_%7B0%7D%7DX%28e%5E%7Bj%5Comega%20%7D%29)
 
 - Konvoluční teorém - konvoluce dvou signálů v časové oblasti vede k vynásobení ve frekvenční oblasti
 
   ![h[n]*x[n] \Leftrightarrow H(e^{j n \omega})X(e^{j n \omega})](https://latex.codecogs.com/svg.latex?h%5Bn%5D*x%5Bn%5D%20%5CLeftrightarrow%20H%28e%5E%7Bj%20n%20%5Comega%7D%29X%28e%5E%7Bj%20n%20%5Comega%7D%29)
-
-- Stejně tak to platí obráceně - násobení signálů v čase je (periodickou) konvolucí ve frekvenci - Teorém o násobení:
-  
-  ![h[n]x[n] \Leftrightarrow H(e^{j n \omega})*X(e^{j n \omega})](https://latex.codecogs.com/svg.latex?h%5Bn%5Dx%5Bn%5D%20%5CLeftrightarrow%20H%28e%5E%7Bj%20n%20%5Comega%7D%29*X%28e%5E%7Bj%20n%20%5Comega%7D%29)
-
-- Parsevalův teorém - DTFT zachovává energii signálu, tedy
-
-  ![\sum\limits_{n=-\infty}^{\infty}{|x[n]|^2} = \frac{1}{2\pi} \int\limits_{-\pi}^{\pi}{|X(e^{j \omega})|^2 d\omega}](https://latex.codecogs.com/svg.latex?%5Csum%5Climits_%7Bn%3D-%5Cinfty%7D%5E%7B%5Cinfty%7D%7B%7Cx%5Bn%5D%7C%5E2%7D%20%3D%20%5Cfrac%7B1%7D%7B2%5Cpi%7D%20%5Cint%5Climits_%7B-%5Cpi%7D%5E%7B%5Cpi%7D%7B%7CX%28e%5E%7Bj%20%5Comega%7D%29%7C%5E2%20d%5Comega%7D)
 
 ## DFT (Discrete Fourier Transform)
 
