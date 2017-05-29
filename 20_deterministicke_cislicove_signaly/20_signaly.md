@@ -80,11 +80,13 @@ a **fázové spektrum** (fázový posun mezi ![x[n]](https://latex.codecogs.com/
   
 - Posunutí - posunutí řady v čase vede k vynásobení ![X(e^{j\omega})](https://latex.codecogs.com/svg.latex?X%28e%5E%7Bj%5Comega%7D%29) komplexní exponenciálou, tedy:
 
-![x[-n] = X(e^{-j n \omega})](https://latex.codecogs.com/gif.latex?x%5Bn-n_%7B0%7D%5D%20%3D%20e%5E%7B-j%5Comega%20n_%7B0%7D%7DX%28e%5E%7Bj%5Comega%20%7D%29)
+  ![x[-n] = X(e^{-j n \omega})](https://latex.codecogs.com/gif.latex?x%5Bn-n_%7B0%7D%5D%20%3D%20e%5E%7B-j%5Comega%20n_%7B0%7D%7DX%28e%5E%7Bj%5Comega%20%7D%29)
 
 - Konvoluční teorém - konvoluce dvou signálů v časové oblasti vede k vynásobení ve frekvenční oblasti
 
   ![h[n]*x[n] \Leftrightarrow H(e^{j n \omega})X(e^{j n \omega})](https://latex.codecogs.com/svg.latex?h%5Bn%5D*x%5Bn%5D%20%5CLeftrightarrow%20H%28e%5E%7Bj%20n%20%5Comega%7D%29X%28e%5E%7Bj%20n%20%5Comega%7D%29)
+
+![DTFT](DTFT.png)
 
 ## DFT (Discrete Fourier Transform)
 
