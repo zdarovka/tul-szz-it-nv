@@ -4,8 +4,6 @@
 frekvenční charakteristika, přenosová funkce, skupinové zpoždění, lineární diferenční rovnice 
 s konstantními koeficienty, systém s lineární a minimální fází. 
 
-## Vlastnosti
-
 **Systém** dokáže generovat, zpracovávat, modifikovat a přijímat signály. Signál je projevem činnosti systému.
 
 Příklady:
@@ -15,6 +13,8 @@ Příklady:
 - Reproduktor - převádí elektrický signál na akustický, atd.
 
 **LTI (Linear Time Invariant)** systémy jsou takové systémy, které jsou lineární a časově nezávislé.
+
+## Vlastnosti
 
 ### Linearita
 
@@ -52,22 +52,19 @@ Lineární systém je aditivní a homogenní
 Výstup kauzálního systému závisí pouze na současných a minulých hodnotách
 
 - Kauzální systém : ![y(t) = x(t) + x(t-1)](https://latex.codecogs.com/svg.latex?y%28t%29%20%3D%20x%28t%29%20&plus;%20x%28t-1%29)
-
 - Nekauzální systém : ![y(t) = x(t) + x(t+1)](https://latex.codecogs.com/svg.latex?y%28t%29%20%3D%20x%28t%29%20&plus;%20x%28t&plus;1%29)
-
+- LTI systémy jsou kauzální poouze v případě, že h[n] = 0
 
 ### Stabilita
 
-- definujeme BIBO stabilitu (Bounded Input Bounded Output)
 - Pokud je vstup do systému omezený (např. na interval <-1;1>) tak jeho výstup bude také omezený (tzn. jeho rozsah se nebude rozpínat do nekonečna)
-
-Obecně lze říct že systém je stabilní, pokud amplituda jeho výstupu neroste nad všechny meze. (Nestabilní systém je např. s kladnou zpětnou vazbou)
-
+- Obecně lze říct že systém je stabilní, pokud amplituda jeho výstupu neroste nad všechny meze. (Nestabilní systém je např. s kladnou zpětnou vazbou)
+- LTI szstémy jsou stabilní pouze v případě, že ![n_0](https://latex.codecogs.com/gif.latex?%5Csum_%7Bn%20%3D%20-%5Cinfty%7D%5E%7B%5Cinfty%7D%20%7Ch%5Bn%5D%7C%3C%20%5Cinfty)
 
 ### Invariantnost vůči (časovému) posunu
 
 - Nechť ![y[n]](https://latex.codecogs.com/svg.latex?y%5Bn%5D) je výstup systému ![T(\cdot)](https://latex.codecogs.com/svg.latex?T%28%5Ccdot%29) na ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) 
-- Pak ![T(\cdot)](https://latex.codecogs.com/svg.latex?T%28%5Ccdot%29) je invariantní vůči posunu, pokud pro libovolné zpoždění ![n_0](https://latex.codecogs.com/svg.latex?n_0)
+- Pak ![T(\cdot)](https://latex.codecogs.com/svg.latex?T%28%5Ccdot%29) je invariantní vůči posunu, pokud pro libovolné zpoždění ![n_0](https://latex.codecogs.com/svg.latex?n_0) platí, že odezva na ![n_0](https://latex.codecogs.com/gif.latex?x%5Bn-n_%7B0%7D%5D) je ![n_0](https://latex.codecogs.com/gif.latex?y%5Bn-n_%7B0%7D%5D)
 
 ### Popis LTI systému
 
@@ -84,7 +81,6 @@ lze popsat pomocí:
 ## Impulsní odezva (FIR/IIR)
 
 - je výstup LTI systémů na tzv. jednotkový impulz (značen písmenem ![\delta](https://latex.codecogs.com/svg.latex?%5Cdelta))
-- Impulsní odezva jednoznačně charakterizuje LTI systém (stejně jako dif. rovnice)
 - značí se ![h[n]](https://latex.codecogs.com/svg.latex?h%5Bn%5D)
 
 ### Konvoluce
@@ -114,69 +110,35 @@ Funkci, která popisuje závislost vlastních hodnot na frekvenci ω značíme !
 
 Získáme ji aplikací DTFT na impulzní odezvu systému ![h[n]](https://latex.codecogs.com/svg.latex?h%5Bn%5D)
 
-![](frekv_char.png)
-
-- na cvikách jsme ji vždycky počítali z diferenční rovnice systému (jako zlomek koeficientů x vuci koeficientum y)
+![ssss](frekv_char.png)
 
 Obvykle se uvádí ve formě dvou reálných funkcí:
 
 - magnitudová charakteristika ![|H(ejω)|](https://latex.codecogs.com/svg.latex?%7CH%28e%5E%7Bj%5Comega%7D%29%7C)
 - fázová charakteristika ![\Phi(\omega)](https://latex.codecogs.com/svg.latex?%5CPhi%28%5Comega%29)
 
-
 Dohromady: ![H(e^{j\omega}) = |H(e^{j\omega})| \cdot e^{j\Phi(\omega)}](https://latex.codecogs.com/svg.latex?H%28e%5E%7Bj%5Comega%7D%29%20%3D%20%7CH%28e%5E%7Bj%5Comega%7D%29%7C%20%5Ccdot%20e%5E%7Bj%5CPhi%28%5Comega%29%7D)
+
+![ssss](frekvencniCharakteritika.PNG)
 
 ## Skupinové spoždění
 
-- Místo fázové charakteristiky (u filtrů s lineární fázovou charakteristikou) se často uvádí skupinové zpoždění (group delay - GD)
-- Udává zpoždění signálu ![e^jωn](https://latex.codecogs.com/svg.latex?e%5E%7Bj%20%5Comega%20n%7D) po průchodu LTI systémem (ve vzorcích)
+- Místo fázové charakteristiky (u filtrů s lineární fázovou charakteristikou) se často uvádí skupinové zpoždění
+- Udává zpoždění úzkopásmového signálu složeného ze skupiny harmonitckých komponent v okolí frekvence ω po průchodu LTI systémem (ve vzorcích)
 - ![τ(ω) = −dφ(ω)/dω](https://latex.codecogs.com/svg.latex?%5Ctau%28%5Comega%29%20%3D%20-%5Cfrac%7Bd%20%5CPhi%28%5Comega%29%7D%7Bd%20%5Comega%7D) 
-- na cviku jsme si psali pro FIR filtry s lineární fází, že 
-	- skupinové spoždění = ![(N-1)/2](https://latex.codecogs.com/svg.latex?%5Cfrac%7BN-1%7D%7B2%7D), kde ![N](https://latex.codecogs.com/svg.latex?N) je délka filtru 
+
+## Přenosová funkce
+
+- Získáme ji pomocí Z-transformace impulsní odezvy
 
 ### Z-transformace
 
 - Z-transformace diskrétní řady ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) je deﬁnována jako:
 	- ![X(z) = \sum_{n = 0}^{N-1} x[n] \cdot z^{-n}](https://latex.codecogs.com/svg.latex?X%28z%29%20%3D%20%5Csum_%7Bn%20%3D%200%7D%5E%7BN-1%7D%20x%5Bn%5D%20%5Ccdot%20z%5E%7B-n%7D)
 - Z-obraz je komplexní funkce komplexní proměnné. Jeho vlastnosti se nejčastěji popisují v z-rovině
-
-### Region konvergence
-
-- (Region of Convergence - ROC) - hodnoty z, pro které je součet řady konečný
 - DTFT ze Z-obrazu získáme dosazením ![z = e^{j\omega}](https://latex.codecogs.com/svg.latex?z%20%3D%20e%5E%7Bj%5Comega%7D), tedy DTFT je tvořena body na jednotkové kružnici v Z rovině
-- Region konvergence je mezikruží ve formě α<|z|<β
-	- α a β jsme počítali pomocí tabulky častých z-obrazů
-	- kde podle tvaru jmenovatele přenosové funkce, nebo tvaru impulzní odezvy se zjistila velikost a orientace daného limitu
-		- tabulka spíše pro představu, rozhodně nebude potřeba
-		- ![](http://s33.postimg.org/o95a4fx0f/roc.png)
-- ROC nikdy neobsahuje póly - v naprosté většině případů právě póly vymezujii ROC, ale nemusí tomu tak být (např. můžu mit kauzální system s pólem ve vzdálenosti 0.5 a s dalšim ve vzdálenosti 0.3 - 0.5 vymezuje ROC outward, 0.3 už ne)
-- pokud se ROC roztahuje ven -> system je kauzální 
-- pokud se ROC roztahuje dovnitř (k počátku), system je nekauzální
-- pokud ROC je mezikruzi -> system obsahuje kauzalni i nekauzalni prvky
-- pokud ROC obsahuje jednotkovou kružnici (a tudíž lze vypočítat DTFT) -> systém je stabilní.
 
-- Pravostranná sekvence má z-obraz s ROC ve tvaru: |z|>α
-- Levostranná sekvence má z-obraz s ROC ve tvaru: |z|<β
-- Z-obraz je komplexní funkce komplexní proměnné
-- je-li ROC vymezené z obou stran (two-sides) nazýváme ho mezikruží
-- ![](http://nrlug.puhep.res.in/GLUE/Packages/engg/DSP/book/img90.gif)
-
-#### Nuly a póly
-
-- Všechny systémy popsané LCCDE lze jednoznačně popsat pomocí Z-transformace jako racionální funkci (viz. přenosová funkce)
-- nuly jsou pak kořeny čitatele a póly kořeny jmenovatele přenosové funkce
-- z pozic nul a pólů v z-rovině můžeme vyčíst chování daného filtru
-	- v blízkosti nul budou dané frekvence tlumeny
-	- v blízkosti pólů budou frekvence zesilovány
-- intenzita zesílení/tlumení je dána vzdáleností od [0;0]
-- ![ukazka frekencni char. filtru a roc](img139.png)
-- v pravo dole je z-rovina, filtr má nulu v [0;0] a jeden pól skoro u [1;0]
-	- ve frek. charak. se to projeví velkým zesílením jedné frekvence, v tomto případě zesílení konstantních signálů (f= 0 Hz)
-
-
-## Přenosová funkce
-
-- Získáme ji pomocí Z-transformace impulsní odezvy
+#### Přenosová funkce
 
 ![](o21_frek_char.png)
 
