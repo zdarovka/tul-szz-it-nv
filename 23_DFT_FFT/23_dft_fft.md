@@ -1,9 +1,9 @@
 # 23. - DFT/FFT (radix-2)
 
-> vlastnosti a výpočetní složitost, linearní a kruhová konvoluce, rychlý
+> DFT/FFT (radix-2) - vlastnosti a výpočetní složitost, linearní a kruhová konvoluce, rychlý
 výpočet lineární konvoluce pomocí FFT (metoda overlap-add, overlap-save).
 
-##DFT a FFT
+## DFT a FFT
 
 - Rychlá Fourierova Transformace (Fast Fourier Transform)
 je skupina algoritmů umožňující výpočetně optimalizovaný
@@ -26,9 +26,9 @@ výpočet DFT a IDFT
 ![](300px-DIT-FFT-butterfly.png)
 ![](pseudokod.png)
 
-##Lineární a kruhová konvoluce
+## Lineární a kruhová konvoluce
 
-###Lineární konvoluce
+### Lineární konvoluce
 
 ![y[n] = x[n] * h[n] = \sum_{k=0}^{N-1}x[k]\cdot h[n-k]](https://latex.codecogs.com/svg.latex?y%5Bn%5D%20%3D%20x%5Bn%5D%20*%20h%5Bn%5D%20%3D%20%5Csum_%7Bk%3D0%7D%5E%7BN-1%7Dx%5Bk%5D%5Ccdot%20h%5Bn-k%5D)
 
@@ -51,7 +51,7 @@ výpočet DFT a IDFT
 Vysledek konvoluce = [1 3 6 10 9 7 4]
 
 
-###Kruhová konvoluce
+### Kruhová konvoluce
 
 - Jsou-li x[n] a h[n] dvě konečné sekvence s N-bodovou DFT X[k] a H[k]
 - pak sekvence s DFT rovnou Y [k] = H[k]X[k] je dána vztahem
@@ -69,7 +69,7 @@ Vysledek konvoluce = [1 3 6 10 9 7 4]
 	- ![](kruh_konv_3.png)
 - Při vhodném doplnění nulami se však používá právě pro rychlý výpočet lineární konvoluce (výstup z FIR ﬁltru) pomocí DFT
 
-##Rychlý výpočet lineární konvoluce pomocí FFT
+## Rychlý výpočet lineární konvoluce pomocí FFT
 
 Výpočet lin. konvoluce pomocí DFT:
 
@@ -84,13 +84,13 @@ Tento postup je nevhodný pro dlouhé sekvence x[n]
 	- Při výpočtu DFT výsledek celý najednou - zpoždění
 	- Toto negativum se v praxi obchází blokovým výpočtem konvoluce
 	- 
-###Overlap-Add (Bloková konvoluce)
+### Overlap-Add (Bloková konvoluce)
 
 - základní princip je, že při kruhové konvoluci signálu s impulzní odezvou, vznikne část navíc (oproti délce vstupu)
 - výsledkem blokové konvoluce Add je poskládání jednotlivých mezivýsledků ![y_{i}](https://latex.codecogs.com/gif.latex?y_%7Bi%7D) za sebe, s tím že překrývající části se sečtou
 ![](overlap_add.png)
 
-###Overlap-Save (Bloková konvoluce)
+### Overlap-Save (Bloková konvoluce)
 
 - k prvnímu rámci signálu se přidá zleva padding nul, aby se z kruhové konvoluce stala lineární
 - v dalších rámcích se přidá na začátek místo nul poslední hodnoty z předchozího rámce
