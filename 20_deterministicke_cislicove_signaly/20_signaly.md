@@ -90,8 +90,6 @@ a **fázové spektrum** (fázový posun mezi ![x[n]](https://latex.codecogs.com/
 
 ## DFT (Discrete Fourier Transform)
 
-### DFT
-
 DTFT převádí nekonečnou diskrétní řadu ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) na spojitou funkci číslicové frekvence ![X(e^{j\omega})](https://latex.codecogs.com/svg.latex?X%28e%5E%7Bj%5Comega%7D%29). Zpětná rekonstrukce signálu ze spektra je možná, pokud známe hodnoty spektra pro všechny číslicové frekvence ![\omega](https://latex.codecogs.com/svg.latex?%5Comega). Pokud je trvání řady konečné, pak je možná perfektní rekonstrukce známe-li N vhodně zvolených frekvenčních bodů. 
 
 V podstatě se jedná o vhodné ekvidistantní navzorkování spojitého DTFT spektra N vzorky tak, že
@@ -104,17 +102,11 @@ Vzorec DFT je tedy
 
 nazýváme ![N](https://latex.codecogs.com/svg.latex?N)-bodová DFT.
 
-Vybráním ![N](https://latex.codecogs.com/svg.latex?N) bodů signálu se v podstatě provádí operace násobení signálu obdélníkovým okénkem (viz část o okénkách).
-
-- Ohledně využití DFT pro rychlou konvoluci - viz otázka [https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/23_dft_fft.md](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/23_dft_fft.md "23")
+- Vybráním ![N](https://latex.codecogs.com/svg.latex?N) bodů signálu se v podstatě provádí operace násobení signálu obdélníkovým okénkem (viz část o okénkách).
 
 - DFT spektrum je ze základu oboustranné (od poloviny do konce je spektrum symetrické). Hodnoty od 0 do ![\pi](https://latex.codecogs.com/gif.latex?%5Cpi) budou stejné jako jako hodnoty od ![2\pi](https://latex.codecogs.com/gif.latex?2%5Cpi) do ![\pi](https://latex.codecogs.com/gif.latex?%5Cpi), pouze s opačným znaménkem. V praxi se proto pracuje obvykle s jednostranným spektrem (od 0 do ![\pi](https://latex.codecogs.com/gif.latex?%5Cpi)), které redundantní hodnoty vynechává (zanedbání jejich výpočtu také přispívá ke zrychlení výpočtu FFT).
 
-### Inverze
-
-Inverzní DFT je dána jako
-
-![x[n] = \frac{1}{N} \sum\limits_{k=0}^{N-1}{X[k] e^{j 2 \pi n k / N}}, 0 \leq n \leq N-1](https://latex.codecogs.com/svg.latex?x%5Bn%5D%20%3D%20%5Cfrac%7B1%7D%7BN%7D%20%5Csum%5Climits_%7Bk%3D0%7D%5E%7BN-1%7D%7BX%5Bk%5D%20e%5E%7Bj%202%20%5Cpi%20n%20k%20/%20N%7D%7D%2C%200%20%5Cleq%20n%20%5Cleq%20N-1)
+![DFT](TimeWaveToDFT2.jpg)
 
 ## STFT (Short Time Fourier Transform)
 
