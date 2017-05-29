@@ -146,7 +146,7 @@ a nevhodně navzorkované DTFT
 ## Vzorkovací teorém
 
 ### Definice
-Je-li ![\Omega_0](https://latex.codecogs.com/svg.latex?%5COmega_0) nevyšší frekvencí obsaženou v analogovém signálu ![x_a(t)](https://latex.codecogs.com/svg.latex?x_a%28t%29) (signál je pásmově omezen), pak ![x_a(t)](https://latex.codecogs.com/svg.latex?x_a%28t%29) je možné jednoznačně rekonstruovat z jeho vzorků ![x_a(nT_s)](https://latex.codecogs.com/svg.latex?x_a%28nT_s%29) pokud
+Je-li ![\Omega_0](https://latex.codecogs.com/svg.latex?%5COmega_0) nejvyšší frekvencí obsaženou v analogovém signálu ![x_a(t)](https://latex.codecogs.com/svg.latex?x_a%28t%29) (signál je pásmově omezen), pak ![x_a(t)](https://latex.codecogs.com/svg.latex?x_a%28t%29) je možné jednoznačně rekonstruovat z jeho vzorků ![x_a(nT_s)](https://latex.codecogs.com/svg.latex?x_a%28nT_s%29) pokud
 
 ![\Omega_s = \frac{2\pi}{T_s} > 2\Omega_0](https://latex.codecogs.com/svg.latex?%5COmega_s%20%3D%20%5Cfrac%7B2%5Cpi%7D%7BT_s%7D%20%3E%202%5COmega_0)
 
@@ -177,24 +177,6 @@ Spojitá amplituda je rozdělena na ![L](https://latex.codecogs.com/svg.latex?L)
 ![l_k = [x_k, x_{k+1}], k = 1, 2,..., L](https://latex.codecogs.com/svg.latex?l_k%20%3D%20%5Bx_k%2C%20x_%7Bk&plus;1%7D%5D%2C%20k%20%3D%201%2C%202%2C...%2C%20L)
 
 Pokud ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) patří do intervalu ![l_k](https://latex.codecogs.com/svg.latex?l_k), kvantizace přiřadí ![\hat{x}[n]](https://latex.codecogs.com/svg.latex?%5Chat%7Bx%7D%5Bn%5D) hodnotu ![\hat{x}_k](https://latex.codecogs.com/svg.latex?%5Chat%7Bx%7D_k)
-
-### Prakticky
-
-![\hat{x}[n] = round(x[n])](https://latex.codecogs.com/svg.latex?%5Chat%7Bx%7D%5Bn%5D%20%3D%20round%28x%5Bn%5D%29)
-
-Kvantizační rozlišení (šířka mezi rozhodovacími úrovněmi) neměnné, počet rozhodovacích hladin jako mocnina dvou (kvůli binárnímu kódování po kvantizaci).
-
-### Kvantizační chyba a SQNR
-
-Rozdíl mezi skutečnou a kvantovanou hodnotou
-
-![e[n] = x[n] - Q(x[n])](https://latex.codecogs.com/svg.latex?e%5Bn%5D%20%3D%20x%5Bn%5D%20-%20Q%28x%5Bn%5D%29)
-
-SQNR - Signal to Quantization Noise Ratio, Odstup signálu od kvantizačního šumu
-
-![SQNR = 10 \log{\frac{\sigma_x^2}{\sigma_e^2}} \approx 6.02 \text{ dB per bit}](https://latex.codecogs.com/svg.latex?SQNR%20%3D%2010%20%5Clog%7B%5Cfrac%7B%5Csigma_x%5E2%7D%7B%5Csigma_e%5E2%7D%7D%20%5Capprox%206.02%20%5Ctext%7B%20dB%20per%20bit%7D)
-
-tzn. přidáním jednoho bitu se SQNR svyšuje o cca 6 dB (4x).
 
 
 
