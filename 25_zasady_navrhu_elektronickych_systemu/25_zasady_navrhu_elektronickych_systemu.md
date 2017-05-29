@@ -6,8 +6,6 @@ Oddělení zpracování dat od řídicích obvodů (obecně rozdělení do něko
 
 ![Schéma systému typického systému](25_typicke_schema.png)
 
-*Schéma systému typického systému*
-
 Nejčastěji používáme úroveň RTL (Register Transfer Level).
 
 - **Datová část** - v podstatě se jedná o střídání kombinační logiky (výpočetní jednotky) a registrů pro uchovávání dat.
@@ -33,21 +31,17 @@ V datové části řešíme algoritmizaci (obecně dvěma krajními implementace
 
 1. pamětí s mikroprogramem (u velkých řadičů neúměrně roste potřebná paměť)
 2. stavovým automatem (Moore, Mealy)
- - **Mealy** - výstup závisí na vstupu a současném stavu; obvykleméně stavů 
- - **Moore** - výstup závisí pouze na současném stavu, obvykle více stavů; o jeden takt spožděn
-
-[Více o Mealy vs Moore v angličtině.](http://www.tutorialspoint.com/automata_theory/moore_and_mealy_machines.htm)
+   - **Mealy** - výstup závisí na vstupu a současném stavu; obvykle méně stavů 
+   - **Moore** - výstup závisí pouze na současném stavu, obvykle více stavů; o jeden takt spožděn
 
 ![Schéma řídicí části systému](25_ridici_cast.png)
 
 *Schéma řídicí části systému*
 
 ### Register retiming
-Při návrhu komplikovaných desek, pracujících na vysoké taktovací frekvenci, je velmi zásadní délka jednotlivých kombinačních cest a případné rozdíly ve spoždění, které mohou způsobit nechtěnou změnámu na výstupech hradel. Register retiming slouží k vyrovnání kombinačních logických cest mezi registry.
+Při návrhu komplikovaných desek, pracujících na vysoké taktovací frekvenci, je velmi zásadní délka jednotlivých kombinačních cest a případné rozdíly ve spoždění, které mohou způsobit nechtěnou změnu na výstupech hradel. Register retiming slouží k vyrovnání kombinačních logických cest mezi registry.
 
 ![Register retiming](25_register_retiming.png)
-
-*Register retiming*
 
 ## Pravidla synchroního návrhu
 **Časová doména** je část obvodu, jehož registry jsou buzeny stejným hodinovým signálem. Při přenosu mezi doménami se mohou objevovat **metastability**, jejich vlivy lze potlačovat různými **synchronizátory**.
@@ -72,7 +66,7 @@ Ukazuje se tedy, že nejlepším řešením je **navrhovat vše synchronně** (n
 **Pravidla synchronního návrhu:**
 
 - na hodinové vstupy všech prvků jsou přivedeny pouze hodinové signály (bez přídavné logiky)
-- všechny klopné obvody jsou hranové řízené (ne hladinově řízené obvody latche)
+- všechny klopné obvody jsou hranově řízené (ne hladinově řízené obvody latche)
 - zpětné vazby v kombinačních obvodech se v návrhu nevyskytují (ZV vedou na asynchronní sekvenční logiku)
 - asynchronní signály jsou synchronizovány
 
@@ -92,8 +86,6 @@ Pro snížení pravděpodobnosti vzniku metastability se používají dvojnásob
 signál větvit.
 
 ![Synchronizátor](25_synchronizator.png)
-
-*Synchronizátor*
 
 **Problém se synchronizací n-bit. sběrnic**
 
@@ -128,5 +120,3 @@ Zastavení hodinového signálu vkládáním logiky není vhodné, lze použít 
 Pro přenos dat mezi časovými doménami lze použít fronty s využitím paměti FIFO s asynchronními hodinami (dual clock FIFO). Využíváme zejména v případě, kdy je zpoždění spojené s resynchronizací nepřípustné.
 
 ![Fronta FIFO](25_fronta.png)
-
-*Fronta FIFO*
