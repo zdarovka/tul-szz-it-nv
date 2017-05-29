@@ -242,10 +242,6 @@ Porty popisují vnější signály entity a jsou charakterizovány:
   - *INOUT* – obousměrný tok (obousměrné vstupy/výstupy)
   - *LINKAGE* – neznámý směr datového toku nebo obousměrný (návaznost na jiné než VHDL modely, např. Verilog)
 
-![Módy portu](24_mody.png)
-
-*Módy portu*
-
 **Datové objekty**
 
 - *Constants* (konstanty) – mají neměnnou hodnotu
