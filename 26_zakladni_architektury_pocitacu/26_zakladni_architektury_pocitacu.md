@@ -68,7 +68,7 @@ Základní principy (rozdíly vůči von Neumannově archit.):
 
 - **řídicí jednotky** CU (Control Unit) – řadič
 - **aritmeticko-logické jednotky** ALU (Arithmetic Logic Unit)
-- **sady registrů** RS (Register Set), které uchovávají různé hodnoty během práce počítače (zápisníková paměť) ALU + RS je někdy označuje jako operační jednotka
+- **sady registrů** RS (Register Set), které uchovávají různé hodnoty během práce počítače (zápisníková paměť)
 - **programového čítače** PC (Program Counter) – často se uvádí jako jeden registr RS nebo součást řadiče
 - **vnitřní sběrnice** - řeší spojení mezi bloky CPU (typy - datová, adresová, řídicí), od každého typu může být v architektuře i více sběrnic
 
@@ -135,7 +135,6 @@ Complex Instruction Set Computer. Rozsáhlý instrukční soubor, obsahuje i mno
 - díky vysoké složitosti byl řadič navržen na principu paměti s mikroprogramy (ROM)
 - řídicí obvody zabírají na čipu přibližně 60% místa
 - pro překlad programů bývá zpravidla jednodušší překladač
-- používá se zpravidla GPR ISA (varianta R-M, M-M)
 - s postupem doby se začíná používat zřetězené zpracování (zejména s rozkladem na mikroinstrukce)
 
 **RISC**
@@ -151,10 +150,7 @@ Reduced Instruction Set Computer, (použit poprvé 1974) počátkem 80.let prvn�
 - velký počet programově dostupných registrů (32–192)
 - operace s daty pouze nad registry (2 zdrojové, 1 cílový)
 - registry jsou víceúčelové (jednodušší překladače)
-- přístup do paměti pouze pomocí instrukcí přesunu (mluvíme o architektuře L/S – instrukce Load a Store)
 - malý počet adresových módů (3–5)
-- ortogonální instrukční soubor (ve všech instrukcích, které používají registr procesoru jako zdrojový nebo cílový operand, lze použít libovolný registr)
-- pro zvýšení účinnosti pipeline optimalizující kompilátor pro naplánování instrukcí
 - nejčastěji harvardská architektura
 
 **PostRISC (CRISC)**
@@ -213,7 +209,6 @@ Z pohledu instrukčního cyklu jsou architektury založeny většinou na vnitřn
 - masivní paralelizace (používá se ke kryptoanylýze například pro lámání hashe)
 - specializovaná architektura na vektorové a maticové operace (filtry, konvoluce, transformace)
 - GPU obvykle disponují paměťovou sbernicí s mnohem vyšší propustností, než CPU. GPU totiž pracuje s větším množstvím dat najednou.
-![Model GPU](http://www.quantalea.net/static/app/tutorial/content/images/gpuModel.jpg)
 
 ## Architektura mikrořadičů
 Mikrořadič je jednoobvodový (jednočipový, monolitický) μP (mikroprocesor doplněný paměťmi a periferiemi). Vyznačují se velkou spolehlivostí a kompaktností, proto jsou určeny především pro jednoúčelové aplikace do vestavěných systémů.
@@ -227,11 +222,8 @@ Mikrořadič je jednoobvodový (jednočipový, monolitický) μP (mikroprocesor 
 - datová sběrnice relativně malá (8, 16, max. 32 bitů)
 - relativně nízká cena (cca od 40,- Kč)
 - široký rozsah napájecího napětí (od 2.7 V do 6 V)
-- technologie CMOS
-- střadačová nebo registrová ISA (příp. kombinace)
 - vstupy a výstupy organizovány do bran (nutno nastavit jako vstupní nebo výstupní)
 - integrované speciální obvody (PWM, ADC či DAC převodníky, komparátory, komunikační sběrnice, radiče displeje atd.)
-- specializovane obvody uvnitř (ČASOVAČE, WATCHDOG, REALTIMECLOCK, ŘADIČ PŘERUŠENÍ ...)
 
 ## Hodnocení výkonu
 Základní požadavek kladený na počítač je schopnost provádět zpracování informací. Tuto schopnost označujeme jako výkonnost počítače. Výkonnost je obtížné hodnotit jediným číslem – objektivnější je použít tzv. vektor výkonnosti, jehož struktura se vyvíjí. Základem bývá počet operací (příp. instrukcí) za sekundu, buď v pevné nebo pohyblivé řádové čárce. Dalšími složkami mohou být propustnost systému, doba odezvy, stupeň využití, aj. Hodnocení výkonnosti by mělo být podkladem pro optimalizaci.
@@ -243,10 +235,6 @@ Základní požadavek kladený na počítač je schopnost provádět zpracován�
 - **MFLOPS** (Million FLoating point Operations Per Second)
 
 ![Výkonostní metriky](26_metriky.png)
-
-*Výkonostní metriky*
-
-výjimečně se užívají GIPS (BIPS), GFLOPS, TFLOPS, …
 
 ### Výkonostní rovnice
 
@@ -267,8 +255,6 @@ výjimečně se užívají GIPS (BIPS), GFLOPS, TFLOPS, …
 Počítač zpracovává program, který má 5 miliónů 1-CPI (jednotaktových instrukcí), 1 milión 2-CPI a 1 milión 3-CPI. Kmitočet hodinových taktů je 100 MHz. Jaká je jeho výkonnost v MIPS?
 
 ![Příklad použití výkonostní rovnice](26_vykonostni_rovnice_priklad.png)
-
-*Příklad použití výkonostní rovnice*
 
 ### Amhdahlův zákon
 Amdahlův zákon je pravidlo používané v informatice k vyjádření maximálního předpokládaného zlepšení systému poté, co je vylepšena pouze některá z jeho částí. Využívá se např. u víceprocesorových systémů k předpovězení teoretického maximálního zrychlení při přidávání dalších procesorů.
@@ -293,35 +279,17 @@ Amdahlův zákon je pravidlo používané v informatice k vyjádření maximáln
 
 **Zrychlení S** je číslo, které udává kolikrát je rychlejší běh úlohy na počítači s vylepšením oproti běhu stejné úlohy na původním počítači.
 
-![Zrychlení S](26_zrychleni.png)
+![FE](https://latex.codecogs.com/gif.latex?F_%7Be%7D) .... udává, jakou část výpočtu lze vylepšit
 
-*Zrychlení S*
+![SE](https://latex.codecogs.com/gif.latex?S_%7Be%7D) .... udává, kolikrát se zrychlil výpočet zlepšené části úlohy
 
-**Definujeme poměry**
-
-![Definované poměry](26_pomery.png)
-
-*Definované poměry*
-
-**Doba výpočtu se skládá**
-
-![Doba výpočtu](26_doba.png)
-
-*Doba výpočtu*
-
-**Doba výpočtu na vylepšeném počítači**
-
-![Doba výpočtu](26_doba_vylepsena.png)
-
-*Doba výpočtu na vylepšeném počítači*
+![](https://latex.codecogs.com/gif.latex?S%20%3D%20%5Cfrac%7B1%7D%7B%281-F_%7Be%7D%29&plus;%5Cfrac%7BF_%7Be%7D%7D%7BS_%7Be%7D%7D%7D)
 
 **Příklad**
 
 Předpokládejme, že výpočet trvá 30 % času, zbytek času je nevyužit či se čeká na I/O. Dále předpokládejme, že výpočet můžeme 5× zrychlit. Jaká bude celková hodnota zrychlení?
 
 ![Doba výpočtu](26_priklad.png)
-
-*Příklad*
 
 Z výpočtu je vidět, že systém bude zrychlen přibližně o 31,6 %.
 
@@ -338,5 +306,3 @@ Celkové zrychlení výpočtu multiprocesorového systému, který má **p** pro
 Jak se zrychlí výpočet dvouprocesorového systému, jestliže 80 % výpočetního algoritmu lze paralelizovat?
 
 ![Doba výpočtu](26_priklad_par.png)
-
-*Příklad pro více procesorů*
