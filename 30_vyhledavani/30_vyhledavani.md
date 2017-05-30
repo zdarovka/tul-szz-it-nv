@@ -16,34 +16,11 @@ Postupné sekvenční procházení prvků seznamu od začátku do konce, známe 
 
 - V některých případech jde o jediný možný způsob prohledávání (spojový seznam).
 
-**Princip:** (máme pole **p** a prvek **h**)
-
-- Porovnáme první prvek pole p s prvkem h.
-- Pokud se rovnají vrátíme index prvku jako výsledek.
-- V opačném případě posuneme ukazatel a porovnáme další prvek z p s prvkem h.
-- Tento postup opakujeme, dokud nenajdeme požadovanou hodnotu nebo nedorazíme na konec pole.
-- Jsme-li na konci a žádný prvek nyvyhověl h, tak se v poli požadovaná hodnota nenachází.
-
-```java
-/**
-  * Linearni vyhledavani
-  * @param array pole, ve kterem hledame
-  * @param value hodnota, kterou hledame
-  * @return index hledaneho prvku, -1 v pripade nenalezeni
-  */
- public static int linearSearch(int[] array, int value){
-     for(int i = 0; i < array.length; i++){
-         if(array[i] == value) return i;
-     }
-     return -1;
- }
-```
-
 ## Binární vyhledávání
 
 Vyhledávací algoritmus na pricipu **půlení intervalu**.
 
-- Složitost procházení je **O(log2(N))**, tedy lepší (rychlejší) než u lineárního vyhledávání.
+- Složitost procházení je ![](https://latex.codecogs.com/gif.latex?O%28log_%7B2%7DN%29), tedy lepší (rychlejší) než u lineárního vyhledávání.
 - Funguje pouze na **uspořádáném** (seřazeném) seznamu.
 - Algoritmus je typu divide and conquer a možný je rekurzivní i iterativní zápis. (iteratívní nevolá funkce a je nepatrně rychlejší)
 
@@ -81,13 +58,11 @@ Vyhledávací algoritmus na pricipu **půlení intervalu**.
 
 Datová struktura založená na binárním stromu, v němž jsou jednotlivé prvky (uzly) uspořádány tak, aby v tomto stromu bylo možné rychle vyhledávat danou hodnotu.
 
-- Postaveno na principu binárního vyhledávání. (vyvážený BST strom má složitost vyhledávání O(log2(N))
+- Postaveno na principu binárního vyhledávání. (vyvážený BST strom má složitost vyhledávání ![](https://latex.codecogs.com/gif.latex?O%28log_%7B2%7DN%29))
 - Jedná se o binární strom, každý uzel tedy má nanejvýš dva potomky − levého a pravého.
 - Každému uzlu je přiřazen určitý klíč. Podle hodnot těchto klíčů jsou uzly uspořádány.
 - Levý podstrom uzlu obsahuje pouze klíče menší než je klíč tohoto uzlu.
 - Pravý podstrom uzlu obsahuje pouze klíče větší než je klíč tohoto uzlu.
-- Může (multimnožina) i nemusí (množina) podporovat duplicitní hodnoty. (ostrá a neostrá nerovnost, záleží na implementaci)
-- Základ pro konstrukci abstraktnějších datových struktur jako jsou množiny, multimnožiny a asociativní pole.
 
 ![Binární vyhledávací strom](30_bst.png)
 
@@ -95,7 +70,7 @@ _Binární vyhledávací strom_
 
 **Operace**
 
-Všechny operace na binárním stromě opakovaně porovnávají hodnoty klíčů. Může se jednat o triviální porovnání dvou čísel či řetězců, ale také o složitější podprogram, pokud úlohu klíče hraje kombinace několika datových položek uzlu. Kromě klíče uzel zpravidla nese další datové položky, které tvoří vlastní obsah datové struktury. Operacemi vzniká problém s vyvážením, proto byl tvořen samovyvažovací strom (**AVL**), který tyto problémy řeší automaticky.
+Operacemi vzniká problém s vyvážením, proto byl tvořen samovyvažovací strom (**AVL**), který tyto problémy řeší automaticky.
 
 _Vyhledávání_
 
@@ -115,6 +90,9 @@ Zde nastává několik případů ke zvážení.
 - _Odstranění listu_: Odstranění uzlu bez potomků se jednoduše provede odstraněním uzlu ze stromu.
 - _Odstranění uzlu s jedním potomkem_: Provede se nahrazením uzlu uzlem potomka.
 - _Odstranění uzlu se dvěma potomky_: Nechť se odstraněný uzel nazývá N. Pak je hodnota uzlu N nahrazena nejbližší vyšší (nejlevější uzel pravého podstromu), nebo nižší hodnotou (nejpravější uzel levého podstromu). Takový uzel má nanejvýš jednoho potomka, lze jej tedy ze stromu vyjmout podle jednoho z předchozích pravidel.
+
+![](bstrom1.png)
+![](bstrom2.png)
 
 _Procházení_
 
@@ -136,21 +114,11 @@ _B strom_
 
 Strom je vyvažován požadavkem, aby byly všechny listy na stejné úrovni. Tato hloubka pozvolna roste s tím, jak do stromu přidáváme další data, nebo klesá spolu s vymazáváním dat ze stromu.
 
-**Operace**
-
-_Vyhledávání_
-
-_Přidání uzlu_
-
-_Odstranění uzlu_
-
 ### 2-3 strom
 
 **2-3 strom** je druh stromu, který se označuje v počítačové terminologii jako **B-strom** obsahující pouze uzly s dvěma nebo třemi potomky. Všechny listy ve stejné hloubce, proto se 2‑3 strom řadí mezi vyvážené stromy.
 
 ![2-3 strom](30_23_strom.png)
-
-_2-3 strom_
 
 Vnitřní uzly neobsahují uvnitř data, ale obsahují některé informace o tom, co je uloženo v jejich potomcích (podstromech).
 
@@ -174,8 +142,6 @@ Při vyhledávání dat podle klíče začínáme u kořene stromu a postupujeme
 
 ![2-3 strom 2 listy](30_23_strom_2.png)
 
-_2-3 strom 2 listy_
-
 - Procházíme uzel se třemi potomky:
 
   - Pokud hledaný klíč K je menší než klíčový atribut uzlu K1, hledáme dále v levém podstromu.
@@ -183,8 +149,6 @@ _2-3 strom 2 listy_
   - Pokud K je větší nebo rovno K2, hledáme dále v pravém podstromu.
 
 ![2-3 strom 3 listy](30_23_strom_3.png)
-
-_2-3 strom 3 listy_
 
 Tímto způsobem pokračujeme, až do poslední úrovně stromu, kde se nachází listy s daty.
 
@@ -197,7 +161,7 @@ Při vkládání nové větve do 2-3 stromu je nutné vyhledat pozici, kam novou
 
 ![2-3 strom vkládání](30_23_strom_vkladani.png)
 
-_2-3 strom vkládání_
+[Video](https://www.youtube.com/watch?v=bhKixY-cZHE)
 
 _Odstranění uzlu_
 
@@ -212,24 +176,51 @@ Nejprve je nutné vyhledat větev, kterou budeme odebírat. Poté se odebere vě
 
 ![2-3 strom odebírání](30_23_strom_odebirani.png)
 
-_2-3 strom odebírání_
-
 ### Hashovaní
 
 Hashování se používá pro efektivní vyhledávání.
+- adresu v paměti vypočteme z hledaného klíče
 
-Obecně jsou pro vyhledávání možné dva způsoby:
+Hashování je vhodné použít, pokud |K|<<|U|
 
-- první způsob je záznamy uspořádat nesekvenčně a potom je sekvenčně prohledávat
-- druhý způsob je znát předem index požadovaného záznamu a tak se dostat k záznamu bez jakéhokoli vyhledávání
+![](universum.PNG)
 
-Sekvenční vyhledávání vyžaduje však při velkém objemu dat velké množství času a přímý přístup zase velké množství paměti. Proto vznikl kompromis mezi těmito způsoby, který je postaven na **hashovaní**. Pro hashování je velice důležitá **hashovací funkce**, která převádí vstupní data na index v poli, kde by měl být uložen požadovaný záznam.
+**Princip hashování (2 fáze):**
+1. Výpočet hašovací funkce h(k) (h(k) vypočte adresu z hodnoty klíče)
+2. Vyřešení kolizí
+
+![](kolize.PNG)
+
+**Definice:**
+
+Hashovací funkce h(k) je zobrazení z množiny klíčů K do množiny adres A = \<amin, amax\>
+
+**Ideální hashovací funkce:**
+- výpočetně co nejjednodušší
+- aproximuje náhodnou funkci
+- využívá rovnoměrně adresní prostor
+- generuje minimum kolizí
+
+**Řešení kolizí**
+1. Adresy v hašovací tabulce obsahují lineární seznamy (v případě kolize se se prvek vloží na konec seznamu)
+2. Otevřeným hašovaním
+    - Tabulka adres uložena do pole
+    - V případě kolize prohledáváme určitou metodou prvky pole, dokud nenajdeme prázdnou pozici
+    - Při vyhledávání postupujeme stejně - pokud nenajdeme volnou pozici znamená to, že prvek není indexován
+    1. Lineární prohledávání
+    
+    ![](linear.PNG)
+    ![](linear2.PNG)
+    
+    2. Dvojí hašování (používá se druhá hashovací funkce)
+    
+    ![](double.PNG)
 
 Na tomto principu jsou postaveny různé datové typy nebo databázové indexi, které pracují na principu klíč hodnota. Například tedy **asociační tabulka**, **hashmap** nebo **hashtable**, tyto struktury mohou být indexovány libovolným datovým typem.
 
-Platí tedy:
+Vlastnosti:
 
-- Rychlejší než lineární nebo binární vyhledávání, O(1).
+- složitost prohledávání O(1).
 - Je potřeba celý klíč.
 - Nejsou možné intervalové dotazy.
 - Nebezpečí kolize (dva klíče ukazují na stejná data)
