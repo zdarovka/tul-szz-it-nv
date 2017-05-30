@@ -6,29 +6,19 @@
 
 - matematický model nezávislý na konkrétní implementaci v programovacím jazyce
 - popisuje chování (možné operace) z hlediska uživatele dat
-- často se u nich uvádí časová či paměťová složitost (důležité z hlediska efektivního návrhu různých algoritmu)
+- často se u nich uvádí časová či paměťová složitost (důležité z hlediska efektivního návrhu různých algoritmů)
 - uživatel používá pouze obecné rozhraní ADT a konkrétní implementace mu zůstává skryta
-- ADT může mít více různých implementací, např. seznam lze implementovat jako dynamicke dynamické pole nebo jako spojový seznam
+- ADT může mít více různých implementací, např. seznam lze implementovat jako dynamické pole nebo jako spojový seznam
 - jazyky mají ve svých standartních knihovnách obvykle obsaženy optimalizované implementace různých ADT
-
-**Datové struktury**
-
-- narozdíl od ADT se jedná o konkrétní organizaci dat v paměti
-- definuje je ten, kdo je implementuje
-- například binární haldu lze uložit do pole
-
-**Datové typy**
-
-- určují rozsah hodnot a definované operace pro proměnou daného typu
 
 ## Vlastnosti
 
 Nejdůležitější vlastnosti abstraktního typu dat jsou:
 
-- **Univerzálnost:** - navržený adt je univerzální a může být použit v libovolném programu (jako hodnota libovolný datový typ)
+- **Univerzálnost:** - navržený ADT je univerzální a může být použit v libovolném programu (jako hodnota libovolný datový typ)
 - **Zapouzdření:** - vnitřní reprezentace je skryta za transparetní rozhraní, které je poskytováno uživateli (uživatel ví jak použít, ne jak je implementováno)
 - **Integrita:** - do vnitřní struktury nelze zasahovat jinak, než přes definované rozhraní (zamezuje nechtěnému poškození dat)
-- **Modularita:** - konkrétní implementaci implementaci na spodu je možné libovolně měnit (vylepšovat), aniž by bylo nutné přepisovat programy, které adt využívají (abstrakce modelu od konkrétní implementace)
+- **Modularita:** - konkrétní implementaci implementaci na spodu je možné libovolně měnit (vylepšovat), aniž by bylo nutné přepisovat programy, které ADT využívají (abstrakce modelu od konkrétní implementace)
 
 Pokud je ADT programován objektově, jsou většinou tyto vlastnosti splněny.
 
@@ -113,8 +103,6 @@ Typické operace:
 
 ![Fronta](29_fronta.png)
 
-_Fronta_
-
 ### Zásobník
 
 - prvek, který byl naposled přidán bude nejdříve odebrán
@@ -131,8 +119,6 @@ Typické operace:
 
 ![Zásobník](29_zasobnik.png)
 
-_Zásobník_
-
 ### Strom
 
 - hierarchická struktura
@@ -147,37 +133,46 @@ _Zásobník_
 
 ![Strom](29_strom.png)
 
-_Strom_
-
 **Vlastnosti:**
 
 - **N-arita** - Kolik smí mít každý uzel maximálně potomků, z tohoto hlediska patří mezi neoblíbenější binární stromy (každý uzel má 0, 1 nebo 2 potomky).
 - **Hloubka uzlu** - Hloubka uzlu je délka cesty od kořene k uzlu
-- **Výška stromu** - Je rovna hodnotě maximální délky stromu.
-- **Šířka stromu** - Počet uzlů na stejné úrovni.
+- **Výška stromu** - Je rovna hodnotě maximální hloubky stromu.
+- **Šířka stromu** - Maximální počet uzlů na stejné úrovni.
 - **Vyváženost** - Strom je vyvážený, jestliže má uzly rovnoměrně rozložené tak, že má nejmenší možnou výšku.
+    - Nebo ekvivaletně: Strom je vyvážený, jestliže pro každý vrchol stromu platí, že počet vrcholů v leveém a pravém podstromu se liší nejvýše o 1.
 
 **Procházení stromem:**
 
 ![Ukázka stromu](29_strom_preorder_inorder_postorder.png)
 
-_Ukázka stromu_
-
-1. Průchod do šířky
+1. **Průchod do šířky**
 
   Projdou se nejprve všechny uzly stromu v jedné hloubce a až poté se pokračuje do další hladiny, kde se opět projdou všechny uzly v dané hloubce.
 
   Příklad: F, B, G, A, D, I, C, E, H
 
-2. Průchod do hloubky
+2. **Průchod do hloubky**
 
-  Procházení začíná v kořeni stromu a postupuje se po potomcích uzlu. Procházení končí, když už v žádné větvi není nenavšívený potomek.
+  Procházení začíná v kořeni stromu a postupuje se po potomcích uzlu. Procházení končí, když už v žádné větvi není nenavštívený potomek.
 
   Při průchodu je možné zpracovat navštívený uzel (N), projít levý podstrom (L) a projít pravý podstrom (P). Podle pořadí těchto akcí se rozlišují tři druhy průchodu:
 
   - **Preorder** (NLR): F, B, A, D, C, E, G, I, H
   - **Inorder** (LNR): A, B, C, D, E, F, G, H, I
   - **Postorder** (LRN): A, C, E, D, B, H, I, G, F
+  
+**Realizace:**
+- Binární strom lze reprezentovat do pole (pro prvek n indexováný od nuly):
+
+  - 2n+1 hodnota pro levý podstrom
+  - 2n+2 hodnota pro pravý podstrom
+  
+![haldapole](haldapole.png)
+
+- Obecný strom lze realizovat ukazateli
+  - ukazatel na rodiče
+  - ukazatele na potomky
 
 #### Halda
 
@@ -192,9 +187,18 @@ _Ukázka stromu_
 - efektivita operací haldy je klíčová pro mnoho algoritmů
 - často se používá pro implementaci prioritní fronty (na tomto principu funguje heapsort)
 
+**Binární halda**
+- Strom je buď vyvážený, nebo se poslední úroveň stromu zaplňuje zleva doprava.
+
+![Bhalda](bhalda.PNG)
+
 ![Binární minimální halda](29_binarni_min_halda.png)
 
 _Binární minimální halda_
+
+![Příklad](haldapriklad.png)
+
+_Příklad_
 
 Operace s haldou:
 
@@ -209,26 +213,20 @@ INCRESE KEY(v, okolik)  | ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/sv
 MERGE                   | ![\mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%29)                   | spojení dvou hald do jedné nové validní haldy obsahující všechny prvky obou původních
 MAKE                    | ![\mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%29)                   | dostane pole N prvku a vytvoří z nich haldu
 
-Binární haldu lze reprezentovat do pole (pro prvek n indexováný od nuly):
-
-- 2n+1 hodnota pro levý podstrom
-- 2n+2 hodnota pro pravý podstrom
-
-### Zobrazení (Asociativní pole)
+### Map (Zobrazení / Asociativní pole)
 
 - prvkům z množiny klíčů přiřazuje nejvýše jednu hodnotu (klíč => hodnota)
 - různá označení (Hash, HashMap, HashTable, AsociativeArray, Dictionary)
 
   - mapa (Java, C++)
   - slovník (.NET, Python)
-  - asociativní pole (Javascript, PHP)
+  - object (Javascript)
+  - asociativní pole (PHP)
 
-- v porovnání s obecným polem může být klíčem i nečíselný typ datový typ klíče musí pouze implementovat operaci porovnání
+- v porovnání s obecným polem může být klíčem i nečíselný typ (datový typ klíče musí pouze implementovat operaci porovnání)
 
-- rychlé hledání podle klíče (![\mathcal{O}(1)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%281%29))
+- rychlé hledání podle klíče ![\mathcal{O}(1)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%281%29)
 - nelze prohledávat podle částečného klíče
 - z klíče nelze přímo spočítat umístění prvku v poli - používá se _hashovací funkce_
 
 ![Asociativní pole](29_asociativni_pole.gif)
-
-Více viz hašování v otázce [30\. Vyhledávání](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/29_abstraktni_datove_typy/29_abstraktni_datove_typy.md).
