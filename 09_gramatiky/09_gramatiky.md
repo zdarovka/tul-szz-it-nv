@@ -36,7 +36,7 @@ To znamená, že pomocí přepisovacích pravidel můžu změnit řetězec ![\al
 | -------  | ----- |
 | ![X \rightarrow a](https://latex.codecogs.com/svg.latex?X%20%5Crightarrow%20a) |  neterminál ![X](https://latex.codecogs.com/svg.latex?X) se přepíše na ![a](https://latex.codecogs.com/svg.latex?a) |
 | ![X \rightarrow Y](https://latex.codecogs.com/svg.latex?X%20%5Crightarrow%20Y) | neterminál ![X](https://latex.codecogs.com/svg.latex?X) se přepíše na neterminál ![Y](https://latex.codecogs.com/svg.latex?Y) |
-| ![X \rightarrow a &#124; Y](https://latex.codecogs.com/svg.latex?X%20%5Crightarrow%20a%20%7C%20Y) | neterminál se ![X](https://latex.codecogs.com/svg.latex?X) přepíše buď na terminál ![a](https://latex.codecogs.com/svg.latex?a) nebo na neterminál ![Y](https://latex.codecogs.com/svg.latex?Y) (spojení více pravidel do jednoho) |
+| ![X \rightarrow a &#124; Y](https://latex.codecogs.com/svg.latex?X%20%5Crightarrow%20a%20%7C%20Y) | neterminál ![X] (https://latex.codecogs.com/svg.latex?X) se přepíše buď na terminál ![a](https://latex.codecogs.com/svg.latex?a) nebo na neterminál ![Y](https://latex.codecogs.com/svg.latex?Y) (spojení více pravidel do jednoho) |
 | ![aX \rightarrow ba](https://latex.codecogs.com/svg.latex?aX%20%5Crightarrow%20ba) | terminál ![a](https://latex.codecogs.com/svg.latex?a) následovaný neterminálem ![X](https://latex.codecogs.com/svg.latex?X) se přepíše na terminální symboly ![ba](https://latex.codecogs.com/svg.latex?ba) |
 
 ### Příklad gramatiky
