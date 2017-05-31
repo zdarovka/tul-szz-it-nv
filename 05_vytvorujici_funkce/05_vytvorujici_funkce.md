@@ -68,17 +68,11 @@ Příklad
 	- ![\frac{f(x) - (a_0+a_1x+\dots+a_{k-1}x^{k-1}))}{x^k} \Rightarrow a_k,a_{k+1},\dots,a_n](https://latex.codecogs.com/svg.latex?%5Cfrac%7Bf%28x%29%20-%20%28a_0&plus;a_1x&plus;%5Cdots&plus;a_%7Bk-1%7Dx%5E%7Bk-1%7D%29%29%7D%7Bx%5Ek%7D%20%5CRightarrow%20a_k%2Ca_%7Bk&plus;1%7D%2C%5Cdots%2Ca_n)
 	- posunutí o k prvků doleva (posloupnost pak začíná k-tým prvkem)
 4. **Vynulování prvních k členů**
-	- ![f(x) - (a_0+a_1x+\dots+a_{k-1}x^{k-1})) \Rightarrow 0,0,\dots,0,a_k,a_{k+1},\dots,a_n](https://latex.codecogs.com/svg.latex?f%28x%29%20-%20%28a_0&plus;a_1x&plus;%5Cdots&plus;a_%7Bk-1%7Dx%5E%7Bk-1%7D%29%29%20%5CRightarrow%200%2C0%2C%5Cdots%2C0%2Ca_k%2Ca_%7Bk&plus;1%7D%2C%5Cdots%2Ca_n)
+	- ![f(x) - (a_0+a_1x+\dots+a_{k-1}x^{k-1})) \Rightarrow 0,0,\dots,0,a_k,a_{k+1},\dots,a_n](https://latex.codecogs.com/svg.latex?f%28x%29%20x^{n}%5CRightarrow%200%2C0%2C%5Cdots%2C0%2Ca_k%2Ca_%7Bk&plus;1%7D%2C%5Cdots%2Ca_n)
 5. **Vkládání nul ("Objedno")**
 	- ![f(x^2) \Rightarrow a_0,0,a_1,0,a_2,0,\dots](https://latex.codecogs.com/svg.latex?f%28x%5E2%29%20%5CRightarrow%20a_0%2C0%2Ca_1%2C0%2Ca_2%2C0%2C%5Cdots)
 6. **Derivace**
 	- ![f'(x) \Rightarrow a_1,2 \cdot a_2,3 \cdot a_3, 4 \cdot a_4, \dots](https://latex.codecogs.com/svg.latex?f%27%28x%29%20%5CRightarrow%20a_1%2C2%20%5Ccdot%20a_2%2C3%20%5Ccdot%20a_3%2C%204%20%5Ccdot%20a_4%2C%20%5Cdots)
-7. **Integrace**
-	- ![\int_{0}^{x}f(t) dt \Rightarrow 0,a_0,\frac{a_1}{2},\frac{a_2}{3},\frac{a_3}{4},\dots](https://latex.codecogs.com/svg.latex?%5Cint_%7B0%7D%5E%7Bx%7Df%28t%29%20dt%20%5CRightarrow%200%2Ca_0%2C%5Cfrac%7Ba_1%7D%7B2%7D%2C%5Cfrac%7Ba_2%7D%7B3%7D%2C%5Cfrac%7Ba_3%7D%7B4%7D%2C%5Cdots)
-8. **Násobení (konvoluce)**
-	- ![f(x) \cdot g(x) \Rightarrow a_0b_0,a_0b_1+a_1b_0,a_0b_2+a_1b_1+a_2b_0,\dots](https://latex.codecogs.com/svg.latex?f%28x%29%20%5Ccdot%20g%28x%29%20%5CRightarrow%20a_0b_0%2Ca_0b_1&plus;a_1b_0%2Ca_0b_2&plus;a_1b_1&plus;a_2b_0%2C%5Cdots)
-9. **Postupný součet prvních prvků**
-	- ![\frac{f(x)}{1-x} \Rightarrow a_0,a_0+a_1,a_0+a_1+a_2,\dots](https://latex.codecogs.com/svg.latex?%5Cfrac%7Bf%28x%29%7D%7B1-x%7D%20%5CRightarrow%20a_0%2Ca_0&plus;a_1%2Ca_0&plus;a_1&plus;a_2%2C%5Cdots)
 
 **Získání hodnoty n-tého prvku posloupnosti**
 
