@@ -22,15 +22,7 @@ např. Fibonacciho rek. vztah ![F_n = F_{n-1} + F_{n-2}](https://latex.codecogs.
 
 ### (Ne)Lineární rek. vztah
 
-- Pokud funkce ![\Phi(a_n, a_{n-1}, \ldots,a_{n-k}, n)](https://latex.codecogs.com/svg.latex?%5CPhi%28a_n%2C%20a_%7Bn-1%7D%2C%20%5Cldots%2Ca_%7Bn-k%7D%2C%20n%29) je lineární funkcí ![a_n, a_{n-1}, \ldots,a_{n-k}](https://latex.codecogs.com/svg.latex?a_n%2C%20a_%7Bn-1%7D%2C%20%5Cldots%2Ca_%7Bn-k%7D),
-
-![\left(\begin{aligned}
-A(x+y) &= A(x) + A(y) \\
-A(\alpha x) &= \alpha A(x)
-\end{aligned}
-\right)](https://latex.codecogs.com/svg.latex?%5Cleft%28%5Cbegin%7Baligned%7D%20A%28x&plus;y%29%20%26%3D%20A%28x%29%20&plus;%20A%28y%29%20%5C%5C%20A%28%5Calpha%20x%29%20%26%3D%20%5Calpha%20A%28x%29%20%5Cend%7Baligned%7D%20%5Cright%29)
-
-pak se jedná o lineární rek. vztah
+![](linearni.png)
 
 - Pokud toto není splněno, pak se jedná o nelineární rekurentní vztah (kterými jsme se nezabývali)
 
