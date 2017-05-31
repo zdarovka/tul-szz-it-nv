@@ -36,7 +36,7 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
 
 **Zápis**
 
-![f(n) \in \mathcal{O}(g(n))](https://latex.codecogs.com/svg.latex?f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28g%28n%29%29) (![f(n)](https://latex.codecogs.com/svg.latex?f%28n%29) je prvkem velkého ![\mathcal{O}(g(n))](https://latex.codecogs.com/svg.latex?f%28n%29)) právě tehdy, když:
+![f(n) \in \mathcal{O}(g(n))](https://latex.codecogs.com/svg.latex?f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28g%28n%29%29) právě tehdy, když:
 
 ![\exists K > 0 ~ \exists n_0~\forall n > n_0 ~ f(n) \leq K \cdot g(n)](https://latex.codecogs.com/svg.latex?%5Cexists%20K%20%3E%200%20%7E%20%5Cexists%20n_0%7E%5Cforall%20n%20%3E%20n_0%20%7E%20f%28n%29%20%5Cleq%20K%20%5Ccdot%20g%28n%29)
 
