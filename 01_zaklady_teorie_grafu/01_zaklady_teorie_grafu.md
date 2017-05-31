@@ -63,9 +63,17 @@
 
 **PodGraf** - graf vzniklý odebráním vrcholů či hran z původního grafu
 
-**Faktor grafu** - podgraf obsahující všechny vrcholy
+**Faktor grafu** - podgraf obsahující všechny vrcholy původního grafu
 
 **Acyklický graf (les)** - graf, ve kterém neexistuje kružnice
+
+**Souvislý graf** - je takový, který má právě 1 komponentu (mezi libovolnou dvojici vrcholů existuje u-v cesta)
+
+**Komponenta grafu** - maximální souvislý podgraf
+
+![](komponenty.png)
+
+_komponenty_
 
 **Strom** - souvislý acyklický graf, kde ekvivaletně platí:
 
@@ -81,20 +89,17 @@
 **Úplný graf** - je takový, kde je každý vrchol propojen s každým
 
 **Stupeň vrcholu**
-
-- *Neorientovaný graf* (značíme deg(u))
- - počet hran, které do daného vrcholu zasahují
- - případné smyčky počítáme dvakrát
-- *Orientovaný graf* (rozlišujeme deg+(u) a deg-(u))
- - deg+(u) počet vstupních hran vrcholu u
- - deg-(u) počet výstupních hran vrcholu u
- - celkový stupeň uzlu je roven součtu vstupujících a vystupujících hran
+- značíme deg(u)
+- *Neorientovaný graf*
+  - počet hran, které do daného vrcholu zasahují
+  - případné smyčky počítáme dvakrát
+- *Orientovaný graf* 
+  - rozlišujeme deg+(u) a deg-(u)
+  - deg+(u) počet vstupních hran vrcholu u
+  - deg-(u) počet výstupních hran vrcholu u
+  - celkový stupeň uzlu je roven součtu vstupujících a vystupujících hran
 
 **Skóre grafu** - posloupnost stupňů vrcholů grafu G seřazená nerostoucím způsobem
-
-**Souvislý graf** - je takový, který má právě 1 komponentu (mezi libovolnou dvojici vrcholů existuje u-v cesta)
-
-**Komponenta grafu** - maximální souvislý podgraf
 
 ## Eulerovský graf
 
@@ -118,6 +123,8 @@
 
 **Hamiltonovská kružnice** - kružnice, která je *faktorem* (podgraf, který obsahuje všechny původní vrcholy)
 
+![](hamilton.gif)
+
 **Problém obchodního cestujícího**
 
 - Máme úplný, ohodnocený graf
@@ -139,8 +146,6 @@ Chceme projít všechny vrcholy grafu.
 
 ![Prohledávání do hloubky](01_dfs.gif)
 
-*Prohledávání do hloubky*
-
 ### Do šířky (BFS - FIFO)
 
 - algoritmus nejprve vyčerpá všechny dostupné hrany a až pak se přesune na další vrchol  
@@ -148,8 +153,6 @@ Chceme projít všechny vrcholy grafu.
 - veškeří následovníci uzlu získaní expandujícím uzlem jsou vkládani do FIFO fronty
 
 ![Prohledávání do šířky](01_bfs.gif)
-
-*Prohledávání do šířky*
 
 ## Minimální kostra
 
@@ -164,8 +167,6 @@ Minimální kostra je kostra s nejmenší možnou váhou.
 
 ![Jarníkův - Primův](01_jarnik.gif)
 
-*Jarníkův - Primův algoritmus*
-
 **Borůvkův algoritmus**
 
 - princip skládání komponent
@@ -174,8 +175,6 @@ Minimální kostra je kostra s nejmenší možnou váhou.
 - zastaví se jakmile dosáhne jedné komponenty
 
 ![Borůvkův algoritmus](01_boruvka.gif)
-
-*Borůvkův algoritmus*
 
 ## Nejkratší cesta
 
@@ -189,5 +188,3 @@ Hledání nejkratší cesty z vrcholu u do vrcholu v.
 - výsledná cesta je pak cesta přes vrcholy s nejmenším skóre
 
 ![Dijkstrův algoritmus](01_dijkstra.gif)
-
-*Dijkstrův algoritmus*
