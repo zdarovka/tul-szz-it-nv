@@ -7,8 +7,6 @@
 - **kryptografie** - věda o tvorbě šifer, využívá šifrování k ukrytí dat
 - **kryptoanalýza** - věda o jejich luštění, zabývá se hledáním způsobu jak šifrované zprávy dešifrova (hledání klíče nebo systému)
 
-**Steganografie** je věda, která se zabývá ukrýváním zprávy, spadají sem různé mikrofilmy a neviditelné inkousty.
-
 Rozlišujeme dva procesy:
 
 - **Šifrování** je proces, který převádí čitelnou zprávu neboli *prostý text* na její nečitelnou podobu neboli *šifrový text*.
