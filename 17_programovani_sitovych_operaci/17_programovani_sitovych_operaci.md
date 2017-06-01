@@ -53,7 +53,7 @@ Každý  socket může být nastaven do dvou módů - **blokujícího** a **nebl
   - nevýhody můžeme řešit provaděním operace ve vlastním vlákně (**thread**)
   - při častém vykonávání blokujících operací může aplikace využít vláken i více najednou (**thread pool**)
   - případně lze použí **pooling** (cyklicky se ptáme neblokující operací typu ready() jestli jsou data v bufferu a v případě úspěchu zahájíme blokujícíc recv())
- - můžeme implementovat **přerušení** na příjem
+  - můžeme implementovat **přerušení** na příjem
 - **Neblokující operace** 
   - dovolí hlavnímu vláknu ihned pokračovat v běhu, úspěšné dokončení se však špatně ověřuje
   - ověření se v tomto případě musí provádět opětovným dotazováním později v programu
