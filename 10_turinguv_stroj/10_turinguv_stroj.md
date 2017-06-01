@@ -133,6 +133,4 @@ Množina ![S \subset \Sigma^*](https://latex.codecogs.com/gif.latex?S%20%5Csubse
 
 ![Vztah RM a RSM](10_vztah_rm_rsm.png)
 
-*Vztah RM a RSM*
-
 Existuje i množina, která **není ani RSM**. Daný jazyk tím pádem **není rozpoznatelný Turingovým strojem**.
