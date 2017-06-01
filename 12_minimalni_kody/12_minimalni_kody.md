@@ -52,12 +52,7 @@ Délky slov ![l_i](https://latex.codecogs.com/svg.latex?l_i) libovolného jednoz
 - Slovníkové metody
 	- LZ77 (PNG)
 	- LZ78
-	- LZW (GIF) 
-
-### RLE
-
-- Použití: zřídka pro kompresi textů, častěji pro obrazovou informaci
-- Princip: opakující se symboly se kódují dvojicí (počet opakování , symbol)
+	- LZW (GIF)
 
 ### Huffmanův minimální kód  
 
