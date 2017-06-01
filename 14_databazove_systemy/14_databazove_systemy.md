@@ -28,7 +28,7 @@ Relační databázový model sdružuje data do tzv. relací (tabulek), které ob
 
 Relační model klade velký důraz na zachování integrity dat. Zavádí pojmy referenční integrita, cizí klíč, primární klíč, normální tvar apod.
 
-Relační model dat je nezávislý na na fyzickém uložení dat (Na konkrétní implementaci relační databáze).
+Relační model dat je nezávislý na fyzickém uložení dat (Na konkrétní implementaci relační databáze).
 
 ### Základní pojmy
 - **relace** - pojmenovaná tabulka s řádky a sloupci - množina n-tic (výsledek dotazu, tabulka, aj.)
