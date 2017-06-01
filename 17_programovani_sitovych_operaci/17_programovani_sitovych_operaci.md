@@ -48,13 +48,15 @@ Komunikace probíhá tak, jak je znázorněno na následujícím obrázku.
 ## Blokujíci a neblokující operace
 Každý  socket může být nastaven do dvou módů - **blokujícího** a **neblokujícího**. V blokujícím řežimu je celá aplikace během odesílání dat zastavena a čeká se na potvrzení o přijetí. To může trvat značnou dobu, po kterou je hlavní vlákno aplikace blokováno. Druhým způsobem je pak neblokující režim, v tomto režimu se požadovaná funkce ihned vrátí (obvykle impleměntováno jako podvlákno, které vykoná zbytek práce) bez ohledu na dokončení vnitřní logiky. Hlavní vlákno tedy v podstatě ihned pokračuje dál ve vykonávání programu, ale nemáme jistotu, že byla odesílaná data správně doručena. Defaultně  jsou vlákna nastavena jako blokující.
 
-- **Blokující operace** - zastaví běh hlavního vlákna, dokud se její běh nedokončí
- - nevýhody můžeme řešit provaděním operace ve vlastním vlákně (**thread**)
- - při častém vykonávání blokujících operací může aplikace využít vláken i více najednou (**thread pool**)
- - případně lze použí **pooling** (cyklicky se ptáme neblokující operací typu ready() jestli jsou data v bufferu a v případě úspěchu zahájíme blokujícíc recv())
+- **Blokující operace** 
+  - zastaví běh hlavního vlákna, dokud se její běh nedokončí
+  - nevýhody můžeme řešit provaděním operace ve vlastním vlákně (**thread**)
+  - při častém vykonávání blokujících operací může aplikace využít vláken i více najednou (**thread pool**)
+  - případně lze použí **pooling** (cyklicky se ptáme neblokující operací typu ready() jestli jsou data v bufferu a v případě úspěchu zahájíme blokujícíc recv())
  - můžeme implementovat **přerušení** na příjem
-- **Neblokující operace** - dovolí hlavnímu vláknu ihned pokračovat v běhu, úspěšné dokončení se však špatně ověřuje
- - ověření se v tomto případě musí provádět opětovným dotazováním později v programu
- - v některých jazycích je možné využít takzvaný **callback**
+- **Neblokující operace** 
+  - dovolí hlavnímu vláknu ihned pokračovat v běhu, úspěšné dokončení se však špatně ověřuje
+  - ověření se v tomto případě musí provádět opětovným dotazováním později v programu
+  - v některých jazycích je možné využít takzvaný **callback**
 
 Jako blokující operace jsou záměrně implementovány funkce různých synchronizačních primitiv, viz okruh [27. Paralelní systémy](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/27_paralelni_systemy/27_paralelni_systemy.md).
