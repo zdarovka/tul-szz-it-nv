@@ -77,9 +77,6 @@ Programování na základě přepalování/porušování propojek.
 
 - složitostí mezi PLD a FPGA
 - obsahují centrální propojovací matici
- - **MAPL** (Multiple Array Programmable Logic)
- - **MACH** (Macro Array CMOS High-density)
- - **PEEL** (Programmable Electrically Erasable Logic)
 
 ![CPLD](24_cpld.png)
 
