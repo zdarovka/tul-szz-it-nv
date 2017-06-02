@@ -57,8 +57,7 @@ Vysledek konvoluce = [1 3 6 10 9 7 4]
 
 ### Kruhová konvoluce
 
-- Jsou-li x[n] a h[n] dvě konečné sekvence s N-bodovou DFT X[k] a H[k]
-- pak sekvence s DFT rovnou Y [k] = H[k]X[k] je dána vztahem
+- Využívá se pro výpočet konvoluce dvou **periodických** signálů
 
 ![](kruh_konv.png)
 
