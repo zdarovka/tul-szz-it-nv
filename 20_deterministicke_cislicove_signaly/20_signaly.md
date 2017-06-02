@@ -65,6 +65,8 @@ a **fázové spektrum** (fázový posun mezi ![x[n]](https://latex.codecogs.com/
 
 ![\Phi(\omega_0)](https://latex.codecogs.com/svg.latex?%5CPhi%28%5Comega_0%29)
 
+![](Obr41.jpg)
+
 ### Vlastnosti
 
 - Periodicita - DTFT je periodická s periodou ![2\pi](https://latex.codecogs.com/svg.latex?2%5Cpi)
