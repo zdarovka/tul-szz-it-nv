@@ -33,7 +33,7 @@ Komunikační systémy pro tato odvětví by měly být:
 
 - podle směru přenosu
 
-  - **jednousměrné**
+  - **jednosměrné**
   - **obousměrné**
 
 - podle umístění
@@ -186,9 +186,9 @@ _Ethernetový rámec_
 
 **Standardy**
 
-- **Ethernet** Ethernet na koaxiálním kabelu nebo krocené dvoulince nebo optickém kabelu o rychlosti 10 Mbit/s. 
-- **Fast Ethernet** Ethernet na krocené dvoulince nebo optickém kabelu o rychlosti 100 Mbit/s. 
-- **Gigabitový Ethernet** Ethernet na krocené dvoulince nebo optickém kabelu o rychlosti 1 Gbit/s. 
+- **Ethernet** Ethernet na koaxiálním kabelu nebo kroucené dvoulince nebo optickém kabelu o rychlosti 10 Mbit/s. 
+- **Fast Ethernet** Ethernet na kroucené dvoulince nebo optickém kabelu o rychlosti 100 Mbit/s. 
+- **Gigabitový Ethernet** Ethernet na kroucené dvoulince nebo optickém kabelu o rychlosti 1 Gbit/s. 
 
 ### Modbus
 
@@ -291,10 +291,6 @@ Standard RS-232, resp. jeho poslední varianta RS-232C z roku 1969, je postupně
 **RS232 je point to point, jeden drát pro příjem druhý pro vysílaní, zařízení si navzájem plní vstupně/výystupní buffery. Neřeší se tedy adresy a kolize.**
 
 ![RS232](28_rs232.png)
-
-![Průběh signálu při přenosu znaku K](28_rs232_prenos.png)
-
-_Průběh signálu při přenosu znaku „K" (ASCII kód 75, binárně 01001011) bez parity a s jedním stopbitem._
 
 ### USB
 
