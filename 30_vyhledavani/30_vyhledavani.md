@@ -22,7 +22,7 @@ Vyhledávací algoritmus na pricipu **půlení intervalu**.
 
 - Složitost procházení je ![](https://latex.codecogs.com/gif.latex?O%28log_%7B2%7DN%29), tedy lepší (rychlejší) než u lineárního vyhledávání.
 - Funguje pouze na **uspořádáném** (seřazeném) seznamu.
-- Algoritmus je typu divide and conquer a možný je rekurzivní i iterativní zápis. (iteratívní nevolá funkce a je nepatrně rychlejší)
+- Možný je rekurzivní i iterativní zápis. (iteratívní nevolá funkce a je nepatrně rychlejší)
 
 **Princip:** (máme pole **p** a prvek **h**)
 
@@ -202,8 +202,8 @@ Hashovací funkce h(k) je zobrazení z množiny klíčů K do množiny adres A =
 - generuje minimum kolizí
 
 **Řešení kolizí**
-1. Adresy v hašovací tabulce obsahují lineární seznamy (v případě kolize se se prvek vloží na konec seznamu)
-2. Otevřeným hašovaním
+- Adresy v hašovací tabulce obsahují lineární seznamy (v případě kolize se se prvek vloží na konec seznamu)
+- Otevřeným hašovaním
     - Tabulka adres uložena do pole
     - V případě kolize prohledáváme určitou metodou prvky pole, dokud nenajdeme prázdnou pozici
     - Při vyhledávání postupujeme stejně - pokud nenajdeme volnou pozici znamená to, že prvek není indexován
