@@ -167,6 +167,8 @@ Pro výpočty se používají reprezentanti ze zbytkových tříd, označované 
 
 *Zbytková třída modulo ![m](https://latex.codecogs.com/svg.latex?m)*
 
+**Redukovanou soustavou zbytků** modulo m nazveme takovou podmnožinu úplné soustavy zbytků modulo m, která obsahuje právě všechny zbytky nesoudělné s modulem m.
+
 ## Počítání v ![(Z_m, +, \cdot)](https://latex.codecogs.com/svg.latex?%5Clarge%20%28Z_m%2C%20&plus;%2C%20%5Ccdot%29)
 
 ### Sčítání modulo m
