@@ -234,6 +234,8 @@ Základní požadavek kladený na počítač je schopnost provádět zpracován�
 - **MOPS** (Million Operations Per Second)
 - **MFLOPS** (Million FLoating point Operations Per Second)
 
+- Jedna instrukce může mít zejména na CISC více operací.
+
 ![Výkonostní metriky](26_metriky2.png)
 
 ### Výkonostní rovnice
