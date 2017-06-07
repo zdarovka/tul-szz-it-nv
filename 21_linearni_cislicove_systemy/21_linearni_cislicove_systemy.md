@@ -53,7 +53,7 @@ Výstup kauzálního systému závisí pouze na současných a minulých hodnot�
 
 - Kauzální systém : ![y(t) = x(t) + x(t-1)](https://latex.codecogs.com/svg.latex?y%28t%29%20%3D%20x%28t%29%20&plus;%20x%28t-1%29)
 - Nekauzální systém : ![y(t) = x(t) + x(t+1)](https://latex.codecogs.com/svg.latex?y%28t%29%20%3D%20x%28t%29%20&plus;%20x%28t&plus;1%29)
-- LTI systémy jsou kauzální poouze v případě, že h[n] = 0
+- LTI systémy jsou kauzální poouze v případě, že h[n] = 0 pro n < 0
 
 ### Stabilita
 
