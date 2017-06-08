@@ -226,6 +226,7 @@ Sběrnice SPI (_Serial Peripheral Interface_) představuje jednu z forem sériov
 - oddělený datový signál mastera od datového signálu slave (MOSI, MISO) (full-duplex)
 - sériové, synchronní
 - mono-master(jeden master, více slavů)
+- rychlost kolem 10 Mbit / s
 
 
 **Kde se používá:**
