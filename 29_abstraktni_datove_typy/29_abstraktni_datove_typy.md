@@ -72,17 +72,11 @@ Implementace je obvykle realizována jako:
 
 Spojové seznamy (linked list) mohou existovat **jednosměrné** a **obousměrné**.V jednosměrném seznamu odkazuje každá položka na položku následující a v obousměrném seznamu odkazuje položka na následující i předcházející položky. Zavádí se také ukazatel nebo reference na aktuální (vybraný) prvek seznamu. Na konci (a začátku) seznamu musí být definována zarážka označující konec seznamu.Pokud vytvoříme cyklus tak, že konec seznamu navážeme na jeho počátek, jedná se o **kruhový seznam**. Viz následující ukázky.
 
-![Jednosměrný seznam](29_jendosmerny_seznam.png)
+![Jednosměrný seznam](singly_linked.png)
 
-_Jednosměrný seznam_
+![Obousměrný seznam](doubly_linked.png)
 
-![Obousměrný seznam](29_obousmerny_seznam.png)
-
-_Obousměrný seznam_
-
-![Kruhový seznam](29_kruhovy_seznam.png)
-
-_Kruhový seznam_
+![Kruhový seznam](cisrcular.PNG)
 
 ### Fronta
 
