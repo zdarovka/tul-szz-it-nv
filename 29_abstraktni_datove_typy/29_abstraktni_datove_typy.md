@@ -159,14 +159,26 @@ Typické operace:
   Při průchodu je možné zpracovat navštívený uzel (N), projít levý podstrom (L) a projít pravý podstrom (P). Podle pořadí těchto akcí se rozlišují tři druhy průchodu:
 
   - **Preorder** (NLR): F, B, A, D, C, E, G, I, H
-  
-  ![NLR](File_Sorted_binary_tree_preorder.png)
+  1. Check if the current node is empty or null.
+  2. Display the data part of the root (or current node).
+  3. Traverse the left subtree by recursively calling the pre-order function.
+  4. Traverse the right subtree by recursively calling the pre-order function.
+
+  ![NLR](220px-Sorted_binary_tree_preorder.svg.png)
   
   - **Inorder** (LNR): A, B, C, D, E, F, G, H, I
+  1. Check if the current node is empty or null.
+  2. Traverse the left subtree by recursively calling the in-order function.
+  3. Display the data part of the root (or current node).
+  4. Traverse the right subtree by recursively calling the in-order function.
   
   ![LNR](440px-Sorted_binary_tree_inorder.svg.png)
   
   - **Postorder** (LRN): A, C, E, D, B, H, I, G, F
+  1. Check if the current node is empty or null.
+  2. Traverse the left subtree by recursively calling the post-order function.
+  3. Traverse the right subtree by recursively calling the post-order function.
+  4. Display the data part of the root (or current node).
   
   ![LRN](440px-Sorted_binary_tree_postorder.svg.png)
   
