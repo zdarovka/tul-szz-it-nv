@@ -160,7 +160,7 @@ Typické operace:
 
   - **Preorder** (NLR): F, B, A, D, C, E, G, I, H
   
-  ![NLR](File_Sorted_binary_tree_preorder.png)
+  ![NLR](220px-Sorted_binary_tree_preorder.svg.png)
   
   - **Inorder** (LNR): A, B, C, D, E, F, G, H, I
   
