@@ -251,5 +251,6 @@ MAKE                    | ![\mathcal{O}(n)](https://latex.codecogs.com/svg.latex
 - rychlé hledání podle klíče ![\mathcal{O}(1)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%281%29)
 - nelze prohledávat podle částečného klíče
 - z klíče nelze přímo spočítat umístění prvku v poli - používá se _hashovací funkce_
+- [Wikipedia](https://en.wikipedia.org/wiki/Associative_array)
 
 ![Asociativní pole](29_asociativni_pole.gif)
