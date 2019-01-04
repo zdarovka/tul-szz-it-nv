@@ -159,11 +159,15 @@ Typické operace:
   Při průchodu je možné zpracovat navštívený uzel (N), projít levý podstrom (L) a projít pravý podstrom (P). Podle pořadí těchto akcí se rozlišují tři druhy průchodu:
 
   - **Preorder** (NLR): F, B, A, D, C, E, G, I, H
+  
   ![NLR](File_Sorted_binary_tree_preorder.png)
   
   - **Inorder** (LNR): A, B, C, D, E, F, G, H, I
+  
   ![LNR](440px-Sorted_binary_tree_inorder.svg.png)
+  
   - **Postorder** (LRN): A, C, E, D, B, H, I, G, F
+  
   ![LRN](440px-Sorted_binary_tree_postorder.svg.png)
   
 **Realizace:**
