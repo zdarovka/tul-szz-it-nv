@@ -10,6 +10,7 @@
 - uživatel používá pouze obecné rozhraní ADT a konkrétní implementace mu zůstává skryta
 - ADT může mít více různých implementací, např. seznam lze implementovat jako dynamické pole nebo jako spojový seznam, integer lze například implementovat jako biární v jedničkovém nebo dvojkovém doplňku
 - jazyky mají ve svých standartních knihovnách obvykle obsaženy optimalizované implementace různých ADT
+-  [Wikipedia](https://en.wikipedia.org/wiki/Abstract_data_type)
 
 ## Vlastnosti
 
