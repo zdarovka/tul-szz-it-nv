@@ -124,6 +124,7 @@ Typické operace:
 - všechny uzly kromě kořenového uzlu mají právě jednoho otce
 - uzel, který nemá žádné potomky (je koncový) se nazývá _list_
 - vlastnost býti stromem je rekurzivní, každý podstrom je také strom
+- [Wikipedia](https://en.wikipedia.org/wiki/Tree_(data_structure))
 - použití:
 
   - halda
