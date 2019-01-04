@@ -8,7 +8,7 @@
 - popisuje chování (možné operace) z hlediska uživatele dat
 - často se u nich uvádí časová či paměťová složitost (důležité z hlediska efektivního návrhu různých algoritmů)
 - uživatel používá pouze obecné rozhraní ADT a konkrétní implementace mu zůstává skryta
-- ADT může mít více různých implementací, např. seznam lze implementovat jako dynamické pole nebo jako spojový seznam
+- ADT může mít více různých implementací, např. seznam lze implementovat jako dynamické pole nebo jako spojový seznam, integer lze například implementovat jako biární v jedničkovém nebo dvojkovém doplňku
 - jazyky mají ve svých standartních knihovnách obvykle obsaženy optimalizované implementace různých ADT
 
 ## Vlastnosti
