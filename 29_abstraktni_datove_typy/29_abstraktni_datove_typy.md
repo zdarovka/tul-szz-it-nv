@@ -88,6 +88,7 @@ Spojové seznamy (linked list) mohou existovat **jednosměrné** a **obousměrn�
   - plánování procesů v OS (FCFS)
   - meziprocesová komunikace - roura (pipe)
   - síťová komunikace - buffer pro datové pakety (switch, bridge, router)
+- [Wikipedia](https://en.wikipedia.org/wiki/Queue_(abstract_data_type))
 
 Typické operace:
 
