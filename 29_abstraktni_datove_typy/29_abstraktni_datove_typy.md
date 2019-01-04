@@ -120,8 +120,8 @@ Typické operace:
 ### Strom
 
 - hierarchická struktura
-- každý uzel může mít několik synů (přímých potomků)
-- všechny uzly kromě kořenového uzlu mají právě jednoho otce
+- každý uzel může mít několik potomků (přímých potomků)
+- všechny uzly kromě kořenového uzlu mají právě jednoho rodiče
 - uzel, který nemá žádné potomky (je koncový) se nazývá _list_
 - vlastnost býti stromem je rekurzivní, každý podstrom je také strom
 - [Wikipedia](https://en.wikipedia.org/wiki/Tree_(data_structure))
