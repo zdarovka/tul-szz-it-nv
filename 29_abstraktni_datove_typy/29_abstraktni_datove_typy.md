@@ -149,6 +149,7 @@ Typické operace:
 
   Projdou se nejprve všechny uzly stromu v jedné hloubce a až poté se pokračuje do další hladiny, kde se opět projdou všechny uzly v dané hloubce.
  ![Průchod do šířky](440px-Sorted_binary_tree_breadth-first_traversal.svg.png)
+ 
   Příklad: F, B, G, A, D, I, C, E, H
 
 2. **Průchod do hloubky**
@@ -158,7 +159,7 @@ Typické operace:
   Při průchodu je možné zpracovat navštívený uzel (N), projít levý podstrom (L) a projít pravý podstrom (P). Podle pořadí těchto akcí se rozlišují tři druhy průchodu:
 
   - **Preorder** (NLR): F, B, A, D, C, E, G, I, H
-  ![NLR](File_Sorted_binary_tree_preorder.svg)
+  ![NLR](File_Sorted_binary_tree_preorder.png)
   
   - **Inorder** (LNR): A, B, C, D, E, F, G, H, I
   ![LNR](440px-Sorted_binary_tree_inorder.svg.png)
