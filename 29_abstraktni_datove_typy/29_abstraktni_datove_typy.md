@@ -214,11 +214,11 @@ Typické operace:
 
 ![Binární minimální halda](29_binarni_min_halda.png)
 
-![Binarni minimální halda jako pole](heap_array.png)
-
 _Binární minimální halda_
 
 ![Příklad](haldapriklad.png)
+
+![Binarni minimální halda jako pole](heap_array.png)
 
 _Příklad_
 
