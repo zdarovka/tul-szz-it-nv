@@ -105,6 +105,7 @@ Typické operace:
 - prvek, který byl naposled přidán bude nejdříve odebrán
 - anglické označení Last In First Out (LIFO)
 - implementace pomocí pole nebo spojových seznamů
+- [Wikipedia](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
 
 Typické operace:
 
