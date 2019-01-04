@@ -8,8 +8,9 @@
 - popisuje chování (možné operace) z hlediska uživatele dat
 - často se u nich uvádí časová či paměťová složitost (důležité z hlediska efektivního návrhu různých algoritmů)
 - uživatel používá pouze obecné rozhraní ADT a konkrétní implementace mu zůstává skryta
-- ADT může mít více různých implementací, např. seznam lze implementovat jako dynamické pole nebo jako spojový seznam
+- ADT může mít více různých implementací, např. seznam lze implementovat jako dynamické pole nebo jako spojový seznam, integer lze například implementovat jako biární v jedničkovém nebo dvojkovém doplňku
 - jazyky mají ve svých standartních knihovnách obvykle obsaženy optimalizované implementace různých ADT
+-  [Wikipedia](https://en.wikipedia.org/wiki/Abstract_data_type)
 
 ## Vlastnosti
 
@@ -62,11 +63,12 @@ Implementace je obvykle realizována jako:
   - při vkládání kontrolujeme velikost a vnitřního pole a případně ho zvětšíme
   - v kontruktoru obvykle předáváme počáteční velikost vnitřního pole
   - díky vnitřnímu poli umožňuje rychlejší vyhledávání prvku dle indexu (je možné realizovat binární vyhledávání)
-
+  - [Wikipedia](https://en.wikipedia.org/wiki/Array_data_structure)
 - **Spojových seznam**
 
   - jednotlivé prvky jsou reprezentovány vždy jako uzly, které mají odkaz na svého následníka (případně i předchůdce)
   - uzly je nutné při vyhledávání procházet postupně (pouze lineární vyhledávání)
+  - [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
 
 Spojové seznamy (linked list) mohou existovat **jednosměrné** a **obousměrné**.V jednosměrném seznamu odkazuje každá položka na položku následující a v obousměrném seznamu odkazuje položka na následující i předcházející položky. Zavádí se také ukazatel nebo reference na aktuální (vybraný) prvek seznamu. Na konci (a začátku) seznamu musí být definována zarážka označující konec seznamu.Pokud vytvoříme cyklus tak, že konec seznamu navážeme na jeho počátek, jedná se o **kruhový seznam**. Viz následující ukázky.
 
