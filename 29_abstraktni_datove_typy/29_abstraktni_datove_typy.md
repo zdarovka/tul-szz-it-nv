@@ -209,6 +209,7 @@ Typické operace:
 
 **Binární halda**
 - Strom je buď vyvážený, nebo se poslední úroveň stromu zaplňuje zleva doprava.
+- Children of the node at position n would be at positions 2n and 2n + 1 in a one-based array, or 2n + 1 and 2n + 2 in a zero-based array
 
 ![Bhalda](bhalda.PNG)
 
