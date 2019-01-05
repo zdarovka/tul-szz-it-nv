@@ -88,15 +88,18 @@ Typicky má procesor dva režimy provozu:
    - Rychlé a efektivní.
    - Náročné na pamět.
    - Náchylné k chybám.
+   - UNIX
 - **„Minimální jádro“ - mikrojádro** (hlavně realtime OS)
    - Zajišťuje pouze abstrakci HW, správu procesů a komunikaci.
    - Zbylé funkce jsou realizovány jako procesy.
    - Pomalé, kvůli častému přepínaní režimu.
    - Malé a odolné vůči chybám.
+   - Speciální větve UNIX kernelu
 - **„Hybridní jádro“ - modulární**
    - Jádro „malé“ jako u mikrokernelu.
    - Služby OS jsou oddělené od jádra, ale také v prostoru jádra.
    - Teoreticky spojuje výhody obour.
+   - Windows, XNU (Apple)
  
  ![Typy jader](13_jadro.png)
 
