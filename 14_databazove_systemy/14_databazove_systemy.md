@@ -133,7 +133,8 @@ struktury a ID její položky)
   - Různé implementace úložište.
   - Použití pro reprezentaci sítí a jejich topologií. (např. sociální ci dopravní sítě, topologie počítačových sítí, . . . ) ˇ
   
-
+#### Ukázka práce s MongoDB
+![MongoDB](mongo.png)
 
 ### Škálování
 Schopnost přidat vlastnosti, aby byly uspokojeny nové nároky uživatelů.
