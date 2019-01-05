@@ -12,6 +12,12 @@
 - jazyky mají ve svých standartních knihovnách obvykle obsaženy optimalizované implementace různých ADT
 -  [Wikipedia](https://en.wikipedia.org/wiki/Abstract_data_type)
 
+**Datové struktury**
+
+- narozdíl od ADT se jedná o konkrétní organizaci dat v paměti
+- definuje je ten, kdo je implementuje
+- například binární haldu lze uložit do pole
+
 ## Vlastnosti
 
 Nejdůležitější vlastnosti abstraktního typu dat jsou:
