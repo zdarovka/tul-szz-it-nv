@@ -126,7 +126,7 @@ Relace je v páté normální formě jestliže je ve 4NF a nemůže být dále b
 
 - výsledná schémata by měly mít stejnou sémantiku
   - Sémantika schématu j dána pomocí integritních omezení, která nejsou vyjádřena pouze pomocí funkčních závislostí
-  - [semnatika](semantika.png)
+  - ![semnatika](semantika.png)
 - výsledná schémata by měly obsahovat stejná data 
 
 Respektive spojení tabulek, které vzniknou dekompozicí musí dát přesně původní tabulku (musí se zachovat závislosti).
