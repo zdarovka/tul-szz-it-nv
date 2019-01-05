@@ -116,9 +116,24 @@ Nevýhody:
 
 Typy:
 - Document store (MongoDB, CouchDB)
+  -  V podstate „klíč-hodnota“, ale hodnota je strukturovaná. (databáze vidí „dovnitř“, hodnota je pochopena, analyzována)
+  -  Hodnota např. jako XML/JSON, nebo jako objekt. (možnost referencí na jiné záznamy, vnořování struktur, kolekce)
+  -  Dotazy i složitejší, než přes klíce. (např. XPath nebo jako v objektových databázích)
 - Key-value store (Redis, Aerospike)
-- Wide column stores (Cassandra, Accumulo)
+  -  Jeden klíč, jedna hodnota, žádný duplikát. (klíč může být složený, např. z hlavní a upřesnující části, které lze použít jako ID ˇ
+struktury a ID její položky)
+  -  Přístup podle klíce přes hash tabulky (brutálně rychlé) ˇ
+  -  Hodnota je BLOB, databáze se to ani nesnaží chápat. (zpracování obsahu „hodnoty“ je na aplikaci, databáze ji jen uchovává jako celek)
+  -  Pokud nás zajímá jen část hodnoty, at’ pro dotazy, nebo pro zápis, tak je pomerně neefektivní. (lze řešit vyjmutí části pod záznam s vlastním „klíčem“, např. s upřesnující částí)
+- Wide column stores (Cassandra by Facebook, Accumulo, BigTable by Google)
+  -  Řádky jako v RDB, u řádku máme růuzné sloupce s hodnotami
+  -  Struktura řádku není dána, každý může mát různé sloupce
 - Graph store (AllegroGraph, ArangoDB)
+  - Grafy = uzly, vlastnosti uzlů, hrany spojující uzly
+  - Různé implementace úložište.
+  - Použití pro reprezentaci sítí a jejich topologií. (např. sociální ci dopravní sítě, topologie počítačových sítí, . . . ) ˇ
+  
+
 
 ### Škálování
 Schopnost přidat vlastnosti, aby byly uspokojeny nové nároky uživatelů.
