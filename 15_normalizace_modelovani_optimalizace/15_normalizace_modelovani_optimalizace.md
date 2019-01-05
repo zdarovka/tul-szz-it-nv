@@ -267,11 +267,4 @@ Pro každou hodnotu klíče z domény je použita bitmapa. Její bity korespondu
 - vhodné pro dotazy s více podmínkami ve WHERE klauzuli
 - uloženy jako bity -> každá hodnota v tabulce je jeden bit (true/false)
 
-příklad:
-
-		SELECT COUNT (*) FROM customers
-		WHERE marital_status = 'married' AND region IN ('central', 'west');
-    
-![bitmapa](bitmapa.gif)
-
 ![bitmap_index](bitmap_index.png)
