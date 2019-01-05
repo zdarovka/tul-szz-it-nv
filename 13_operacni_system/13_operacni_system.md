@@ -188,6 +188,7 @@ Správu paměti aplikuje operační systém ve vnitřní paměti (RAM).
    - Nevýhody: velké bloky na začátku paměti jsou rozporcovány na menší
 4. **Next FIT** - přidělí se první blok, který se po posledním použitým blokem, optimalizace FirstFitu - snaha o rychlejší hledání.
    - Nevýhody - sklony k fragmentaci (měřením se ukazuje, že výrazněji, než předchozí metody)
+   - Next fit is a modified version of ‘first fit’. It begins as first fit to find a free partition but when called next time it starts searching from where it left off, not from the beginning. This policy makes use of a roving pointer. The pointer roves along the memory chain to search for a next fit. This helps in, to avoid the usage of memory always from the head (beginning) of the free block chain.
 
 ## Správa procesů
 
