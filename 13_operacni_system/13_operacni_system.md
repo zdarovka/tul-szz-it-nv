@@ -171,6 +171,7 @@ Správu paměti aplikuje operační systém ve vnitřní paměti (RAM).
 - Řeší fragmentaci
 - Umožňuje lepší optimalizaci (odkládání na disk)
 - Používán v moderích OS
+- Aby nebylo nutné pro převod logických adres na fyzické udržovat velké množství informací, je adresní prostor rozdělen na stránky stejné velikosti (typicky 4 KiB, ale i 8 KiB nebo větší) a udržují se jen data mapování pro ně. Virtuální adresní prostor je tedy složen ze stránek, které odpovídají stejně velkým oblastem ve fyzické paměti RAM. Zatímco logické stránky vytvářejí souvislý lineární adresní prostor, umístění fyzických stránek je díky převodu zcela nahodilé. Pro běžící proces se tak vytváří iluze, že jeho adresní prostor v operační paměti je souvislý, zatímco ve skutečnosti jsou fyzické stránky fragmentovány. Fragmentace je však procesu (resp. jeho strojovým instrukcím) skryta a není ji nutné nijak řešit (na rozdíl od segmentace paměti , kde je nutné fragmentaci odstraňovat přesunem segmentů).
 
 **Odkládání na disk** - pokud je v systému povoleno, umožňuje zapsat část paměti na disk a uvolnit tím místo v RAM. Typicky se odloží procesy, které již dlouho neběžely.
 
