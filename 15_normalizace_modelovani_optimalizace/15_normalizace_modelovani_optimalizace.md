@@ -273,3 +273,5 @@ příklad:
 		WHERE marital_status = 'married' AND region IN ('central', 'west');
     
 ![bitmapa](bitmapa.gif)
+
+![bitmap_index](bitmap_index.png)
