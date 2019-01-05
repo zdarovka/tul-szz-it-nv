@@ -18,6 +18,10 @@
 - definuje je ten, kdo je implementuje
 - například binární haldu lze uložit do pole
 
+**Datové typy**
+
+- určují rozsah hodnot a definované operace pro proměnou daného typu
+
 ## Vlastnosti
 
 Nejdůležitější vlastnosti abstraktního typu dat jsou:
