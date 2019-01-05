@@ -121,15 +121,18 @@ Během přerušení dochází ke změně **kontextu**. Kontext je vše, co potř
   - *Řadič přerušení*, obvod budí procesor a stanovuje důležitost přerušení.
   - *Maskovatelné přerušení* lze za chodu systému zakázat a ignorovat.
   - *Nemaskovatelné přerušení* nastává vždy a ignorovat jej nelze (například reset).
+  - Vnější přerušení (též hardwarové přerušení) je označováno podle toho, že přichází ze vstupně-výstupních zařízení (tj. z pohledu procesoru přicházejí z vnějšku). Vstupně-výstupní zařízení tak má možnost si asynchronně vyžádat pozornost procesoru a zajistit tak svoji obsluhu ve chvíli, kdy to právě potřebuje bez ohledu na právě zpracovávanou úlohu.
+  - Vnější přerušení jsou do procesoru doručována prostřednictvím řadiče přerušení, což je specializovaný obvod, který umožňuje stanovit prioritu jednotlivým přerušením, rozdělovat je mezi různé procesory a další související akce.
 - **Vnitřní (procesorové)**
   - Obsloužení chyb výpočtu
   - Dáno procesorem: u „intelů“ např. dělení nulou, problémy s pamětí, chyba koprocesoru
+  - Vnitřní přerušení vyvolává sám procesor, který tak signalizuje problémy při zpracování strojových instrukcí a umožňuje operačnímu systému na tyto události nejvhodnějším způsobem zareagovat. Jedná se například o pokus dělení nulou, porušení ochrany paměti, nepřítomnost matematického koprocesoru, výpadek stránky a podobně.
 - **Softwarové**
   - Vyvoláno programově instrukcí pro přerušení (Intel: INT n)
   - Probíhá synchronně s taktem procesoru
   - Slouží zejména k volání služeb OS = systémová volání a přechod mezi chráněným a nechráněným režimem
   - Ve srovnání s podprogramy má pevnou adresu pro obslužnou rutinu
-
+  - Softwarové přerušení je speciální strojová instrukce (obvykle je jich v procesoru k dispozici několik, procesory Intel mapují všechna přerušení na softwarová přerušení). Tento typ přerušení je na rozdíl od druhých dvou typů synchronní, je tedy vyvoláno zcela záměrně umístěním příslušné strojové instrukce přímo do prováděného programu. Jedná se o podobný způsob, jako vyvolání klasickému podprogramu (podprogramem je zde ISR uvnitř operačního systému), avšak procesor se může zachovat jinak. Instrukce softwarového přerušení se proto využívá pro vyvolání služeb operačního systému z běžícího procesu (tzv. systémové volání). Uživatelská úloha tak sice nemůže skočit do prostoru jádra operačního systému, ale může k tomu využít softwarové přerušení (kterých je omezené množství a vstupní body lze snadno kontrolovat). Při využití privilegovaného režimu může softwarové přerušení aktivovat privilegovaný stav.
 **Obsluha přerušeni**
 
 1. Uložení aktuálního kontextu.
