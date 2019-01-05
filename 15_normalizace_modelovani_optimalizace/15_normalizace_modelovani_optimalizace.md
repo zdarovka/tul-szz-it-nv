@@ -188,11 +188,16 @@ Druhy indexů:
   - pokud tabulka nemá clustered index, tak se chová jako halda (musíme ji sekvenčně procházet)
   - listy indexu obsahují data tabulky
   - clustered index způsobuje fyzických seřazení dat na základě cluseter klíče
+  - With a clustered index the rows are stored physically on the disk in the same order as the index. Therefore, there can be only one clustered index.
 - **unclustered index**
   - tabulka může mít více unclustered indexů
   - většinou je automaticky vytvořen pro unikátní atributy
   - unclustered index nezpůsobuje fyzické seřazení dat, ale pouze seřazuje sloupečky indexu nad kterými je unclustered index vytvořen
   - listy indexu obsahují buďto clustering key (v případě existence clustered indexu) nebo ukazatel na konkrétní řádek
+  - With a non clustered index there is a second list that has pointers to the physical rows. You can have many non clustered indexes, although each new index will increase the time it takes to write new records.
+
+It is generally faster to read from a clustered index if you want to get back all the columns. You do not have to go first to the index and then to the table.
+Writing to a table with a clustered index can be slower, if there is a need to rearrange the data.
 
 ### B-tree index (balanced search tree)
 - dynamická struktura
