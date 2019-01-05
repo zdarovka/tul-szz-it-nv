@@ -204,6 +204,8 @@ Writing to a table with a clustered index can be slower, if there is a need to r
 - stejná hloubka stromu pro všechny hodnoty (listy)
 - strom je vyvážený
 - v listech jsou dvě hodnoty: klíč a ROWID (ROWID může být více v případě, že se nejedná o unikátní parametr)
+- [https://use-the-index-luke.com/sql/anatomy/the-tree](https://use-the-index-luke.com/sql/anatomy/the-tree)
+- It works almost instantly—even on a huge data set. That is primarily because of the tree balance, which allows accessing all elements with the same number of steps, and secondly because of the logarithmic growth of the tree depth. That means that the tree depth grows very slowly compared to the number of leaf nodes. Real world indexes with millions of records have a tree depth of four or five. A tree depth of six is hardly ever seen.
 
 ![btree](btree.png)
 *Ukázka b-tree struktury dat*
