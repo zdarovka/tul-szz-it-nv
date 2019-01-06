@@ -138,15 +138,19 @@ Kategorie:
 
 - **SISD** 
   - Počítač zpracovává data sériově podle jednoho programu (Von Neuman)
+  - Is a computer architecture in which a single uni-core processor, executes a single instruction stream, to operate on data stored in a single memory.
   - ![sisd](sisd.png)
 - **SIMD** 
   - Počítač používající větší množství stejných procesorů řízených společným programem (vektorové počítače). Procesory provádějí stejnou instrukci, ale s jinými daty.
+  - It describes computers with multiple processing elements that perform the same operation on multiple data points simultaneously. 
   - ![simd](simd.png)
 - **MISD**
   - Není běžné, vznikla uměle. Série procesorů, které postupně zpracovávají společná data.
+  - Is a type of parallel computing architecture where many functional units perform different operations on the same data
   - ![MISD](misd.png)
 - **MIMD**
   - Multiprocesorový systém, každý procesor je řízen samostatným programem pracujícím na samostatných datech.
+  - At any time, different processors may be executing different instructions on different pieces of data.
   - ![mimd](mimd.png)
 
 ## Paralelizace
