@@ -228,3 +228,17 @@ Kategorie:
         - Redukční operace (Redukce dat všech procesů na jednu hodnotu - MAX, MIN, SUM, AVG atd.)
  - MPI is a communication protocol for programming parallel computers. Both point-to-point and collective communication are supported. MPI "is a message-passing application programmer interface, together with protocol and semantic specifications for how its features must behave in any implementation."
  - [Wikipedia](https://en.wikipedia.org/wiki/Message_Passing_Interface)
+
+## Synchronizace
+Synchronizační primitiva jsou v operačních systémech prostředky, umožňující zároveň běžícím aplikacím ošetřit současný přístup ke sdíleným prostředkům. Ve smyslu algoritmu se jedná o rozhraní a jeho implementace není důležitá. 
+ - Deadlock - vlákno A čeká na dokončení vlákna B, které čeká na dokončení vlákna A 
+ - Souběh - data jsou zároveň zapisována a čtena 
+
+Mezi synchronizační primitiva patří zámek a jeho zobecnění - semafory, fronty zpráv a monitor. Zámky a semafory bývají implementovány operačním systémem pomocí atomických operací na sdílené paměti a plánovače. Pro synchronizaci v paralelním programování stačí atomické operace na sdílené paměti (čekají na sebe procesy na různých procesorech a tedy mohou čekat aktivně) a je možné je implementovat i bez pomoci operačního systému. Fronty zpráv jsou primitivní operací v případě paralelního programování, ale je možné je implementovat v operačním systému i na jednom procesoru. Monitor je možné realizovat pouze s podporou programovacího jazyka. 
+
+ **Korektní paralelní program - Nutné podmínky**
+1. Dva procesy se nesmí nacházet současně ve stejné sdružené sekci. 
+2. Žádné předpoklady nesmí být kladeny na rychlost a počet procesorů. 
+3. Pokud proces běžící mimo kritickou sekci nesmí být blokován ostatní procesy. 
+4. Žádný proces nesmí do nekonečna čekat na vstup do kritické sekce. 
+
