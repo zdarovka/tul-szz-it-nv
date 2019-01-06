@@ -77,6 +77,9 @@ Pro seznam máme dvě základní procedury:
 
 ### Lambda kalkul
 Lambda kalkulus je formální systém pro deklaraci funkcí s pravidly pro jejich vyhodnocování. Lambda kalkulus lze chápat jako jednoduchý, univerzální, netypovaný a striktně formální programovací jazyk. Je výpočetně ekvivalentní s Turingovým strojem. Základní stavební jednotkou lambda kalkulu je tzv. lambda výraz. Množinu lambda výrazů lze chápat jako soubor pravidel pro výpočet.
+
+Lambda kalkul je formální systém a výpočetní model používaný v teoretické informatice a matematice pro studium funkcí a rekurze. Jeho autory jsou Alonzo Church a Stephen Cole Kleene. Lambda kalkul je teoretickým základem funkcionálního programování a příslušných programovacích jazyků, obzvláště Lispu.
+
 [Wikipedia](https://cs.wikipedia.org/wiki/Lambda_kalkul)
 
 Formálně lze každý lambda výraz vyjádřit takto:
@@ -86,6 +89,8 @@ Formálně lze každý lambda výraz vyjádřit takto:
 <function> := ( λ <name> . <expression> )
 <application> := ( <expression> <expression> )
 ```
+
+V lambda kalkulu každý výraz popisuje funkci jednoho argumentu, který je sám funkcí jednoho argumentu, a jejímž výsledkem je opět funkce jednoho argumentu. Funkce lze definovat bez pojmenování, uvedením lambda výrazu, který popisuje, jak se z hodnoty argumentu vypočte hodnota funkce. Příkladem může být funkce „přičti dvojku“, `f(x) = x + 2`. V lambda kalkulu se taková funkce zapíše jako` λ x. x + 2 `(nebo, beze změny významu `λ y. y + 2`, jméno argumentu není podstatné). Aplikace takové funkce na číslo 3 se zapíše jako `(λ x. x + 2) 3`. Aplikace je asociativní zleva: `f x y = (f x) y`.
 
 Funkce s více parametry sice v lambda kalkulu neexistují, ale každou takovou funkci lze převést na funkci s parametrem jedním tak, že vnější funkce vrací vnitřní funkci, které předá parametr. Tento převodní proces se nazývá Currying.
 
