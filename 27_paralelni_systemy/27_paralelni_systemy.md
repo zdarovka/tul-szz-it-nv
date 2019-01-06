@@ -144,6 +144,7 @@ Kategorie:
   - Počítač používající větší množství stejných procesorů řízených společným programem (vektorové počítače). Procesory provádějí stejnou instrukci, ale s jinými daty.
   - It describes computers with multiple processing elements that perform the same operation on multiple data points simultaneously. 
   - ![simd](simd.png)
+  - ![simd2](simd2.png)
 - **MISD**
   - Není běžné, vznikla uměle. Série procesorů, které postupně zpracovávají společná data.
   - Is a type of parallel computing architecture where many functional units perform different operations on the same data
