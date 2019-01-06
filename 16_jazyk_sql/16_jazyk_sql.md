@@ -298,9 +298,15 @@ IF ERRORS<>0 ROLLBACK;
   - Změny, které se provedou jako výsledek úspěšných transakcí, jsou skutečně uloženy v databázi, a již nemohou být ztraceny.
 
 ### Typy konfliktů
-- **WR konflikt** - čtení dat, která nebyla potvrzena (commit)
-- **RW konflikt** - neopakovatelné čtení dat; čteme 2x, ale po prvním čtení se data změní = výsledkem jsou dvě rozdílné sady dat
-- **WW konflikt** - přepsání nepotvrzených dat
+- **WR konflikt** 
+  - čtení dat, která nebyla potvrzena (commit)
+  - ![wr](wr.png)
+- **RW konflikt**
+  - neopakovatelné čtení dat; čteme 2x, ale po prvním čtení se data změní = výsledkem jsou dvě rozdílné sady dat
+  - ![wr](wr.png)
+- **WW konflikt**
+  - přepsání nepotvrzených dat
+  - ![ww](ww.png)
 
 K eliminaci konfliktů se používá *přidělování sdílených zámků - 2PL a Strict 2PL*. Je třeba zaručit, že příkazy lock a unlock budou atomické operace - semafory.
 
