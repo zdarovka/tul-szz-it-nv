@@ -40,14 +40,24 @@ Toto rozdělení není absolutní a moderní  programovací jazyky jsou obvykle 
 - výpočtem funkcionálního programu je posloupnost vzájemně ekvivalentních výrazů, které se postupně zjednodušují 
 - výsledkem výpočtu je výraz v normální formě, tedy dále nezjednodušitelný
 - program je chápán jako jedna funkce obsahující vstupní parametry mající jediný výstup, tato funkce pak může být dále rozložitelná na podfunkce
+- Funkcionální programovací jazyky, především čistě funkcionální, se používají spíše v akademickém než komerčním prostředí. Přesto široké spektrum organizací využívá některé funkcionální programovací jazyky jako např. Erlang, R (statistika), Mathematica (symbolická matematika), Haskell, ML, J a K (finanční analýza) a doménově specifické programovací jazyky jako XQuery/XSLT (XML). Dále jsou funkcionální programovací jazyky důležité pro některá odvětví informatiky, například zabývající se umělou inteligencí, formální specifikací, modelováním nebo rychlým prototypováním.
+- [Wikipedia](https://cs.wikipedia.org/wiki/Funkcion%C3%A1ln%C3%AD_programov%C3%A1n%C3%AD)
 
 ### Scheme
 - jeden ze dvou hlavních dialektů funkcionálního programovacího jazyka Lisp.
 - deklarativní multiparadigmatický jazyk, převládá funcionální přístup
+- [Wikipedia](https://cs.wikipedia.org/wiki/Scheme)
 - vše je definováno jako seznam (mnoho závorek)
  - **promenná:** (define var1 value)  
  - **funkce:** (define x2 (lambda (x) (* x x)))
  - **seznam:** (list 1 2 3)
+ 
+```scheme
+(define (hello)
+  (display "Ahoj svete!")
+  (newline))
+(hello) ;volání funkce
+```
 
 **Příklad** (nalezení nejmenšího prvku v seznamu)
 
@@ -62,11 +72,12 @@ Pro seznam máme dvě základní procedury:
           ((< (car lst) (minim (cdr lst))) (car lst))
           (else (minim (cdr lst)))) )
 
-(minim '(3 4 2 9 3 8)) 
+(minim '(3 4 2 9 3 8))  ;volání funkce
 ```
 
 ### Lambda kalkul
 Lambda kalkulus je formální systém pro deklaraci funkcí s pravidly pro jejich vyhodnocování. Lambda kalkulus lze chápat jako jednoduchý, univerzální, netypovaný a striktně formální programovací jazyk. Je výpočetně ekvivalentní s Turingovým strojem. Základní stavební jednotkou lambda kalkulu je tzv. lambda výraz. Množinu lambda výrazů lze chápat jako soubor pravidel pro výpočet.
+[Wikipedia](https://cs.wikipedia.org/wiki/Lambda_kalkul)
 
 Formálně lze každý lambda výraz vyjádřit takto:
 
