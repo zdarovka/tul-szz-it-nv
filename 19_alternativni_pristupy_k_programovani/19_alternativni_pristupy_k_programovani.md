@@ -3,8 +3,17 @@
 
 Hlavní dva přístupy k programování jsou:
 
-- **Imperativní** - Přímočarý popis algoritmu, postup řešení krok za krokem, ukládání mezivýsledků do proměnných.
-- **Deklarativní** - Je počítači řečeno, co má vykonat, nikoli jak. Program je strukturován jako soubor vlastností, které má výsledek mít.
+- **Imperativní** 
+  - Přímočarý popis algoritmu, postup řešení krok za krokem, ukládání mezivýsledků do proměnných.
+  - Imperativní programování je jedno z programovacích paradigmat, neboli způsobů, jak jsou v programovacím jazyku formulována řešení problémů. Imperativní programování popisuje výpočet pomocí posloupnosti příkazů a určuje přesný postup (algoritmus), jak danou úlohu řešit. Program je sadou proměnných, jež v závislosti na vyhodnocení podmínek mění pomocí příkazů svůj stav. Základní metodou imperativního programování je procedurální programování, tyto termíny bývají proto často zaměňovány.
+  - V přímém kontrastu s imperativním programováním je deklarativní programování, jež je založeno na popisu cíle – přesný algoritmus provedení specifikuje až interpret příslušného jazyka a programátor se jím nezabývá. Díky tomu lze ušetřit mnoho chyb vznikajících zejména tím, že do jedné globální proměnné zapisuje najednou mnoho funkcí a metod. V deklarativním programování se totiž většinou místo proměnných používají k předání hodnot návratové hodnoty funkcí.
+  - Na druhou stranu programátorovi při imperativním přístupu zůstává možnost program široce a přesně optimalizovat takovým způsobem, jaký právě potřebuje. Při přístupu deklarativním musí spoléhat na překladač, jež nemusí zvolit algoritmus, který by byl v dané chvíli výhodnější. Navíc při deklarativním přístupu je velmi často využíváno rekurze, což klade vyšší nároky na programátora. Ten si totiž musí představit, jak celý program bude fungovat, místo toho, aby viděl, jako u přístupu imperativního, přesně zapsaný algoritmus před sebou.
+  - Typy příkazů: Přiřazení, cykly, větvění (podmínky)
+  - [Wikipedia](https://cs.wikipedia.org/wiki/Imperativn%C3%AD_programov%C3%A1n%C3%AD)
+- **Deklarativní** 
+  - Je počítači řečeno, co má vykonat, nikoli jak. Program je strukturován jako soubor vlastností, které má výsledek mít.
+  - [Wikipedia](https://cs.wikipedia.org/wiki/Deklarativn%C3%AD_programov%C3%A1n%C3%AD)
+  
 
 Vyšší programovací jazyky se dále dělí takto:
 
