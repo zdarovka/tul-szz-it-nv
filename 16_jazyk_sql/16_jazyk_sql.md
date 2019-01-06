@@ -303,7 +303,7 @@ IF ERRORS<>0 ROLLBACK;
   - ![wr](wr.png)
 - **RW konflikt**
   - neopakovatelné čtení dat; čteme 2x, ale po prvním čtení se data změní = výsledkem jsou dvě rozdílné sady dat
-  - ![wr](wr.png)
+  - ![rw](rw.png)
 - **WW konflikt**
   - přepsání nepotvrzených dat
   - ![ww](ww.png)
