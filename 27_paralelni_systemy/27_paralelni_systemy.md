@@ -236,9 +236,13 @@ Synchronizační primitiva jsou v operačních systémech prostředky, umožňuj
 
 Mezi synchronizační primitiva patří zámek a jeho zobecnění - semafory, fronty zpráv a monitor. Zámky a semafory bývají implementovány operačním systémem pomocí atomických operací na sdílené paměti a plánovače. Pro synchronizaci v paralelním programování stačí atomické operace na sdílené paměti (čekají na sebe procesy na různých procesorech a tedy mohou čekat aktivně) a je možné je implementovat i bez pomoci operačního systému. Fronty zpráv jsou primitivní operací v případě paralelního programování, ale je možné je implementovat v operačním systému i na jednom procesoru. Monitor je možné realizovat pouze s podporou programovacího jazyka. 
 
- **Korektní paralelní program - Nutné podmínky**
-1. Dva procesy se nesmí nacházet současně ve stejné sdružené sekci. 
-2. Žádné předpoklady nesmí být kladeny na rychlost a počet procesorů. 
-3. Pokud proces běžící mimo kritickou sekci nesmí být blokován ostatní procesy. 
-4. Žádný proces nesmí do nekonečna čekat na vstup do kritické sekce. 
+ **K uváznutí dojde jen při splnění všech následujících podmínek:**
+1. Vzájemné vyloučení (Mutual exclusion)
+  - Prostředek může v jednom okamžiku používat jenom jeden proces (jinak dojde k chybě).
+2. Drž a čekej (Hold & wait)
+  - Proces může žádat o další prostředky, i když už má nějaké přiděleny.
+3. Neodnímatelnost (No preemption)
+  - Jakmile proces zmíněný prostředek vlastní, nelze mu ho bezpečně odejmout, musí ho sám vrátit.
+4. Čekání do kruhu (Circular wait)
+  - Je možné uzavřít cyklus z procesů čekající každý na svého předchůdce – respektive k deadlocku dojde, jakmile je tento cyklus uzavřen. 
 
