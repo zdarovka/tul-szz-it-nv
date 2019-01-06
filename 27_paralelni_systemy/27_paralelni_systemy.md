@@ -238,11 +238,11 @@ Mezi synchronizační primitiva patří zámek a jeho zobecnění - semafory, fr
 
  **K uváznutí dojde jen při splnění všech následujících podmínek:**
 1. Vzájemné vyloučení (Mutual exclusion)
-  - Prostředek může v jednom okamžiku používat jenom jeden proces (jinak dojde k chybě).
+    - Prostředek může v jednom okamžiku používat jenom jeden proces (jinak dojde k chybě).
 2. Drž a čekej (Hold & wait)
-  - Proces může žádat o další prostředky, i když už má nějaké přiděleny.
+    - Proces může žádat o další prostředky, i když už má nějaké přiděleny.
 3. Neodnímatelnost (No preemption)
-  - Jakmile proces zmíněný prostředek vlastní, nelze mu ho bezpečně odejmout, musí ho sám vrátit.
+    - Jakmile proces zmíněný prostředek vlastní, nelze mu ho bezpečně odejmout, musí ho sám vrátit.
 4. Čekání do kruhu (Circular wait)
-  - Je možné uzavřít cyklus z procesů čekající každý na svého předchůdce – respektive k deadlocku dojde, jakmile je tento cyklus uzavřen. 
+    - Je možné uzavřít cyklus z procesů čekající každý na svého předchůdce – respektive k deadlocku dojde, jakmile je tento cyklus uzavřen. 
 
