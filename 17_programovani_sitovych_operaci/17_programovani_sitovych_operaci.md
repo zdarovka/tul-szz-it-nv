@@ -25,6 +25,7 @@ Socket je obecný model point to point (roura) komunikace.
 - **TCP**
   - streamovaná spojovaná komunikace (Nejdříve se musí navázat spojení mezi párem socketů, server socket naslouchá na portu, klientský navazuje spojení.)
   - [Wikipedia](https://cs.wikipedia.org/wiki/TCP/IP)
+  - [Wikipedia](https://cs.wikipedia.org/wiki/Transmission_Control_Protocol)
 - **UDP** 
   - nespojovaná datagramová komunikace (S každým zaslaným datagramem se zasílá lokální socket descriptor a adresa příjemce.)
   - [WIkipedia](https://cs.wikipedia.org/wiki/User_Datagram_Protocol)
