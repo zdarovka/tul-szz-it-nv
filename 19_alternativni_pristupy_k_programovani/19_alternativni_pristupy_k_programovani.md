@@ -17,6 +17,8 @@ Vyšší programovací jazyky se dále dělí takto:
 
 Toto rozdělení není absolutní a moderní  programovací jazyky jsou obvykle **multiparadigmatické**. To znamená, že různá paradigmata nějakým způsobem podporují a kombinují. Například Python podporuje *procedurální*, *objektově orientované* i *funkcionální* paradigma.
 
+[Wikipedia](https://cs.wikipedia.org/wiki/Programovac%C3%AD_jazyk)
+
 ## Funcionální programování
 
 - funkcionální paradigma patří mezi deklarativní programovací principy
