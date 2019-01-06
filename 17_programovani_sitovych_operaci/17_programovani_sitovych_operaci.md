@@ -21,8 +21,12 @@ Socket je obecný model point to point (roura) komunikace.
 
 ### Typy socketů
 - **Internet Domain Sockets** - Síťové sockety, podporované napříč platformami.
- - **TCP** - streamovaná spojovaná komunikace (Nejdříve se musí navázat spojení mezi párem socketů, server socket naslouchá na portu, klientský navazuje spojení.)
- - **UDP** - nespojovaná datagramová komunikace (S každým zaslaným datagramem se zasílá lokální socket descriptor a adresa příjemce.)
+ - **TCP**
+  - streamovaná spojovaná komunikace (Nejdříve se musí navázat spojení mezi párem socketů, server socket naslouchá na portu, klientský navazuje spojení.)
+  - [Wikipedia](https://cs.wikipedia.org/wiki/TCP/IP)
+ - **UDP** 
+  - nespojovaná datagramová komunikace (S každým zaslaným datagramem se zasílá lokální socket descriptor a adresa příjemce.)
+  - [WIkipedia](https://cs.wikipedia.org/wiki/User_Datagram_Protocol)
  - **RawIP** - obvykle dostupné jen routerech a nízkoúrovňových službách jako je  (ICMP) ping. (OS již většinou nepodporují, lze falšovat hlavičky a tak dále.)
 
 ### Síťové sockety
