@@ -204,6 +204,8 @@ Kategorie:
 - funguje na principu předávání zpráv
 - na každém počítači musí běžet démon
 - pro komunikaci s uzly slouží knihovna PVM poskytující rozhraní pro paralelní operace (jazyk C, C++, Fortran)
+- Parallel Virtual Machine (PVM) is a software tool for parallel networking of computers. It is designed to allow a network of heterogeneous Unix and/or Windows machines to be used as a single distributed parallel processor. Thus large computational problems can be solved more cost effectively by using the aggregate power and memory of many computers. The software is very portable; the source code, available free through netlib, has been compiled on everything from laptops to Crays
+- [Wikipedia](https://en.wikipedia.org/wiki/Parallel_Virtual_Machine)
 
 ### MPI (Message Passing Interface)
 - distribuovaná pamět
@@ -223,3 +225,5 @@ Kategorie:
         - Synchronizace (každý komunikátor realizuje tzv. bariéru, na které je možné všechny procesy synchronizovat)
         - Přesuny dat (rozselání dat všem procesům)
         - Redukční operace (Redukce dat všech procesů na jednu hodnotu - MAX, MIN, SUM, AVG atd.)
+  - MPI is a communication protocol for programming parallel computers. Both point-to-point and collective communication are supported. MPI "is a message-passing application programmer interface, together with protocol and semantic specifications for how its features must behave in any implementation."
+ - [Wikipedia](https://en.wikipedia.org/wiki/Message_Passing_Interface)
