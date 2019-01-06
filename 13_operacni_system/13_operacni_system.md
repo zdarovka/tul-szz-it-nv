@@ -392,14 +392,3 @@ Procesy se vzájemně blokují: A má zamčen zdroj ZA, B má zamčen zdroj ZB. 
 - Nutná schopnost detekce uváznutí a vyhodnocení stavu systému.
 - V případě uváznutí prostě procesy zabijeme všechny nebo jeden náhodný a otestujeme znovu.
 
-
-K uváznutí dojde jen při splnění všech následujících podmínek:
-Vzájemné vyloučení (Mutual exclusion)
- Prostředek může v jednom okamžiku používat jenom jeden proces (jinak dojde k chybě).
-Drž a čekej (Hold & wait)
- Proces může žádat o další prostředky, i když už má nějaké přiděleny.
-Neodnímatelnost (No preemption)
- Jakmile proces zmíněný prostředek vlastní, nelze mu ho bezpečně odejmout, musí ho sám vrátit.
-Čekání do kruhu (Circular wait)
- Je možné uzavřít cyklus z procesů čekající každý na svého předchůdce – respektive k deadlocku
-dojde, jakmile je tento cyklus uzavřen. 
