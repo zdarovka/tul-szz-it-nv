@@ -136,10 +136,18 @@ Podle toku dat:
 
 Kategorie:
 
-- **SISD** - Počítač zpracovává data sériově podle jednoho programu (Von Neuman)
-- **SIMD** - Počítač používající větší množství stejných procesorů řízených společným programem (vektorové počítače). Procesory provádějí stejnou instrukci, ale s jinými daty.
-- **MISD** - Není běžné, vznikla uměle. Série procesorů, které postupně zpracovávají společná data.
-- **MIMD** - Multiprocesorový systém, každý procesor je řízen samostatným programem pracujícím na samostatných datech.
+- **SISD** 
+  - Počítač zpracovává data sériově podle jednoho programu (Von Neuman)
+  - ![sisd](sisd.png)
+- **SIMD** 
+  - Počítač používající větší množství stejných procesorů řízených společným programem (vektorové počítače). Procesory provádějí stejnou instrukci, ale s jinými daty.
+  - ![simd](simd.png)
+- **MISD**
+  - Není běžné, vznikla uměle. Série procesorů, které postupně zpracovávají společná data.
+  - ![MISD](misd.png)
+- **MIMD**
+  - Multiprocesorový systém, každý procesor je řízen samostatným programem pracujícím na samostatných datech.
+  - ![mimd](mimd.png)
 
 ## Paralelizace
 
