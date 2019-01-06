@@ -253,10 +253,6 @@ paměť, sdílení proměnné, sdílené soubory,…).
 prostředky.
 - Velmi špatně se detekují (náhodný výskyt)
 
-### Vzájemné vyloučení
-- Procesům není dovoleno sdílet stejný prostředek ve stejném čase.
-- Procesy se nesmí nacházet ve sdružených sekcích současně
-
 ### Kritická sekce
 - část programu, kde procesy používají sdílené prostředky (např. sdílená paměť, sdílená proměnná,
 sdílený soubor, ...).
