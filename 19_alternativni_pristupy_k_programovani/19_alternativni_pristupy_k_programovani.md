@@ -235,10 +235,12 @@ unsigned greatest_common_divisor (const unsigned a, const unsigned b)
 - aplikace matematické logiky v programování
 - interpretem je rezoluční stroj, který z faktů a pravidel odvozuje/ověřuje další fakta
 - především deklarativní přístup (popis logických vztahů), procedurální složka potlačena
+- [Wikipedia](https://cs.wikipedia.org/wiki/Logick%C3%A9_programov%C3%A1n%C3%AD)
 
 ### Prolog
 
 - využivá se v oboru umělé inteligence a počítačové lingvistiky
+- [Wikipedia](https://cs.wikipedia.org/wiki/Prolog_(programovac%C3%AD_jazyk))
 - 2 režimy :
   - **konzultační** (zadávají se fakta a pravidla)
   - **dotazovací** (kladou se otázky)
@@ -266,7 +268,7 @@ prarodic(X,Y) :- rodic(X,Z), rodic(Z,Y).
 ?- prarodic(X,petr). X=ivana; X=alfons; X=otylie; %No
 ```
 
-### Rezoluční mechanismus v prologu (jediné co jsem našel a moc tomu nerozumím)
+### Rezoluční mechanismus v prologu
 Způsob vyhdonocování na základě predikátů => tvorba derivačního stromu.
 
 Ve zjednodušeném případě, kdy pracujeme s výrokovou logikou a logický program ani hlavní cíl atomický neobsahují proměnné, zpětné usuzování (backward reasoning) určí logický a-nebo strom, který stanovuje prostor řešení cíle.
