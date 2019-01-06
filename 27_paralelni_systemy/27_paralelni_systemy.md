@@ -265,6 +265,8 @@ sdíleného prostředku
     - unlocked
   - U mutexů se můžeme setkat s tím, že bude třeba mutex zamknout v závislosti na podmínce. Například problém producent - konzument.
 Producent produkuje data do sdílené proměnné a konzument je čte. Přitom proměnná musí být zabezpečena mutexem a zároveň se musí hlídat stav, zda proměnná obsahuje užitečná data.
+  - "Štafetový kolík" - kdo ho má, může přistupovat k jemu příslušnému zdroji
+  - [Wikipedia](https://cs.wikipedia.org/wiki/Vz%C3%A1jemn%C3%A9_vylou%C4%8Den%C3%AD)
 - **Semafor** 
   - Semafor je synchronizační primitivum obsahující celočíselný čítač, který si lze představit například jako počítadlo volných prostředků. Poskytuje atomické operace „up“ a „down“. Operace „down“ sníží čítač o jedničku, v případě, že už je nulový (nedostává se prostředků), se proces zablokuje a přidá do fronty procesů čekajících na daný semafor. Operace „up“ zkontroluje frontu, a v případě, že je neprázdná, vybere jeden proces čekající ve frontě a odblokuje jej (ten pak pokračuje za svou operací „down“); je-li fronta prázdná, zvýší hodnotu čítače o jedničku
   - Názvy operací P a V jsou tradiční a pochází od Edsgera Dijkstry, který semafory vymyslel. Jsou odvozeny od holandských slov „prolaag“ (složeno z probeer te verlagen, zkus a sniž) a „verhoog“, zvyš
