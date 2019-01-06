@@ -246,3 +246,26 @@ Mezi synchronizační primitiva patří zámek a jeho zobecnění - semafory, fr
 4. Čekání do kruhu (Circular wait)
     - Je možné uzavřít cyklus z procesů čekající každý na svého předchůdce – respektive k deadlocku dojde, jakmile je tento cyklus uzavřen. 
 
+### Časově závislé chyby
+- Dva nebo několik procesů používá (čte/zapisuje) společné sdílené prostředky (např. sdílená
+paměť, sdílení proměnné, sdílené soubory,…).
+- Výsledek výpočtu je závislý na přepínání kontextu jednotlivých procesů, které používají sdílené
+prostředky.
+- Velmi špatně se detekují (náhodný výskyt)
+
+### Vzájemné vyloučení
+- Procesům není dovoleno sdílet stejný prostředek ve stejném čase.
+- Procesy se nesmí nacházet ve sdružených sekcích současně
+
+### Kritická sekce
+- část programu, kde procesy používají sdílené prostředky (např. sdílená paměť, sdílená proměnná,
+sdílený soubor, ...).
+- Sdružené kritické sekce = kritické sekce dvou (nebo více) procesů, které se týkají stejného
+sdíleného prostředku
+- **MUTEX**
+  - Nejprve si položme otázku, co je to kritická sekce. Za kritickou sekci považujeme tu část kódu vlákna, která operuje nad sdílenými daty a hrozí, že paralelně může jiné vlákno operovat nad stejnými daty. Důsledkem může být nekonzistence dat. Například jedno vlákno zvýší sdílenou proměnnou A o jedna a dále s ní počítá, kdežto druhé vlákno proměnou A zmenší o dvě a dále s ní počítá. Pokud se poštěstí, tak se instrukce mohou proložit tak, že ani jedno vlákno nedá správný výsledek. Tomuto je třeba zabránit a to tím, že do té části, která pracuje s proměnnou A může vstoupit pouze jedno vlákno, druhé musí čekat až to první skončí.Takovéto kritické sekce, kde může být v jednom okamžiku pouze jedno vlákno, nazýváme MUTEX (MUTual EXclusion)
+  - **stavy**
+    - locked
+    - unlocked
+  - U mutexů se můžeme setkat s tím, že bude třeba mutex zamknout v závislosti na podmínce. Například problém producent - konzument.
+Producent produkuje data do sdílené proměnné a konzument je čte. Přitom proměnná musí být zabezpečena mutexem a zároveň se musí hlídat stav, zda proměnná obsahuje užitečná data.
