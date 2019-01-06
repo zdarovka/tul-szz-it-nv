@@ -316,7 +316,7 @@ Pravidla pro přidělování zámků transakcím:
 
 1. Pokud chce transakce číst (modifikovat) objekt db, musí nejprve požádat o sdílený (exklusivní) zámek.
 2. Všechny zámky držené transakcí jsou uvolněny po jejím skončení.
-![S2PL](S2pl.PNG)
+![S2PL](s2pl.PNG)
 
 **2PL**
 
