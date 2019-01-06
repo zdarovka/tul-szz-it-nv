@@ -316,11 +316,13 @@ Pravidla pro přidělování zámků transakcím:
 
 1. Pokud chce transakce číst (modifikovat) objekt db, musí nejprve požádat o sdílený (exklusivní) zámek.
 2. Všechny zámky držené transakcí jsou uvolněny po jejím skončení.
+![S2PL](S2pl.PNG)
 
 **2PL**
 
 1. Pokud transakce chce číst (modifikovat) objekt db, nejprve musí požádat o sdílený (exklusivní) zámek.
 2. Transakce nemůže požádat o nový zámek, pokud již nějaký neuvolnila.
+![2Pl](2pl.PNG)
 
 ### Stupně izolace
 
