@@ -95,20 +95,20 @@ CAN (Controller Area Network) je sběrnice typu multimaster, která je určena k
 - Každý uzel pomocí masky a filtru rozhodne, zda zprávu přijme či nikoli
 - Tento způsob umožňuje zasílání zpráv pouze určitým skupinám uzlů
 - Různé rámce mají různou prioritu, rámce s větší prioritou se dostanou na sběrnici rychleji a častěji
-- **LLC – Logica Link Control**
-
-  - Filtrování zpráv
-  - Signalizace přetížení
-  - Správa zotavování
-
-- **MAC – Medium Access Control**
-
-  - Zabalení dat do rámce / rozbalení dat z rámce
-  - Kódování rámce (vkládání, vyhazování bitu)
-  - Řízení přístupu k médiu
-  - Detekce a signalizace chyb
-  - Správa potvrzování příjmu
-  - Serializace / deserializac
+- OSI MODEL - linková vrstva (2)
+  - **LLC – Logica Link Control**
+    - responsible for identifying and encapsulating network layer protocols, and controls error checking and frame synchronization.
+    - Filtrování zpráv
+    - Signalizace přetížení
+    - Správa zotavování    
+  - **MAC – Medium Access Control**
+    - responsible for controlling how devices in a network gain access to a medium and permission to transmit data.
+    - Zabalení dat do rámce / rozbalení dat z rámce
+    - Kódování rámce (vkládání, vyhazování bitu)
+    - Řízení přístupu k médiu
+    - Detekce a signalizace chyb
+    - Správa potvrzování příjmu
+    - Serializace / deserializac
 
 **Fyzická vrstva:**
  - Kódování / vzorkování bitu
