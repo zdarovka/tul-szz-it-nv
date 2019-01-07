@@ -78,8 +78,9 @@ Programování na základě přepalování/porušování propojek.
 
 ### CPLD
 
-- složitostí mezi PLD a FPGA
+- Jeho složitost je zhruba mezi PLD a FPGA
 - obsahují centrální propojovací matici
+- The main distinction between FPGA and CPLD device architectures is that FPGAs are internally based on look-up tables (LUTs) while CPLDs form the logic functions with sea-of-gates (for example, sum of products).
 
 ![CPLD](24_cpld.png)
 
