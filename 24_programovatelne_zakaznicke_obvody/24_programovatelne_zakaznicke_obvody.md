@@ -239,10 +239,12 @@ Základní konstrukce, které jsou povinné.
 
 - *Entita* - „černá skříňka“ se vstupy a výstupy (obdoba grafického symbolu)
   - Entita nepopisuje chování modulů (nedefinuje funkci)
+  - Interface v Cx
 - *Architektura* - určuje chování entit
   - tělo architektury má dvě části: deklarační část (např. definice signálů), příkazová část (uzavřeno do begin - end )
   - architektura musí být spojena se specifikovanou entitou
   - rozdílné architektury definují rozdílné pohledy na entity
+  - Třída která implementuje Architecturu
 
 **Porty** (Brány)
 
