@@ -112,6 +112,12 @@ Asynchronní signál není dodáván s CLK, tudíž je potřeba signál synchorn
 *Asynchroní reset*
 
 Zastavení hodinového signálu vkládáním logiky není vhodné, lze použít bloky DCM (Digital Clock Manager) či PLL.
+   - DCM 
+      - poskytuje autokalibraci, plně digitální řešení distribuce zpoždění, násobení, dělení a fázový posun hodinového signálu 
+      - A digital clock manager (DCM) is an electronic component available on some field-programmable gate arrays (FPGAs) (notably ones produced by Xilinx). A digital clock manager is useful for manipulating clock signals inside the FPGA, and to avoid clock skew which would introduce errors in the circuit.
+      - Multiplying or dividing an incoming clock (which can come from outside the FPGA or from a Digital Frequency Synthesizer
+   - PLL
+      - Fázový závěs (anglicky Phase-Locked Loop, PLL) je řídicí systém, který generuje výstupní signál, jehož fáze závisí na fázi vstupního, „referenčního“, signálu. Jedná se o elektronický obvod skládající se z oscilátoru a fázového detektoru. Obvod porovnává fázi vstupního signálu s fází signálu produkovaného oscilátorem a frekvenci oscilátoru upravuje, aby se fáze shodovaly. Signál z fázového detektoru se používá k ovládání oscilátoru ve smyčce zpětné vazby.
 
 **Resynchronizace asynchroních vstupů**
 
