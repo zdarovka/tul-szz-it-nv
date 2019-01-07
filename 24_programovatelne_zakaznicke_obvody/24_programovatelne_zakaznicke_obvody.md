@@ -49,7 +49,7 @@ Programování na základě přepalování/porušování propojek.
 
 **PAL**
 
-- programovatelné pole AND
+- **programovatelné pole AND**
 - počet programovatelných bodů: N = 2m.k.n
 - omezený počet součinových termů k
 - na výstupu mohou obsahovat klopné obvody
@@ -63,7 +63,7 @@ Programování na základě přepalování/porušování propojek.
 - na výstupu makrobuňka OLMC (Output Logic Macro Cell)
  - každý I/O lze konfigurovat jako vstup, výstup nebo třístavový výstup
  - některé z konfigurovatelných parametrů pouze globální
- - This device has the same logical properties as the PAL but can be erased and reprogrammed. The GAL is very useful in the prototyping stage of a design, when any bugs in the logic can be corrected by reprogramming. GALs are programmed and reprogrammed using a PAL programmer, or by using the in-circuit programming technique on supporting chips.
+ - **This device has the same logical properties as the PAL but can be erased and reprogrammed.** The GAL is very useful in the prototyping stage of a design, when any bugs in the logic can be corrected by reprogramming. GALs are programmed and reprogrammed using a PAL programmer, or by using the in-circuit programming technique on supporting chips.
 
 ![GAL](24_gal.png)
 
@@ -72,6 +72,7 @@ Programování na základě přepalování/porušování propojek.
 - programovatelné pole AND i OR
 - počet programovatelných bodů: N = m.k + 2k.n
 - odstraňuje omezení v počtu součinových termů
+- **PLAs differ from Programmable Array Logic devices (PALs and GALs) in that both the AND and OR gate planes are programmable.**
 
 ![PLA](24_pla.png)
 
