@@ -40,7 +40,8 @@ V datové části řešíme algoritmizaci (obecně dvěma krajními implementace
 
 ### Register retiming
  - Při návrhu komplikovaných desek, pracujících na vysoké taktovací frekvenci, je velmi zásadní délka jednotlivých kombinačních cest a případné rozdíly ve spoždění, které mohou způsobit nechtěnou změnu na výstupech hradel. Register retiming slouží k vyrovnání kombinačních logických cest mezi registry.
- - Retiming is the technique of moving the structural location of latches or registers in a digital circuit to improve its performance, area, and/or power characteristics in such a way that preserves its functional behavior at its outputs. Retiming was first described by Charles E. Leiserson and James B. Saxe in 1983.[1]
+ - Retiming is the technique of moving the structural location of latches or registers in a digital circuit to improve its performance, area, and/or power characteristics in such a way that preserves its functional behavior at its outputs. Retiming was first described by Charles E. Leiserson and James B. Saxe in 1983.
+ - [Wikipedia](https://en.wikipedia.org/wiki/Retiming)
 
 ![Register retiming](25_register_retiming.png)
 
