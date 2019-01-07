@@ -102,11 +102,29 @@ Souhrn vlastností počítačového systému viděného z pohledu programátora 
 - seznamu registrů
 - pravidel pro manipulaci s výjimkami a přerušeními
 
+*Umožňuje*
+- Abstrakce (výhoda – různé implementace stejné architektury)
+- Definice rozhraní mezi nízko-úrovňovým SW a HW
+- Standardizuje instrukce, bitové vzory strojového jazyka
+
 *Dělíma na:*
 
-- **Střadačově orientovaná ISA** (dominantní střadač)
-- **Zásobníkově orientovaná ISA** (vše se děje přes zásobník [java bytecode procesory])
-- **ISA s univerzálními registry** (nejpoužívanější architektura, mnoho univerzálních registrů)
+- **Střadačově orientovaná ISA** 
+  - nelze pracovat s registry napřímo, a je nutné si operadny vždy "zkopírovat" do střadače (akumulátoru)
+  - Střadač je základní registr aritmetickologické jednotky, který vždy obsahuje jeden operand aritmetické nebo logické operace a do něhož se ukládá výsledek této operace. Protože registr dovoluje ve spolupráci s aritmetickologickou jednotkou postupné přičítání zpracovávaných čísel, nazývá se střadač nebo akumulátor. Zvláštností střadače u procesoru 8051 je to, že leží v paměťovém prostoru SFR vnitřní paměti RAM procesoru a je přístupný nejen běžnými instrukcemi, ale i pomocí přímé adresy označované v mnemonice procesoru symbolickým názvem ACC.
+  - (dominantní střadač)
+- **Zásobníkově orientovaná ISA**
+  - (vše se děje přes zásobník [java bytecode procesory])
+  - ![zasbonikova.png](zasbonikova.png)
+- **ISA s univerzálními registry** 
+  - (nejpoužívanější architektura, mnoho univerzálních registrů)
+  - Registry jsou rychlejší než paměť (včetně cache !!)
+  - K registrům lze přistupovat náhodně (versus .. zásobník je přísně sekvenční)
+  - Registry mohou obsahovat mezivýsledky a lokální proměnné
+  - Méně častý přístup do paměti – potenciální urychlování
+  - **Po roce 1975 používají všechny nové procesory nějakou podobu GPR (registry pro všeobecné použití)**
+![isa](isa.png)
+
 
 *Instrukční cyklus:*
 
