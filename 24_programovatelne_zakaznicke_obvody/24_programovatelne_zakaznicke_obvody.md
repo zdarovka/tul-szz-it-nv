@@ -85,9 +85,20 @@ Programování na základě přepalování/porušování propojek.
 ![CPLD](24_cpld.png)
 
 ## FPGA - Field-programmable gate array
-Programovatelná hradlová pole (FPGA, Field Programmable Gate Array) jsou speciální číslicové integrované obvody obsahující různě složité programovatelné bloky propojené konfigurovatelnou maticí spojů.
+ - Programovatelná hradlová pole (FPGA, Field Programmable Gate Array) jsou speciální číslicové integrované obvody obsahující různě složité programovatelné bloky propojené konfigurovatelnou maticí spojů.
+ - Programovatelná hradlová pole (FPGA, anglicky Field Programmable Gate Array) je v elektronice typ logického integrovaného obvodu, který je vyroben tak, aby mohl být naprogramován až u zákazníka. Obsahuje pole programovatelných logických obvodů (PLD), logických bloků, umožňuje je navzájem propojit a tím vytvořit takřka libovolné číslicové zařízení (například mikroprocesor, řídící obvod síťové karty a podobně). Tím se odlišuje od zákaznických integrovaných obvodů (ASIC), jejichž funkce je dána již při výrobě.
+ - FPGA obvody dnes nacházejí uplatnění v široké škále aplikací díky své programovatelnosti, snadnému návrhu, flexibilitě, neustále klesajícím cenám a zvolna se snižující spotřebě energie vlastním čipem. Typické použití je v oblasti menších sérií navrhovaných zařízení, kdy se nevyplatí návrh zákaznického integrovaného obvodu a současně konvenční řešení systému s procesorem už není vhodné. Další aplikace můžeme nalézt například v oblasti prototypování složitějších zákaznických integrovaných obvodů. Velká programovatelná hradlová pole dnes umožňují i implementaci komplikovaných procesorů.
+ - Kromě FPGA obvodů se lze běžně setkat i s tzv. CPLD obvody (Complex Programmable Logic Devices). CPLD použijeme spíše na návrh jednoduché propojovací logiky při integraci složitějších prvků (glue logic).
 
 ![FPGA](24_fpga.png)
+
+**Výhody**
+ - Snadná konfigurace a rekonfigurovatelnost i za běhu systému.
+ - K výrobě FPGA s volatilní konfigurací je používán standardní technologický proces CMOS bez dodatečných kroků a proto jsou SRAM obvody vždy o jednu až dvě technologické generace napřed před ostatními FPGA.
+ 
+**Nevýhody**
+ - Programovatelný obvod musí být po startu systému nakonfigurován – k tomu je obvykle potřeba externí paměť a jednoduchý řadič, to znamená větší potřebný prostor na desce s plošnými spoji a více součástek, dále konfigurace může trvat až stovky milisekund.
+ - Je těžší zajistit zabezpečení intelektuálního vlastnictví, protože konfiguraci obvodu lze obvykle jednoduše vyčíst z konfigurační paměti.
 
 ### Části obvodů FPGA
 - **logické prvky (LE – logic element, LC – logic cell)**
