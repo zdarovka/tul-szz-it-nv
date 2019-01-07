@@ -119,8 +119,9 @@ CAN (Controller Area Network) je sběrnice typu multimaster, která je určena k
  
 Pracuje nad sběrnicí, k níž přistupuje metodou **CSMA/CD+AMP**
 
-- CSMA - náhodný přístup k médiu
-- CD - detekce kolizí
+- CSMA
+  - Carrier Sense Multiple Access with Collision Detection CSMA/CD) je protokol pro přístup k přenosovému médiu v počítačových sítích. Patří do třídy CSMA, tedy metod s vícenásobným kolizním přístupem a nasloucháním nosné. 
+  - Na rozdíl od čistého CSMA u CSMA/CD stanice při svém vysílání současně kontroluje přenosové médium, zda nezachytí jiné vysílání, které koliduje s jejím. Z této vlastnosti je odvozena přípona „s detekcí kolizí“ (with Collision Detection) v názvu metody. Pokud stanice zjistí kolizi, zastaví vysílání, počká náhodnou dobu a opakuje svůj pokus znovu. CSMA/CD je proto efektivnější než samotné CSMA či CSMA/CA − v nich se kolize nezjišťují a dojde-li k nim, zbytečně se odvysílá celý datový rámec, který bude beztak nutno opakovat.
 - AMP - Arbitration on Message Priority (řidí se prioritami zpráv)
 
 Komunikace na sběrnici CAN probíhá tak, že každý uzel může za určitých okolností využívat sběrnici pro vysílání svých zpráv. Zpráva vysílaná po sběrnici obsahuje identifikační číslo vysílajícího uzlu. Identifikátor definuje nejen obsah zprávy, ale i prioritu přístupu na sběrnici. Tímto způsobem je možno zaslat zprávu z jednoho uzlu do jiného uzlu nebo několik jiných uzlů současně. Komunikační síť CAN může pracovat jak v režimu multi-master (více nadřízených uzlů), nebo v režimu master-slave (jeden uzel nadřízený a více podřízených uzlů).
