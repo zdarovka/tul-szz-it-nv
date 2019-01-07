@@ -140,8 +140,12 @@ Souhrn vlastností počítačového systému viděného z pohledu programátora 
 **Vývoj procesorů lze rozdělit do několika fází:**
 
 - **Subskalární procesory** (Tradiční sekvenční provádění instrukcí.)
-- **Skalární procesory** (Sekvenční zpracování částečně nahrazeno zpracováním paralelním (např. zřetězené zpracování, či něklok jednotek), v každý okamžik se dokončí jen jedna instrukce.)
-- **Superskalární procesory** (Umí dokončit více instrukcí za jeden cyklus.)
+- **Skalární procesory** 
+  - (Sekvenční zpracování částečně nahrazeno zpracováním paralelním (např. zřetězené zpracování, či něklok jednotek), v každý okamžik se dokončí jen jedna instrukce.)
+  - Scalar processors represent a class of computer processors. A scalar processor processes only one data item at a time, with typical data items being integers or floating point numbers.[1] A scalar processor is classified as a SISD processor (Single Instructions, Single Data) in Flynn's taxonomy.
+- **Superskalární procesory** 
+  - Superskalární architektura (superskalarita) je v informatice jedním ze způsobů zvyšování výkonu procesoru. Superskalarita umožňuje v jednom taktu zpracovat více strojových instrukcí zároveň, protože některé části procesoru jsou duplikovány, například matematický koprocesor (FPU) nebo aritmeticko-logická jednotka (ALU). Od vícejádrových procesorů se superskalarita liší tím, že je zvětšen počet pouze některých částí procesoru.
+  - (Umí dokončit více instrukcí za jeden cyklus.)
 
 **Procesory dělíme podle instrukční sady na:**
 
