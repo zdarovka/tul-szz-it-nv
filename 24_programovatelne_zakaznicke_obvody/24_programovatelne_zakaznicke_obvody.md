@@ -47,7 +47,7 @@ Programování na základě přepalování/porušování propojek.
 
 ![PROM](24_prom.png)
 
-**PAL**
+**PAL - Programmable array logic**
 
 - **programovatelné pole AND**
 - počet programovatelných bodů: N = 2m.k.n
@@ -57,7 +57,7 @@ Programování na základě přepalování/porušování propojek.
 
 ![PAL](24_pal.png)
 
-**GAL**
+**GAL - Generic array logic**
 
 - vychází z obvodů PAL
 - na výstupu makrobuňka OLMC (Output Logic Macro Cell)
@@ -67,7 +67,7 @@ Programování na základě přepalování/porušování propojek.
 
 ![GAL](24_gal.png)
 
-**PLA**
+**PLA - Programmable logic array**
 
 - programovatelné pole AND i OR
 - počet programovatelných bodů: N = m.k + 2k.n
@@ -76,7 +76,7 @@ Programování na základě přepalování/porušování propojek.
 
 ![PLA](24_pla.png)
 
-### CPLD
+### CPLD - Complex programmable logic device
 
 - Jeho složitost je zhruba mezi PLD a FPGA
 - obsahují centrální propojovací matici
@@ -84,7 +84,7 @@ Programování na základě přepalování/porušování propojek.
 
 ![CPLD](24_cpld.png)
 
-## FPGA
+## FPGA - Field-programmable gate array
 Programovatelná hradlová pole (FPGA, Field Programmable Gate Array) jsou speciální číslicové integrované obvody obsahující různě složité programovatelné bloky propojené konfigurovatelnou maticí spojů.
 
 ![FPGA](24_fpga.png)
