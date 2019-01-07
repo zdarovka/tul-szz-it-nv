@@ -117,6 +117,9 @@ Programování na základě přepalování/porušování propojek.
 
 - na principu SRAM
 - na principu multiplexorů
+- Vyhledávací tabulka (anglicky lookup table, LUT) je v matematické informatice datová struktura, ve které je uložen omezený počet hodnot určité funkce nebo matematické operace, takovým způsobem, aby bylo možné pro některé argumenty rychle vyhledat hodnotu funkce. Účelem vyhledávací tabulky je nahradit pomalý výpočet funkce rychlým vyhledáním hodnoty v předem připravené tabulce. Vyhledávací tabulka bývá často implementována polem, v němž se hodnota argumentu funkce (někdy určitým způsobem transformovaná) použije jako index.
+ - In digital logic, a lookup table can be implemented with a multiplexer whose select lines are driven by the address signal and whose inputs are the values of the elements contained in the array. These values can either be hard-wired, as in an ASIC which purpose is specific to a function, or provided by D latches which allow for configurable values.
+ - An n-bit LUT can encode any n-input boolean function by storing the truth table of the function in the LUT. This is an efficient way of encoding Boolean logic functions, and LUTs with 4-6 bits of input are in fact the key component of modern field-programmable gate arrays (FPGAs) which provide reconfigurable hardware logic capabilities.
 
 ![LUT](24_lut.png)
 
