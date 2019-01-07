@@ -36,7 +36,7 @@ Programování na základě přepalování/porušování propojek.
 
 ![PLD](24_pld.png)
 
-### SPLD
+## SPLD
 
 **PROM**
 
@@ -76,7 +76,7 @@ Programování na základě přepalování/porušování propojek.
 
 ![PLA](24_pla.png)
 
-### CPLD - Complex programmable logic device
+## CPLD - Complex programmable logic device
 
 - Jeho složitost je zhruba mezi PLD a FPGA
 - obsahují centrální propojovací matici
