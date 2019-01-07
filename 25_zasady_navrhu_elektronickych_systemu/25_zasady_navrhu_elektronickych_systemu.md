@@ -72,6 +72,8 @@ Ukazuje se tedy, že nejlepším řešením je **navrhovat vše synchronně** (n
 - zpětné vazby v kombinačních obvodech se v návrhu nevyskytují (ZV vedou na asynchronní sekvenční logiku)
 - asynchronní signály jsou synchronizovány
 
+**Poznámka: hladinové vs hranové obvody** - The flipflop is ready to get the input throughout the Level of the clock continuous.In edge triggering,The flipflop will be ready to get input only when the edge of the clock is detected.Always edge triggering is preferred.
+
 Výstupy z logiky (přenosy čítačů, výstupy dekodérů a apod.) nejsou použity jako hodinové signály.
 
 ## Přenos signálů mezi časovými doménami
