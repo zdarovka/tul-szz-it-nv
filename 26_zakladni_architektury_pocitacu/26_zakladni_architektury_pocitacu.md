@@ -33,14 +33,14 @@ Počítač tvoří:
 Charakteristické vlastnosti lze shrnout do následujících bodů:
 
 1. struktura počítače je nezávislá na typu řešené úlohy, počítač se programuje obsahem paměti
-2. instrukce a operandy jsou v téže paměti
+2. **instrukce a operandy jsou v téže paměti**
 3. paměť je rozdělena do buněk stejné velikosti, jejich pořadová čísla se používají jako adresy
 4. program je tvořen posloupností elementárních příkazů (instrukcí), které se provádějí jednotlivě v pořadí, v němž jsou zapsány do paměti
 5. změna pořadí provádění instrukcí se vyvolá instrukcí podmíněného nebo nepodmíněného skoku
 6. pro reprezentaci instrukcí i čísel se používají dvojkové signály a dvojková číselná soustava
 7. programem řízené zpracování dat probíhá v počítači samočinně (tok dat řídí řadič)
-8. zpracování dat probíhá v tzv. diskrétním režimu (během výpočtu nelze s počítačem komunikovat)
-9. vstupy (resp. výstupy) jsou koncipovány jako datové zdroje (resp. výsledky) a jsou tedy přímo napojeny na ALU.
+8. **zpracování dat probíhá v tzv. diskrétním režimu (během výpočtu nelze s počítačem komunikovat)**
+9. **vstupy (resp. výstupy) jsou koncipovány jako datové zdroje (resp. výsledky) a jsou tedy přímo napojeny na ALU.**
 
 **Nevýhodou je možnost mylně interpretovat data jako program.**
 
@@ -51,9 +51,9 @@ Charakteristické vlastnosti lze shrnout do následujících bodů:
 ### Harvardská koncepce
 Základní principy (rozdíly vůči von Neumannově archit.):
 
-1. paměť programu je oddělena od paměti dat - možnost ve stejném okamžiku načítat instrukci a přistupovat k datové paměti - datová a programová paměť mohou mít odlišnou organizaci
-2. oddělené sběrnice pro program a data
-3. řízení procesoru je odděleno od řízení vstupních a výstupních jednotek (nejsou napojeny přímo na ALU)
+1. **paměť programu je oddělena od paměti dat - možnost ve stejném okamžiku načítat instrukci a přistupovat k datové paměti - datová a programová paměť mohou mít odlišnou organizaci**
+2. **oddělené sběrnice pro program a data**
+3. **řízení procesoru je odděleno od řízení vstupních a výstupních jednotek (nejsou napojeny přímo na ALU)**
 
 **Možnost rychlejšího zpracování většího objemu dat.**
 
