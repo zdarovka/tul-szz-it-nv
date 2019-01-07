@@ -92,6 +92,8 @@ Základní principy (rozdíly vůči von Neumannově archit.):
 
 **Architektura souboru instrukcí** (ISA)
 
+![isa](isa.png)
+
 Souhrn vlastností počítačového systému viděného z pohledu programátora v strojovém jazyce (koncept struktury, funkčního chování)
 
 *Skládá se z:*
@@ -123,7 +125,7 @@ Souhrn vlastností počítačového systému viděného z pohledu programátora 
   - Registry mohou obsahovat mezivýsledky a lokální proměnné
   - Méně častý přístup do paměti – potenciální urychlování
   - **Po roce 1975 používají všechny nové procesory nějakou podobu GPR (registry pro všeobecné použití)**
-![isa](isa.png)
+
 
 
 *Instrukční cyklus:*
