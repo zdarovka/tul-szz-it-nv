@@ -75,7 +75,6 @@ Uvedená směs sběrnic je hodně různoroda a můžeme jí rozdělit do několi
 
 Univerzální synchronní / asynchronní sériové rozhraní USART (Universal Synchronous / Asynchronous Receiver and Transmitter). Jde o zařízení pro sériovou komunikaci, které lze nastavit buď pro asynchronní režim (SCI – např. pro linky RS-232 resp. RS-485), anebo pro synchronní režim (běžně označovaný jako SPI). USART se od UARTu liší možností synchroní komunikace.
 
-**USART**
   - UART je asynchronní (USART synchronní) sériové rozhraní pro přenos dat mezi zařízeními v obou směrech (plný duplex). Používá se pro komunikaci mezi mikrokontroléry, počítači a dalšími zařízeními podporující tento standard.
   - Pro přenos se používají rámce, které mohou mít 5 až 9 bitů a jsou od sebe odděleny jedním start bitem a jedním nebo dvěma stop bity (obr. 1). Každý rámec může obsahovat ještě paritní bit pro kontrolu rámce. Dále je možné nastavit rychlost přenosu dat od 1 200 bps až do 250 kbps.
 
