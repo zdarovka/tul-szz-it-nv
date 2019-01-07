@@ -105,6 +105,8 @@ signál větvit.
 
 Problém s uvolněním resetu s aktivní hranou hodin (nutno dodržet dobu zotavení po resetu – reset recovery time trr) – může vést na metastabilní chování.
 
+Asynchronní signál není dodáván s CLK, tudíž je potřeba signál synchornizovat s CLK
+
 ![Asynchroní reset](25_reset.png)
 
 *Asynchroní reset*
