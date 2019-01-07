@@ -160,7 +160,7 @@ V FPGA se nejčastěji používají programovatelné přepínače na principu:
 - Ve výstupní cestě je zařazen programovatelný výstupní driver:
   - umožňuje měnit rychlost přeběhu (2-3 stupně),
   - určuje výstupní proudové zatížení (2-25 mA),
-  - umožňuje nastavení do stavu vysoké impedance.
+  - umožňuje nastavení do stavu vysoké impedance (1, 0, stav vysoké impedance).
 - Součástí I/O buňky jsou:
   - pull-up a pull-down rezistory,
   - ochrany proti kladnému i zápornému přepětí,
