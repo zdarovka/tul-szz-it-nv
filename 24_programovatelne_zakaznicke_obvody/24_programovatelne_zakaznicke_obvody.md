@@ -53,6 +53,7 @@ Programování na základě přepalování/porušování propojek.
 - počet programovatelných bodů: N = 2m.k.n
 - omezený počet součinových termů k
 - na výstupu mohou obsahovat klopné obvody
+- PAL devices have arrays of transistor cells arranged in a "fixed-OR, programmable-AND" plane used to implement "sum-of-products" binary logic equations for each of the outputs in terms of the inputs and either synchronous or asynchronous feedback from the outputs.
 
 ![PAL](24_pal.png)
 
@@ -62,6 +63,7 @@ Programování na základě přepalování/porušování propojek.
 - na výstupu makrobuňka OLMC (Output Logic Macro Cell)
  - každý I/O lze konfigurovat jako vstup, výstup nebo třístavový výstup
  - některé z konfigurovatelných parametrů pouze globální
+ - This device has the same logical properties as the PAL but can be erased and reprogrammed. The GAL is very useful in the prototyping stage of a design, when any bugs in the logic can be corrected by reprogramming. GALs are programmed and reprogrammed using a PAL programmer, or by using the in-circuit programming technique on supporting chips.
 
 ![GAL](24_gal.png)
 
