@@ -73,7 +73,7 @@
 
 **Komponenta grafu** - maximální souvislý podgraf
 
-![](komponenty.png)
+![komponenta.png](komponenta.png)
 
 _komponenty_
 
