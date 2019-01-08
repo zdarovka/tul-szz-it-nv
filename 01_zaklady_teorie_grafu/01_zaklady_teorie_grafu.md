@@ -152,6 +152,7 @@ _komponenty_
 ## Rovinné grafy
 
 - jsou grafy, u kterých existuje rovinné nakreslení, tj. nakreslení bez křížení hran
+- ![440px-Graf_K4_v_rovině.svg.png](440px-Graf_K4_v_rovině.svg.png)
 
 ## Prohledávání grafu
 Chceme projít všechny vrcholy grafu.
