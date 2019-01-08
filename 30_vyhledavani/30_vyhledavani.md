@@ -75,7 +75,6 @@ Operacemi vzniká problém s vyvážením, proto byl tvořen samovyvažovací st
 _Vyhledávání_
 
 Vyhledání konkrétní hodnoty v binárním vyhledávacím stromu typicky probíhá rekurzivně. Začíná zpravidla v kořeni. V každém kroku porovná hledanou hodnotu s klíčem zkoumaného uzlu. Pokud jsou si rovny, hodnota byla nalezena. Je-li hledaná hodnota menší, pokračuje hledání v levém podstromu. Je-li větší, bude hledání pokračovat v pravém podstromu. Díky uspořádání stromu je cesta k hledané hodnotě jednoznačně určena.
-[YouTube](https://youtu.be/ygZMI2YIcvk?t=105)
 
 _Přidání uzlu_
 
@@ -83,6 +82,8 @@ Vložení nového uzlu začíná hledáním jeho pozice ve stromu – postupuje 
 
 - Klíč byl nalezen, strom tedy dotyčnou hodnotu již obsahuje a není třeba ji vkládat (komplikovanější varianty připouštějící vícenásobný výskyt stejného klíče by pokračovaly dál do podstromu připouštějícího rovnost).
 - Algoritmus narazil na neexistující uzel, nový uzel bude vložen na toto místo, protože sem podle hodnoty svého klíče patří.
+
+[YouTube](https://youtu.be/ygZMI2YIcvk?t=105)
 
 _Odstranění uzlu_
 
