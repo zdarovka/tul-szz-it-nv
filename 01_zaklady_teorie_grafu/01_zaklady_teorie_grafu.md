@@ -35,10 +35,12 @@
 	- řádky jsou jednotlivé vrcholy
 	- existence hrany je je zavedena jako jedničky ve spojených vrcholech
 	- tedy v jednom sloupci jsou právě 2 jedničky
+	- ![230px-Incidence_matrix_-_directed_graph.svg.png](230px-Incidence_matrix_-_directed_graph.svg.png)
 - **matice sousednosti**
 	- čtvercová matice dle počtu vrcholů
 	- řádky i sloupce odpovídají vrcholům
 	- tam kde jsou vrcholy spojené je nenulové číslo (váha)
+	- ![matice_priklad_orient.png](matice_priklad_orient.png)
 
 ### Průchod grafem z vrcholu u do v
 
