@@ -212,5 +212,6 @@ Hledání nejkratší cesty z vrcholu u do vrcholu v.
 - každý následující vrchol dostane skóre součtem skóre vrcholu a váhy hrany, kterou jsou spojené
 - pokud se do daného vrcholu lze dostat více hranami, tak výsledné skóre tohoto vrcholu je to menší
 - výsledná cesta je pak cesta přes vrcholy s nejmenším skóre
+- [YouTube](https://www.youtube.com/watch?v=_lHSawdgXpI)
 
 ![Dijkstrův algoritmus](01_dijkstra.gif)
