@@ -75,6 +75,7 @@ Operacemi vzniká problém s vyvážením, proto byl tvořen samovyvažovací st
 _Vyhledávání_
 
 Vyhledání konkrétní hodnoty v binárním vyhledávacím stromu typicky probíhá rekurzivně. Začíná zpravidla v kořeni. V každém kroku porovná hledanou hodnotu s klíčem zkoumaného uzlu. Pokud jsou si rovny, hodnota byla nalezena. Je-li hledaná hodnota menší, pokračuje hledání v levém podstromu. Je-li větší, bude hledání pokračovat v pravém podstromu. Díky uspořádání stromu je cesta k hledané hodnotě jednoznačně určena.
+[YouTube](https://youtu.be/ygZMI2YIcvk?t=105)
 
 _Přidání uzlu_
 
