@@ -158,22 +158,22 @@ _komponenty_
 Chceme projít všechny vrcholy grafu.
 
 ### Do hloubky (DFS - LIFO)
-
+- Depth-first search
 - algoritmus vezme první hranu (obvykle nejlevnější), dostane se k dalšímu vrcholu
 - tam opět vezme první hranu a takto postupuje dokud nenarazí na vrchol, který nemá další hranu, nebo na konečný vrchol
 - v tu chvíli se vrátí na předchozí vrchol a jde druhou hranou
 - při procházení do hloubky se využívá zásobník (LIFO)
-- [Youtube](https://www.youtube.com/watch?v=iaBEKo5sM7w)
+- [YouTube](https://www.youtube.com/watch?v=iaBEKo5sM7w)
 - ![deep.png](deep.png)
 
 ![Prohledávání do hloubky](01_dfs.gif)
 
 ### Do šířky (BFS - FIFO)
-
+- Breadth-first search
 - algoritmus nejprve vyčerpá všechny dostupné hrany a až pak se přesune na další vrchol  
 - při procházení do šířky se využívá fronta (FIFO)
 - veškeří následovníci uzlu získaní expandujícím uzlem jsou vkládani do FIFO fronty
-
+- [YouTube](https://www.youtube.com/watch?v=QRq6p9s8NVg)
 ![Prohledávání do šířky](01_bfs.gif)
 
 ## Minimální kostra
