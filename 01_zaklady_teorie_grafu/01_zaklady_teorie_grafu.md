@@ -127,8 +127,8 @@ _komponenty_
 **Eulerovský tah**
 
 - takový u-v tah, který obsahuje každou hranu právě jednou
-- otevřený u != v
-- uzavřený u=v (**eulerovská kružnice**)
+- otevřený u != v (je definován stejně jako tah uzavřený, pouze se nevrací do původního bodu, kde začal.)
+- uzavřený u=v (**eulerovská kružnice**) (vrací se do počátečního bodu)
 
 **Kritérium eulerovskosti**
 
