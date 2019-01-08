@@ -200,7 +200,7 @@ Minimální kostra je kostra s nejmenší možnou váhou.
 ![Borůvkův algoritmus](01_boruvka.gif)
 
 **Kruskalův algoritmus**
-- [Wikipedia](https://www.youtube.com/watch?v=71UQH7Pr9kU)
+- [YouTube](https://www.youtube.com/watch?v=71UQH7Pr9kU)
 
 ## Nejkratší cesta
 
