@@ -77,12 +77,14 @@
 
 _komponenty_
 
-**Strom** - souvislý acyklický graf, kde ekvivaletně platí:
-
-- G je strom
-- G je acyklický a zároveň |V| = |H| + 1
-- G je souvislý a zároveň |V| = |H| + 1
-- Mezi libovolnými vrcholy existuje právě jedna cesta
+**Strom** 
+- souvislý acyklický graf, kde ekvivaletně platí:
+	- G je strom
+	- G je acyklický a zároveň |V| = |H| + 1
+	- G je souvislý a zároveň |V| = |H| + 1
+	- Mezi libovolnými vrcholy existuje právě jedna cesta
+- Z definice stromu vyplývá, že mezi každými dvěma vrcholy existuje právě jedna cesta (alespoň jedna cesta, protože je souvislý; nemůže nastat situace více cest, protože díky neexistenci kružnice není možné zvolit "objížďku").
+- ![priklad_bvs.png](priklad_bvs.png)
 
 **Kostra grafu** 
  - takový podgraf souvislého grafu G na množině všech jeho vrcholů, který je stromem (strom, obsahující všechny vrcholy grafu G)
@@ -93,8 +95,9 @@ _komponenty_
 **Isomorfní graf** 
  - graf který vznikne přeznačením vrcholů (bijektivní zobrazení vrcholů starého grafu do vrcholů nového grafu)
  - ![isomorfismus_1.png](isomorfismus_1.png)
+ 
 **Úplný graf** 
- - V úvodním příkladu by úplnému grafu odpovídala skupina lidí, kde se zná každý s každým.
+ - Úplný graf je takový graf, ve kterém jsou každé dva vrcholy spojené hranou.
  - ![uplne_grafy.png](uplne_grafy.png)
 
 **Stupeň vrcholu**
