@@ -69,7 +69,7 @@
 
 **Acyklický graf (les)** - graf, ve kterém neexistuje kružnice
 
-**Souvislý graf** - je takový, který má právě 1 komponentu (mezi libovolnou dvojici vrcholů existuje u-v cesta)
+**Souvislý graf** - je takový, který má právě 1 komponentu (mezi libovolnou dvojici vrcholů existuje u-v sled)
 
 **Komponenta grafu** - maximální souvislý podgraf
 
