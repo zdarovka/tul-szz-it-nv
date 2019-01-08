@@ -104,5 +104,6 @@ Kompresní poměr: (nový počet bitů) / (původní počet bitů) = 23 / 88 = 0
 - Aritmetické kódování reprezentuje zprávu jako podinterval intervalu <0,1)
 - Výstupem je jedno racionální číslo a tabulka četností
 	- pomocí tabulky zjistíme poměrné rozdělení jednotlivých znaků a následně z daného racionálního čísla sestavíme řetězec
+- [YouTube](https://www.youtube.com/watch?v=-R2a2a1-2MM)
 
 ![ukazka aritm. kod](aritm_kod.png)
