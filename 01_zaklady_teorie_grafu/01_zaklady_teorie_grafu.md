@@ -138,6 +138,7 @@ _komponenty_
 
 ## Hamiltonovský grafy
 - je souvislý graf, ve kterém existuje **Hamiltonovská kružnice**.
+- Hamiltonovský graf je graf, který lze projít takovou cestou, že každý jeho uzel je navštíven právě jednou s výjimkou uzlu výchozího, který je zároveň uzlem cílovým. Neboli - graf je hamiltonovský, právě když obsahuje kružnici, která prochází všemi jeho uzly (tzv. hamiltonovská kružnice).
 
 **Hamiltonovská kružnice** - kružnice, která je *faktorem* (podgraf, který obsahuje všechny původní vrcholy)
 
