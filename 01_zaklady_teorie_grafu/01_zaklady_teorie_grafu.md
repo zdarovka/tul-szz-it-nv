@@ -45,14 +45,14 @@
 ### Průchod grafem z vrcholu u do v
 
 - **sled**
- - libovolná posloupnost vrcholů a hran (jak se po sobě navazujících hranách dostat z u do v)
- - pokud u=v -> uzavřený sled
+ 	- libovolná posloupnost vrcholů a hran (jak se po sobě navazujících hranách dostat z u do v)
+ 	- pokud u=v -> uzavřený sled
 - **tah**
- - je sled, kde se nesmí opakovat hrany
- - pokud u=v -> uzavřený tah
+ 	- je sled, kde se nesmí opakovat hrany
+ 	- pokud u=v -> uzavřený tah
 - **cesta**
- - je tah, kde se nesmí opakovat vrcholy
- - pokud u=v -> **kružnice** (uzavřená cesta)
+ 	- je tah, kde se nesmí opakovat vrcholy
+ 	- pokud u=v -> **kružnice** (uzavřená cesta)
 
 ### Operace s grafem
 
