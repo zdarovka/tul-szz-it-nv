@@ -145,6 +145,7 @@ THEINITIAL => ASDXWXAXJM
 Dešifrujte NTBWWFYN pomocí Hillovy matice H(3, 2; 7, 5).
 
 *Pozn.:* Délka vstupní abecedy je 26, všechna záporná čísla (získaná např. při výopčtu inverzní matice) jsou převedena na kladná pomocí mod 26.
+*Pozn.:* [Násobení matic](https://www.youtube.com/watch?v=DiSHJt1ZMOw)
 
 ![\[\large B = NTBWWFYN \rightarrow \begin{pmatrix} N & T\\ B & W\\ W & F\\ Y & N\\ \end{pmatrix} = \begin{pmatrix} 13 & 19\\ 1 & 22\\ 22 & 5\\ 24 & 13\\ \end{pmatrix}\]](https://latex.codecogs.com/svg.latex?%5Clarge%20B%20%3D%20NTBWWFYN%20%5Crightarrow%20%5Cbegin%7Bpmatrix%7D%20N%20%26%20T%5C%5C%20B%20%26%20W%5C%5C%20W%20%26%20F%5C%5C%20Y%20%26%20N%5C%5C%20%5Cend%7Bpmatrix%7D%20%3D%20%5Cbegin%7Bpmatrix%7D%2013%20%26%2019%5C%5C%201%20%26%2022%5C%5C%2022%20%26%205%5C%5C%2024%20%26%2013%5C%5C%20%5Cend%7Bpmatrix%7D)
 
