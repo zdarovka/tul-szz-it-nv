@@ -84,11 +84,18 @@ _komponenty_
 - G je souvislý a zároveň |V| = |H| + 1
 - Mezi libovolnými vrcholy existuje právě jedna cesta
 
-**Kostra grafu** -  takový podgraf souvislého grafu G na množině všech jeho vrcholů, který je stromem (strom, obsahující všechny vrcholy grafu G)
+**Kostra grafu** 
+ - takový podgraf souvislého grafu G na množině všech jeho vrcholů, který je stromem (strom, obsahující všechny vrcholy grafu G)
+ - Pokud původní graf (graf, ke kterému hledáme kostru) obsahuje kružnici, pak máme více možností, jak kostru zvolit.
+ - ![priklad_ruznych_koster_stejneho_grafu.png](priklad_ruznych_koster_stejneho_grafu.png)
 
-**Isomorfní graf** - graf který vznikne přeznačením vrcholů (bijektivní zobrazení vrcholů starého grafu do vrcholů nového grafu)
 
-**Úplný graf** - je takový, kde je každý vrchol propojen s každým
+**Isomorfní graf** 
+ - graf který vznikne přeznačením vrcholů (bijektivní zobrazení vrcholů starého grafu do vrcholů nového grafu)
+ - ![isomorfismus_1.png](isomorfismus_1.png)
+**Úplný graf** 
+ - V úvodním příkladu by úplnému grafu odpovídala skupina lidí, kde se zná každý s každým.
+ - ![uplne_grafy.png](uplne_grafy.png)
 
 **Stupeň vrcholu**
 - značíme deg(u)
