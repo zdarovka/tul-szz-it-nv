@@ -93,6 +93,7 @@ _komponenty_
 **Isomorfní graf** 
  - graf který vznikne přeznačením vrcholů (bijektivní zobrazení vrcholů starého grafu do vrcholů nového grafu)
  - ![isomorfismus_1.png](isomorfismus_1.png)
+ 
 **Úplný graf** 
  - V úvodním příkladu by úplnému grafu odpovídala skupina lidí, kde se zná každý s každým.
  - ![uplne_grafy.png](uplne_grafy.png)
