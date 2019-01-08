@@ -186,6 +186,7 @@ Minimální kostra je kostra s nejmenší možnou váhou.
 - vkaždém svém kroku připojí ten z uzlů, mezi nímž a projenou částí grafu je hrana nejnižší délky
 - označí sousedy nově připojeného uzlu za objevené, případně zkrátí vzdálenosti od již známých uzlů, pokud byla nalezena výhodnější hrana
 - v okamžiku, kdy jsou propojeny všechny uzly, algoritmus terminuje.
+- [YouTube](https://www.youtube.com/watch?v=cplfcGZmX7I)
 
 ![Jarníkův - Primův](01_jarnik.gif)
 
