@@ -173,7 +173,9 @@ Ti = (Ci - Ki) mod m - dešifrování
 | Otevřený text | S | T | A | S | T | N | E | A | V | E | S | E | L | E |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Klíč  | H | E | S | L | O | H | E | S | L | O | H | E | S | L |
-| Šifrovaný text | A | Y | T | E | I | V | J | T | H | T | A | J | E | Q |
+| Šifrovaný text | z | x | s | d | h | u | i | s | g | s | z | i | d | z |
+
+![Vigenère_square_shading.svg.png](Vigenère_square_shading.svg.png)
 
 *Příklad s použitím slova HESLO jako klíče k zašifrování*
 
