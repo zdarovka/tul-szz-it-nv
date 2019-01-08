@@ -53,6 +53,15 @@ Délky slov ![l_i](https://latex.codecogs.com/svg.latex?l_i) libovolného jednoz
 	- LZ77 (PNG)
 	- LZ78
 	- LZW (GIF)
+	
+
+### Hammingův kód
+- Hamming codes can detect up to two-bit errors or correct one-bit errors without detection of uncorrected errors.
+- [YouTube](https://www.youtube.com/watch?v=373FUw-2U2k)
+
+### CRC
+- Cyklický redundantní součet, označovaný také CRC (zkratka anglického Cyclic redundancy check) je speciální hašovací funkce, používaná k detekci chyb během přenosu či ukládání dat. Pro svou jednoduchost a dobré matematické vlastnosti jde o velmi rozšířený způsob realizace kontrolního součtu. Kontrolní součet bývá odesílán či ukládán společně s daty, při jejichž přenosu nebo uchovávání by mohlo dojít k chybě. Po převzetí dat je znovu nezávisle spočítán. Pokud je nezávisle spočítaný kontrolní součet odlišný od přeneseného nebo uloženého, je zřejmé že při přenosu nebo uchovávání došlo k chybě. Pokud je shodný, tak téměř jistě k žádné chybě nedošlo. V určitých případech je možné chybu pomocí CRC opravit.
+- [YouTube](https://www.youtube.com/watch?v=OWoCYP4eCcs)
 
 ### Huffmanův minimální kód  
 
