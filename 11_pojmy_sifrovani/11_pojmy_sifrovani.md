@@ -191,6 +191,32 @@ Principem transpoziční šifry je změna pořadí znaků (jejich permutace) na 
 
 *Transpoziční mřížka, černá pole značí vystříhaná okénka a červená vršek. Příložením na čtverec a postupným otáčením a přepisováním viditelných znaků text rozluštíme.*
 
+#### Rail Fence šifra
+Rail Fence šifra je forma transpoziční šifry, která dostala svoje jméno podle způsobu, kterým je kódovaná. V Rail Fence šifře se původní text (plaintext) píše sestupně na "koleje" jdoucí za sebou. Když se dostaneme na poslední "kolej" imaginárního plotu, pokračujeme dále směrem nahoru. Zpráva se potom čte v řádcích. Například použijeme tři "koleje" a zprávu "BYLI JSTE ODHALENI. HNED UTECTE", šifra se zapíše takto:
+```
+B . . . J . . . O . . . L . . . H . . . U . . . T .
+. Y . I . S . E . D . A . E . I . N . D . T . C . E
+. . L . . . T . . . H . . . N . . . E . . . E . . .
+```
+Potom se to čte takto:
+
+```
+BJOLH UTYIS EDAEI NDTCE LTHNE E
+```
+
+#### Route šifra
+V route šifře se nejdříve původní text (plaintext) zapíše do mřížky daných rozměrů, potom se čte podle vzoru uvedeného v klíči. Na ukážku použijeme stejný text, který jsme použili při rail fence šifře.
+```
+BITDLIETT
+YJEHEHDEE
+LSOANNUC
+```
+BITDLIETT
+YJEHEHDEE
+LSOANNUC
+```
+TEČUNNAOSLYBITDLIETEDHEHEJ
+```
 ### Blokové šifry
 
 #### Feistelovo šifrování
