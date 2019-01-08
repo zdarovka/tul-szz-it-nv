@@ -163,6 +163,8 @@ Chceme projít všechny vrcholy grafu.
 - tam opět vezme první hranu a takto postupuje dokud nenarazí na vrchol, který nemá další hranu, nebo na konečný vrchol
 - v tu chvíli se vrátí na předchozí vrchol a jde druhou hranou
 - při procházení do hloubky se využívá zásobník (LIFO)
+- [Youtube](https://www.youtube.com/watch?v=iaBEKo5sM7w)
+- ![deep.png](deep.png)
 
 ![Prohledávání do hloubky](01_dfs.gif)
 
