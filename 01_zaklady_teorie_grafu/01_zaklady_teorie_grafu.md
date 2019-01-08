@@ -166,7 +166,6 @@ Chceme projít všechny vrcholy grafu.
 - [YouTube](https://www.youtube.com/watch?v=iaBEKo5sM7w)
 - ![deep.png](deep.png)
 
-![Prohledávání do hloubky](01_dfs.gif)
 
 ### Do šířky (BFS - FIFO)
 - Breadth-first search
@@ -174,7 +173,6 @@ Chceme projít všechny vrcholy grafu.
 - při procházení do šířky se využívá fronta (FIFO)
 - veškeří následovníci uzlu získaní expandujícím uzlem jsou vkládani do FIFO fronty
 - [YouTube](https://www.youtube.com/watch?v=QRq6p9s8NVg)
-![Prohledávání do šířky](01_bfs.gif)
 
 ## Minimální kostra
 
