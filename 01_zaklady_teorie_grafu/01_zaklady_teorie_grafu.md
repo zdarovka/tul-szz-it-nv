@@ -110,8 +110,14 @@ _komponenty_
   - deg+(u) počet vstupních hran vrcholu u
   - deg-(u) počet výstupních hran vrcholu u
   - celkový stupeň uzlu je roven součtu vstupujících a vystupujících hran
+  - ![stupen.png](stupen.png)
 
-**Skóre grafu** - posloupnost stupňů vrcholů grafu G seřazená nerostoucím způsobem
+**Skóre grafu** 
+- posloupnost stupňů vrcholů grafu G seřazená nerostoucím způsobem
+- Dvě skóre považujeme za stejná, pokud jedno můžeme dostat z druhého přerovnáním čísel (permutací).
+- Pokud dva grafy mají různé skóre, nejsou isomorfní.
+- Neplatí ale opak tohoto tvrzení (stejné skóre → isomorfní grafy). Příklad, který by takovéto tvrzení nesplnil, je na obr. č. 2.17 – zkuste si rozmyslet, proč grafy nejsou isomorfní, ačkoliv mají stejné skóre.
+	- ![skore.png](skore.png)
 
 ## Eulerovský graf
 
