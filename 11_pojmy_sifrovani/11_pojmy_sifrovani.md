@@ -131,7 +131,7 @@ THEINITIAL => ASDXWXAXJM
 Šifra založená na maticovém násobenní. Šifrovacím klíčem nazveme matici, kterou použijeme k zakódování zprávy. Je třeba, aby byly splněny následující podmínky:
 
 - Matice je typu mxm (čtvercová) a platí, že počet znaků zprávy je dělitelný m.
-- Determinant matice a počet znaků abecedy jsou nesoudělná čísla.
+- [Determinant](https://www.youtube.com/watch?v=UVM7SH3_2V4) matice a počet znaků abecedy jsou nesoudělná čísla.
 - Matice je invertibilní (regulární). (potřebujeme inverzní matici)
 
 **A . H = B** - šifrování
