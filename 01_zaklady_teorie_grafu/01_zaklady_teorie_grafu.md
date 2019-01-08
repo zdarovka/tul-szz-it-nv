@@ -164,6 +164,7 @@ Chceme projít všechny vrcholy grafu.
 - v tu chvíli se vrátí na předchozí vrchol a jde druhou hranou
 - při procházení do hloubky se využívá zásobník (LIFO)
 - [YouTube](https://www.youtube.com/watch?v=iaBEKo5sM7w)
+- [YouTube](https://www.youtube.com/watch?v=pcKY4hjDrxk)
 - ![deep.png](deep.png)
 
 
@@ -173,6 +174,7 @@ Chceme projít všechny vrcholy grafu.
 - při procházení do šířky se využívá fronta (FIFO)
 - veškeří následovníci uzlu získaní expandujícím uzlem jsou vkládani do FIFO fronty
 - [YouTube](https://www.youtube.com/watch?v=QRq6p9s8NVg)
+- [YouTube](https://www.youtube.com/watch?v=pcKY4hjDrxk)
 
 ## Minimální kostra
 
