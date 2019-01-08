@@ -91,7 +91,7 @@ AHOJ => DKRM
 
 | Otevřená abeceda | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Šifrovaná abeceda | V | E | S | L | O | A | B | C | D | F | G | H | I | J | K | M | N | P | Q | R | T | U | W | X | Y | Z |
+| Šifrovaná abeceda | V | E | S | L | O | P | Q | R | T | U | W | X | Y | Z | A | B | C | D | F | G | H | I | J | K | M | N |  
 
 *Tabulka záměny s použitím hesla VESLO*
 
