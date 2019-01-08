@@ -179,7 +179,7 @@ Ti = (Ci - Ki) mod m - dešifrování
 
 *Příklad s použitím slova HESLO jako klíče k zašifrování*
 
-STASNEAVESELE => AYTEIVJTHTAJEQ
+STASNEAVESELE => zxsdhuisgszidz
 
 #### Vermanova šifra
 Obdoba Viegnerovy šifry, klíč je však zcela náhodný a stejně dlouhý jako otevřený text. Bez znalosti klíče nerozluštitelná.
