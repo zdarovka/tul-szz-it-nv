@@ -110,7 +110,7 @@ _komponenty_
   - deg+(u) počet vstupních hran vrcholu u
   - deg-(u) počet výstupních hran vrcholu u
   - celkový stupeň uzlu je roven součtu vstupujících a vystupujících hran
-  - ![stupen.png](stupen.png)
+ - ![stupen.png](stupen.png)
 
 **Skóre grafu** 
 - posloupnost stupňů vrcholů grafu G seřazená nerostoucím způsobem
