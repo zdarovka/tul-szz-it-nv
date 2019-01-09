@@ -167,7 +167,7 @@ Nejvyšší frekvence obsažená v signálu nesmí být větší než polovina v
 
 Při nedodržení vzorkovacího teorému dochází k aliasingu - překládání frekvencí ve spektru - a tím k nejednoznačnosti rekonstrukce signálu, viz obrázek.
 
-![chirp aliasing](http://i.imgur.com/kvacDPJ.png)
+![1_alias.gif](1_alias.gif)
 
 Nahoře zvyšující se tón od 0 do 2 kHz, vzorkovací frekvence 4 kHz (splňuje vzorkovací teorém). 
 Dole zvyšující se tón od 0 do 4 kHz, vzorkovací frekvence 4 kHz (od poloviny trvání nesplňuje vzorkovací teorém a je přeložen (doslova)).
