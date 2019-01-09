@@ -184,4 +184,11 @@ Spojitá amplituda je rozdělena na ![L](https://latex.codecogs.com/svg.latex?L)
 Pokud ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) patří do intervalu ![l_k](https://latex.codecogs.com/svg.latex?l_k), kvantizace přiřadí ![\hat{x}[n]](https://latex.codecogs.com/svg.latex?%5Chat%7Bx%7D%5Bn%5D) hodnotu ![\hat{x}_k](https://latex.codecogs.com/svg.latex?%5Chat%7Bx%7D_k)
 
 
+Otázkou tedy je, jak nastavit kvantizační hladiny. Toto nastavení je většinou závislé na citlivosti snímacího zařízení (ve fotografii třeba snímací senzor CCD). Podle něho nastavíme dolní a horní práh a pak rozdělíme hodnoty mezi nimi.
+- Lineární (ekvidistantní) 
+  – kvantizační hladiny jsou od sebe stejně vzdálené, většinou se používá tento způsob
+- Nelineární 
+  – úrovně kvantizačních hladin jsou přizpůsobené určitému účelu – tedy pokud nás zajímá určitá oblast intenzit. Používají se třeba logaritmické nebo exponenciální rozdělení.
+- Další možnost je třeba taková, aby každá barva byla zastoupena na obrázku stejným počtem pixelů
+
 
