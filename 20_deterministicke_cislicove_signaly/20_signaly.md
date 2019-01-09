@@ -28,6 +28,10 @@ jednotkový skok
 
 ![u[n] = 1 pokud n >= 0, 0 otherwise](https://latex.codecogs.com/svg.latex?u%28n%29%20%3D%20%5Cbegin%7Bcases%7D%201%20%26%20%5Cquad%20%5Ctext%7Bpokud%20%7D%20n%20%5Cgeq%200%5C%5C%200%20%26%20%5Cquad%20%5Ctext%7Bjinak%20%7D%5C%5C%20%5Cend%7Bcases%7D)
 
+![vztah.png](vztah.png)
+
+jednotkový skok je nekonečná posloupnost jednotkvých skoků
+
 ## Periodicita signálu
 
 Pokud
