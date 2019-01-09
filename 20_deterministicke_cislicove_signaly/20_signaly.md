@@ -73,6 +73,15 @@ a **fázové spektrum** (fázový posun mezi ![x[n]](https://latex.codecogs.com/
 
 ![](Obr41.jpg)
 
+![dtft1](dtft1.png)
+![dtft2.png](dtft2.png)
+
+**Vlastnosti**
+- Periodicka s 2pí
+- konvoluce 2 signlau v casove oblasti se rovna soucinu obrazu techto signálu ve frekvenční oblasti
+  - ![dtft3.png](dtft3.png)
+
+
 ### Vlastnosti
 
 - Periodicita - DTFT je periodická s periodou ![2\pi](https://latex.codecogs.com/svg.latex?2%5Cpi)
