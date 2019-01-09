@@ -20,6 +20,8 @@ Příklady:
 
 Lineární systém je aditivní a homogenní
 
+![linearsy.png](linearsy.png)
+
 ##### Aditivita (Additivity)
 
 ![T (x1[n] + x2[n]) = T (x1[n]) + T (x2[n])](https://latex.codecogs.com/svg.latex?T%28x_%7B1%7D%5Bn%5D%20&plus;%20x_%7B2%7D%5Bn%5D%29%20%3D%20T%28x_%7B1%7D%5Bn%5D%29%20&plus;%20T%28x_%7B2%7D%5Bn%5D%29)
