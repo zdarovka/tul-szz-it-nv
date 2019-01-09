@@ -118,6 +118,7 @@ Obvykle se uvádí ve formě dvou reálných funkcí:
 
 - magnitudová charakteristika ![|H(ejω)|](https://latex.codecogs.com/svg.latex?%7CH%28e%5E%7Bj%5Comega%7D%29%7C)
 - fázová charakteristika ![\Phi(\omega)](https://latex.codecogs.com/svg.latex?%5CPhi%28%5Comega%29)
+	- udává změnu fáze harmonické funkce o dané frekvenci při průchodu systémem
 
 Dohromady: ![H(e^{j\omega}) = |H(e^{j\omega})| \cdot e^{j\Phi(\omega)}](https://latex.codecogs.com/svg.latex?H%28e%5E%7Bj%5Comega%7D%29%20%3D%20%7CH%28e%5E%7Bj%5Comega%7D%29%7C%20%5Ccdot%20e%5E%7Bj%5CPhi%28%5Comega%29%7D)
 
