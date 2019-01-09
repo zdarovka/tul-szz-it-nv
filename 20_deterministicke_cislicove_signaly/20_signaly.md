@@ -7,6 +7,8 @@ Signál je (matematická) funkce, která reprezentuje informaci o vývoji nějak
 Takový signál je v reálném světě obvykle spojitý (analogový) - akustika, elektrický signál, teplota, tlak, etc. Vzorkováním (výběr vzorku v daných intervalech) a kvantováním (přiřazením jedné z konečného množství hodnot) vzniká číslicový signál.
 Deterministický číslicový signál je pak každý číslicový signál, u kterého lze v jakémkoliv okamžiku zjistit hodnotu s absolutní jistotou (lze je popsat exaktním matematickým vzorcem, např. ![x[n] = sin(\omega n)](https://latex.codecogs.com/svg.latex?x%5Bn%5D%20%3D%20sin%28%5Comega%20n%29) - opakem jsou stochastické signály, kde jsou funkce popsány statistickým vzorcem.
 
+**Diskrétní systém** - matematický operátor transformující vstupní diskrétní signál X[n] na výstupní diskrétní signál y[n]
+
 ## Popis signálu v časové oblasti
 
 Signál ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) - indexovaná nekonečná posloupnost čísel z ![R](https://latex.codecogs.com/svg.latex?%5Cmathbb%7BR%7D) nebo ![C](https://latex.codecogs.com/svg.latex?%5Cmathbb%7BC%7D).
