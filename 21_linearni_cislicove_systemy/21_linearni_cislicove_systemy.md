@@ -128,6 +128,7 @@ Dohromady: ![H(e^{j\omega}) = |H(e^{j\omega})| \cdot e^{j\Phi(\omega)}](https://
 
 - Místo fázové charakteristiky (u filtrů s lineární fázovou charakteristikou) se často uvádí skupinové zpoždění
 - Udává zpoždění úzkopásmového signálu složeného ze skupiny harmonitckých komponent v okolí frekvence ω po průchodu LTI systémem (ve vzorcích)
+- Systémy se (zobecněnou) lineární fází se vyznačují konstantním skupinovým zpožděním tedy pouze zpožďují signál a (téměř) jej nedeformují v časové oblasti (pokud frekvenční pásmo signálu leží v propustném pásmu filtru).
 - ![τ(ω) = −dφ(ω)/dω](https://latex.codecogs.com/svg.latex?%5Ctau%28%5Comega%29%20%3D%20-%5Cfrac%7Bd%20%5CPhi%28%5Comega%29%7D%7Bd%20%5Comega%7D) 
 
 ## Přenosová funkce
