@@ -86,22 +86,25 @@ Pokud jsou obě třídy problémů ![\mathcal{P}, \overline{{\mathcal{P}}}](http
 
 **Takový TS neexistuje**, problém zastavení pro Turingovy stroje je nerozhodnutelný.
 
+[Wikipedia](https://cs.wikipedia.org/wiki/Probl%C3%A9m_zastaven%C3%AD)
+
 **Důkaz sporem:**
 
-Uvažujeme, že existuje výše popsaný TS, který označíme A.
+Uvažujeme, že existuje výše popsaný TS, který označíme **A**.
 
 ![Halting problem A](10_halting_problem_A.jpg)
 
-Na vstupu je kód stroje M a slovo w. Tento TS ukončí činnost akceptováním, pokud TS M zastaví pro slovo w. Svoji činnost ukončí zamítnutím, pokud stroj M pro dané slovo cykluje.
+Na vstupu je **kód stroje TS M a slovo w**. Tento **TS A** ukončí činnost akceptováním, pokud **TS M zastaví pro slovo w**. 
+ - **TS A** Svoji činnost ukončí zamítnutím, pokud stroj M pro dané slovo cykluje.
 
-TS A rozšíříme na TS B tak, že:
-- vstupem bude pouze kód stroje a ten bude zároveň i vstupním slovem,
-- stroj B bude cyklovat právě tehdy, když stroj A skončí akceptováním (když stroj M zastaví),
-- stroj B zastaví, pokud stroj A skončí zamítnutím (a tedy stroj M cykluje).
+**TS A** rozšíříme na **TS B** tak, že:
+- vstupem bude pouze kód stroje **TS M** a ten bude zároveň i vstupním slovem,
+- stroj **B** bude **cyklovat** právě tehdy, když stroj **TS A skončí akceptováním (když stroj M zastaví)**,
+- stroj **B** zastaví, pokud stroj **TS A skončí zamítnutím (a tedy stroj M cykluje)**.
 
 ![Halting problem B](10_halting_problem_B.jpg)
 
-Vytvořený stroj B je ovšem také TS. Pokud na vstup stroje B dáme jeho vlastní kód, dochází ke sporu, protože:
+Vytvořený stroj **TS B** je ovšem také TS. Pokud na vstup stroje **TS B** dáme jeho vlastní kód, dochází ke sporu, protože:
 - stroj B cykluje právě tehdy, pokud stroj B zastaví,
 - stroj B zastaví právě tehdy, pokud stroj B cykluje.
 
