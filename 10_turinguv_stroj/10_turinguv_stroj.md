@@ -94,8 +94,9 @@ Uvažujeme, že existuje výše popsaný TS, který označíme **A**.
 
 ![Halting problem A](10_halting_problem_A.jpg)
 
-Na vstupu je **kód stroje TS M a slovo w**. Tento **TS A** ukončí činnost akceptováním, pokud **TS M zastaví pro slovo w**. 
- - **TS A** Svoji činnost ukončí zamítnutím, pokud stroj M pro dané slovo cykluje.
+Na vstupu je **kód stroje TS M a slovo w**. 
+ - **TS A** ukončí činnost akceptováním, pokud **TS M zastaví pro slovo w**. 
+ - **TS A** ukončí svoji činnost zamítnutím, pokud stroj **TS M pro dané slovo cykluje**.
 
 **TS A** rozšíříme na **TS B** tak, že:
 - vstupem bude pouze kód stroje **TS M** a ten bude zároveň i vstupním slovem,
@@ -105,8 +106,8 @@ Na vstupu je **kód stroje TS M a slovo w**. Tento **TS A** ukončí činnost ak
 ![Halting problem B](10_halting_problem_B.jpg)
 
 Vytvořený stroj **TS B** je ovšem také TS. Pokud na vstup stroje **TS B** dáme jeho vlastní kód, dochází ke sporu, protože:
-- stroj B cykluje právě tehdy, pokud stroj B zastaví,
-- stroj B zastaví právě tehdy, pokud stroj B cykluje.
+- stroj **TS B cykluje** právě tehdy, pokud stroj **TS B zastaví**,
+- stroj **TS B zastaví** právě tehdy, pokud stroj **TS B cykluje**.
 
 ![Halting problem B spor](10_halting_problem_B_paradox.jpg)
 
