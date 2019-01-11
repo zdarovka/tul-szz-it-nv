@@ -77,7 +77,12 @@ Nesetříděnou posloupnost procházím shora dolů a porovnávám dvojice po so
 
 ### Sinking Sort
 
-Stejné jako bubble sort, akorát procházím od zdola nahoru.
+For example, in Donald Knuth's The Art of Computer Programming, Volume 3: Sorting and Searching he states in section 5.2.1 'Sorting by Insertion', that [the value] "settles to its proper level" and that this method of sorting has sometimes been called the sifting or sinking technique.[clarification needed]
+
+This debate is perpetuated by the ease with which one may consider this algorithm from two different but equally valid perspectives:
+
+The larger values might be regarded as heavier and therefore be seen to progressively sink to the bottom of the list
+The smaller values might be regarded as lighter and therefore be seen to progressively bubble up to the top of the list.
 
 ### Shaker Sort
 
