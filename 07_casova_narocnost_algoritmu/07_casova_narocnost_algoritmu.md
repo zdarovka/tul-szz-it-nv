@@ -12,6 +12,10 @@
 - ![f: \mathbb{N} \rightarrow \mathbb{R}^+](https://latex.codecogs.com/svg.latex?f%3A%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BR%7D%5E&plus;)
 - ![g: \mathbb{N} \rightarrow \mathbb{R}^+](https://latex.codecogs.com/svg.latex?g%3A%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BR%7D%5E&plus;)
 
+**Asymptotická složitost**
+Asymptotická složitost je způsob klasifikace počítačových algoritmů. Určuje operační náročnost algoritmu tak, že zjišťuje, jakým způsobem se bude chování algoritmu měnit v závislosti na změně velikosti (počtu) vstupních dat.
+[Wikipedia](https://cs.wikipedia.org/wiki/Asymptotick%C3%A1_slo%C5%BEitost)
+
 ## Porovnání složitostí
 
 V tabulce seřazeno od nejrychlejší po nejnáročnější.
