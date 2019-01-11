@@ -113,3 +113,9 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
     - Jsou úlohy, které jsou NP, nejsou P a *lze na ně převést všechny ostatní NP úlohy*
     - Pokud by se našlo řešení NP-úplné úlohy, které by bylo schopné řešit danou úlohu v polynomiálním čase, znamenalo by to, že ![P = NP](https://latex.codecogs.com/svg.latex?P%20%3D%20NP) (všechny NP úlohy bychom dokázali vyřešit v polynomiálním čase)
     - Konsenzus je, že ![P \neq NP](https://latex.codecogs.com/svg.latex?P%20%5Cneq%20NP), ale zatím to nebylo dokázáno (jedná se o jeden z [Millenium Prize Problems](https://en.wikipedia.org/wiki/Millennium_Prize_Problems))
+    
+    Polynomiální složitost: funkce složitosti je polynomiální, tedy ve tvaru "a\*n^k + méně_významné_členy", kde "k" je pevně dané přirozené číslo, a méně_významné_členy znamená výraz obsahující pouze násobky n v mocnině nejvýše k-1...
+    
+    Exponenciální složitost: 2 jednotky pro data velikost 1, 4 pro 2, 8 pro 3, 16 pro 4, ..., 65536 pro 16, atd. - tedy funkce 2^n, resp. a*k^n kde k je nějaký pevně daný základ a a je nějaká konstanta. 
+
+Zatímco polynomiální složitost je ještě jakžtakž vypočitatelná hrubou silou, exponenciální složitost se považuje za prakticky nevypočitatelný algoritmus pro již velmi malá data.
