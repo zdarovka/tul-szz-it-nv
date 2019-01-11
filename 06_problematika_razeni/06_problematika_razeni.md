@@ -49,6 +49,7 @@ c. Divide and Conquer
 ### Selection Sort
 
 V každém kroku vybere z nesetříděné části nejmenší prvek a vloží nakonec setříděné části.
+Není stabilní jelikož dochazí k prohazování prvků, a tudíž se mohou stejné hodnoty v poli přeházet.
 
 ![](SelectionSortNguyen.gif)
 
