@@ -37,6 +37,7 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
 - Omezuje růst funkce shora
 - Používá se nejčastěji pro udávání asymptotické složitosti algoritmů (oproti ostatním dvěma notacím)
 - Říká, že funkce ![f](https://latex.codecogs.com/svg.latex?f) **neroste rychleji** než kladný násobek funkce ![g](https://latex.codecogs.com/svg.latex?g)
+- Omicron(f(x)) – algoritmus probíhá asymptoticky stejně rychle nebo rychleji než f(x).
 
 **Zápis**
 
@@ -48,6 +49,7 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
 
 - Omezuje růst funkce zdola
 - Říká, že funkce ![f](https://latex.codecogs.com/svg.latex?f) **roste alespoň tak rychle** jako ![g](https://latex.codecogs.com/svg.latex?g) (až na multiplikativní konstantu)
+- Omega(f(x)) – algoritmus probíhá asymptoticky stejně rychle nebo pomaleji než f(x).
 
 **Zápis**
 
@@ -57,6 +59,7 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
 
 - Omezuje růst funkce shora i zdola
 - Říká, že funkce ![f](https://latex.codecogs.com/svg.latex?f) **roste stejně rychle** jako funkce ![g](https://latex.codecogs.com/svg.latex?g) (až na multiplikativní konstanty)
+- Theta(f(x)) – algoritmus probíhá asymptoticky stejně rychle jako f(x). Tj. je zároveň v O(f(x)) a v \\Omega(f(x)).
 
 **Zápis**
 
