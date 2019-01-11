@@ -51,6 +51,8 @@ c. Divide and Conquer
 V každém kroku vybere z nesetříděné části nejmenší prvek a vloží nakonec setříděné části.
 Není stabilní jelikož dochazí k prohazování prvků, a tudíž se mohou stejné hodnoty v poli přeházet.
 
+není stabilni, není prirozeny
+
 ![](SelectionSortNguyen.gif)
 
 ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
@@ -58,6 +60,8 @@ Není stabilní jelikož dochazí k prohazování prvků, a tudíž se mohou ste
 ### Insertion Sort
 
 Vyberu první prvek z nesetříděné části a zařadím ho na správné místo v setříděné části.
+
+je stabilni, je prirozeny
 
 ![](insertion-sort-o.gif)
 
@@ -70,6 +74,8 @@ pro téměř seřazenou posloupnost ... ![f(n) \in \mathcal{O}(n)](https://latex
 ### Bubble Sort
 
 Nesetříděnou posloupnost procházím shora dolů a porovnávám dvojice po sobě jdoucích prvků; dvojice mimo pořadí zaměním. Tím se na přední pozici dostane vždy nejmenší prvek.
+
+je stabilni, je prirozeny
 
 ![Bubble sort](Sorting_bubblesort_anim.gif)
 
@@ -84,9 +90,13 @@ This debate is perpetuated by the ease with which one may consider this algorith
 The larger values might be regarded as heavier and therefore be seen to progressively sink to the bottom of the list
 The smaller values might be regarded as lighter and therefore be seen to progressively bubble up to the top of the list.
 
+je stabilni, je prirozeny
+
 ### Shaker Sort
 
 Kombinace Bubble Sort a Sinking Sort. Střídá se procházecí pořadí.
+
+je stabilni, je prirozeny
 
 ![](Sorting_shaker_sort_anim.gif)
 
@@ -96,11 +106,15 @@ Kombinace Bubble Sort a Sinking Sort. Střídá se procházecí pořadí.
 
 Vstupní posloupnost se rekurzivně dělí na dvě poloviny až jsou poslopnosti délky jedna. Následuje zpětný chod, tj. sestavení setříděné posloupnosti. Při zpětném chodu se sloučí dvě fronty do jedné (nejmenší prvek je vždy na začátku jedné ze dvou front).
 
+je stabilni, neni prirozeny
+
 ![Ukázka merge sort](06_merge_sort.jpg)
 
 ![f(n) \in \mathcal{O}(n \cdot \log_2 n)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%20%5Ccdot%20%5Clog_2%20n%29)
 
 ### Quick sort
+
+neni stabilni, neni prirozeny
 
 Zvolíme tzv. pivota a posloupnost rozdělíme na dvě části. Jedna z nich obsahuje prvky menší nebo rovny pivotu a druhá obsahuje prvky větší než pivot. Na tyto dvě posloupnosti se rekurzivně aplikuje stejná operace.
 
