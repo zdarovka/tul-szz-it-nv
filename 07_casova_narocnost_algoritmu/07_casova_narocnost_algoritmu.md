@@ -101,6 +101,7 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
     - Příklady:
       - Násobení
       - Řazení
+    - V teorii složitosti je P jednou z nejzákladnějších tříd složitosti. Obsahuje všechny problémy řešitelné pomocí deterministického Turingova stroje v polynomiálním čase.
 
 2. Úlohy NP (non-deterministic polynomial time)
     - Úlohy, jejichž *řešení lze ověřit v polynomiálním čase*
@@ -108,11 +109,13 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
       - Faktorizace - rozklad na prvočísla (asymetrická kryptografie)
       - Návrh desek plošných spojů
       - Problém obchodního cestujícího
+    - NP (zkratka nedeterministicky polynomiální) je množina problémů, které lze řešit v polynomiálně omezeném čase na nedeterministickém Turingově stroji - na počítači, který umožňuje v každém kroku rozvětvit výpočet na n větví, v nichž se posléze řešení hledá současně. Ekvivalentně se hovoří o stroji, který na místě rozhodování uhodne správnou cestu výpočtu. Alternativně lze tyto problémy definovat tak, že je to množina problémů, u kterých lze pro dodaný výsledek v polynomiálním čase ověřit jeho správnost (ale obecně nikoliv nalézt řešení v polynomiálním čase).
 
 3. Úlohy NP-úplné
     - Jsou úlohy, které jsou NP, nejsou P a *lze na ně převést všechny ostatní NP úlohy*
     - Pokud by se našlo řešení NP-úplné úlohy, které by bylo schopné řešit danou úlohu v polynomiálním čase, znamenalo by to, že ![P = NP](https://latex.codecogs.com/svg.latex?P%20%3D%20NP) (všechny NP úlohy bychom dokázali vyřešit v polynomiálním čase)
     - Konsenzus je, že ![P \neq NP](https://latex.codecogs.com/svg.latex?P%20%5Cneq%20NP), ale zatím to nebylo dokázáno (jedná se o jeden z [Millenium Prize Problems](https://en.wikipedia.org/wiki/Millennium_Prize_Problems))
+    - NP-úplné (NP-complete, NPC) problémy jsou takové nedeterministicky polynomiální problémy, na které jsou polynomiálně redukovatelné všechny ostatní problémy z NP. To znamená, že třídu NP-úplných úloh tvoří v jistém smyslu ty nejtěžší úlohy z NP. Pokud by byl nalezen polynomiální deterministický algoritmus pro nějakou NP-úplnou úlohu, znamenalo by to, že všechny nedeterministicky polynomiální problémy jsou řešitelné v polynomiálním čase, tedy že třída NP se „zhroutí“ do třídy P (NP = P). Otázka, zda nějaký takový algoritmus existuje, zatím nebyla rozhodnuta, předpokládá se však, že NP ≠ P (je však zřejmé, že P ⊆ NP)
     
 Polynomiální složitost: funkce složitosti je polynomiální, tedy ve tvaru "a\*n^k + méně_významné_členy", kde "k" je pevně dané přirozené číslo, a méně_významné_členy znamená výraz obsahující pouze násobky n v mocnině nejvýše k-1...
     
