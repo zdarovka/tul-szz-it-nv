@@ -8,7 +8,9 @@
 
 - Jeden ze způsobů zápisu posloupnosti ![\{a_n\}_{n=0}^{\infty}](https://latex.codecogs.com/svg.latex?%5C%7Ba_n%5C%7D_%7Bn%3D0%7D%5E%7B%5Cinfty%7D)
 - pokud máme explicitně zadanou posloupnot nejsme schopni spočítat libovolnou hodnotu dané posloupnosti, pokud je to ovšem rekurentní vztah, tak získáme libovolný prvek posloupnosti an
-
+	- Posloupností rozumíme libovolné zobrazení množiny přirozených čísel N do množiny reálných (resp. komplexních čísel) 
+	- Na množině všech posloupností se zavádí operace sčítání posloupností a násobení poslouností skalárem
+	- ![rek.png](rek.png)
 ![\left.\begin{aligned}
   F(a_n, a_{n-1}, \ldots, a_{n-k}, n) = 0\\
   a_n=\Phi(a_{n-1}, a_{n-2}, \ldots,a_{n-k}, n)
