@@ -12,6 +12,8 @@
 - Je-li tato řada konvergentní pro nějaké x≠0, nazveme tuto řadu obyčejnou vytvořující funkcí této posloupnosti a budeme ji značit a(x)
 - Má-li posloupnost ( ![a_n](https://latex.codecogs.com/svg.latex?a_n) )jen konečně mnoho nenulových členů, její obyčejná vytvořující funkce je mnohočlen.   
 
+
+![vytv.png](vytv.png)
 ![](obyc_fce.png)
 
 ## Exponenciální vytvořující funkce
