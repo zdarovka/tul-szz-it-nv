@@ -11,6 +11,7 @@
 	- Posloupností rozumíme libovolné zobrazení množiny přirozených čísel N do množiny reálných (resp. komplexních čísel) 
 	- Na množině všech posloupností se zavádí operace sčítání posloupností a násobení poslouností skalárem
 	- ![rek.png](rek.png)
+- Žádné počáteční podmínky nejsou zadány, nelze tudíž spočítat konstanty K_1 a K_2 (řešení není určeno jednoznačně, existuje nekonečně mnoho různých řešení s různými K_1 a K_2) a pro první příklad je hotovo.
 	
 	
 ![\left.\begin{aligned}
