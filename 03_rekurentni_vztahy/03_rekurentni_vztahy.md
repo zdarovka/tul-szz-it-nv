@@ -420,3 +420,5 @@ Postup řešení je zcela analogický postupu řešení jednoho rekurenčního v
 #### Příklad
 
 - V Čendově pdf, nemá cenu ho sem přepisovat
+
+![vytv.png](vytv.png)
