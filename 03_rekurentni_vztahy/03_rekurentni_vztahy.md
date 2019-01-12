@@ -11,6 +11,8 @@
 	- Posloupností rozumíme libovolné zobrazení množiny přirozených čísel N do množiny reálných (resp. komplexních čísel) 
 	- Na množině všech posloupností se zavádí operace sčítání posloupností a násobení poslouností skalárem
 	- ![rek.png](rek.png)
+	
+	
 ![\left.\begin{aligned}
   F(a_n, a_{n-1}, \ldots, a_{n-k}, n) = 0\\
   a_n=\Phi(a_{n-1}, a_{n-2}, \ldots,a_{n-k}, n)
