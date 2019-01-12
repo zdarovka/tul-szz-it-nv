@@ -4,6 +4,7 @@
 ## Obyčejná vytvořující funkce
 
 - Vytvořující funkce nám definuje posloupnost 
+  - Posloupností rozumíme libovolné zobrazení množiny přirozených čísel N do množiny reálných (resp. komplexních čísel)
 - je to tedy jedna z možností zápisu posloupností, ovšem ne všechny posloupnosti lze vyjádřit pomocí vytvořujících funkcí (anebo jdou, ale taková funkce bude asi hodně složitá)
 	- výhodou je zapsání nekonečné posloupnosti pomocí funkce
 - Máme posloupnost reálných čísel ![a_n](https://latex.codecogs.com/svg.latex?a_n)
