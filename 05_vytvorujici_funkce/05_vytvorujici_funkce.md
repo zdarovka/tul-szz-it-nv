@@ -34,6 +34,7 @@ Příklad
 ### Otevřený tvar
 
 - obecný předpis  ![\sum_{i=0}^{\infty} a_ix^i](https://latex.codecogs.com/svg.latex?%5Csum_%7Bi%3D0%7D%5E%7B%5Cinfty%7D%20a_ix%5Ei)
+- otevrený = nekonecny zapis
 
 ![\sum_{i=0}^{\infty} x^i \Rightarrow 1\cdot x^0 + 1\cdot x^1 + 1\cdot x^2 + \dots](https://latex.codecogs.com/svg.latex?%5Csum_%7Bi%3D0%7D%5E%7B%5Cinfty%7D%20x%5Ei%20%5CRightarrow%201%5Ccdot%20x%5E0%20&plus;%201%5Ccdot%20x%5E1%20&plus;%201%5Ccdot%20x%5E2%20&plus;%20%5Cdots)
 
@@ -44,6 +45,7 @@ Příklad
 ### Uzavřený tvar
 
 - generuje posloupnost ![a_n](https://latex.codecogs.com/svg.latex?a_n)
+- 
 
 ![\frac{1}{1-x} \Rightarrow 1,1,1,1,\dots](https://latex.codecogs.com/svg.latex?%5Cfrac%7B1%7D%7B1-x%7D%20%5CRightarrow%201%2C1%2C1%2C1%2C%5Cdots)
 
