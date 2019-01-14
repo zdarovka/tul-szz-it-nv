@@ -11,6 +11,9 @@
 	- Ekvalizace fázové charakteristiky při zachování magnitudového spektra (tzv. allpass filtry)
 - Obvykle zadávány pomocí Z-přenosu ve formě
 	- ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/22_cislicove_filtry/Hz.png)
+	- B(z) jsou koeficienty vstupu a A(z) jsou koeficienty zpětné vazby
+
+
 - Filtry mající ![p \geq 1](https://latex.codecogs.com/svg.latex?p%20%5Cgeq%201) (cokoliv ve jmenovateli kromě 1) nazýváme IIR (infinite impulse response - nekonečná impulsní odezva kvůli zpětné vazbě)
 - Filtry mající ![p = 0](https://latex.codecogs.com/svg.latex?p%20%3D%200) (ve jmenovateli pouze 1) nazýváme FIR (finite impulse response - konečná impulsní odezva, jejíž nenulové vzorky jsou rovny koeficientům ![b[k]](https://latex.codecogs.com/svg.latex?b%5Bk%5D))
 
